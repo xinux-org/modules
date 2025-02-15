@@ -1,0 +1,21 @@
+---
+name: Pipewire
+id: modules.pipewire
+flake: xinux-modules
+description: "Pipewire Sound Server."
+version: 0.0.1
+icon:
+  type: system
+  path: org.gnome.Settings-sound-symbolic
+
+options:
+- label: "Enable"
+  id: modules.pipewire.enable
+  description: "Enable Pipewire."
+  type: !switch
+    default: true
+- label: "Jack"
+  id: services.pipewire.jack.enable
+  description: "Enable Jack support."
+  type: !switch
+    default: false

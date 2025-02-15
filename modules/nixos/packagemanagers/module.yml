@@ -1,0 +1,21 @@
+---
+name: Package Managers
+id: modules.packagemanagers
+flake: xinux-modules
+description: "Package Manager Module."
+version: 0.0.1
+icon:
+  type: system
+  path: package-x-generic-symbolic
+
+options:
+- label: "Flatpak"
+  id: services.flatpak.enable
+  description: "Enable Flatpak support."
+  type: !switch
+    default: false
+- label: "AppImage"
+  id: modules.packagemanagers.appimage.enable
+  description: "Enable AppImage support by installing the \"appimage-run\" package. For AppImages to work, you must run them with the \"appimage-run\" command."
+  type: !switch
+    default: false

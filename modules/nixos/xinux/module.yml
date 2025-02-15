@@ -1,0 +1,26 @@
+---
+name: Xinux
+id: modules.xinux
+flake: xinux-modules
+description: "Xinux default options."
+version: 0.0.1
+icon:
+  type: system
+  path: weather-xinux-symbolic
+
+options:
+- label: "Enable Nix Software Center"
+  id: modules.xinux.nixSoftwareCenter.enable
+  description: "Enable Nix Software Center, a graphical software center for Nix."
+  type: !switch
+    default: true
+- label: "Enable Configuration Editor"
+  id: modules.xinux.nixosConfEditor.enable
+  description: "Enable NixOS Configuration Editor, a graphical editor for NixOS configurations."
+  type: !switch
+    default: true
+- label: "Enable FHS binary compatibility"
+  id: modules.xinux.binaryCompat.enable
+  description: "Enable FHS binary compatibility, allowing you to run binaries from other Linux distributions. This still may not work for all binaries."
+  type: !switch
+    default: false

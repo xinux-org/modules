@@ -1,0 +1,31 @@
+---
+name: Networking
+id: modules.networking
+flake: xinux-modules
+description: "Network options."
+version: 0.0.1
+icon:
+  type: system
+  path: org.gnome.Settings-network-symbolic
+
+options:
+- label: "Enable Network Manager"
+  id: networking.networkmanager.enable
+  description: "Enable NetworkManager."
+  type: !switch
+    default: true
+- label: "Enable Firewall"
+  id: networking.firewall.enable
+  description: "Enable the system firewall."
+  type: !switch
+    default: true
+- label: "Allowed TCP Ports"
+  id: networking.firewall.allowedTCPPorts
+  description: "Allowed TCP Ports."
+  type: !numberlist
+    default: []
+- label: "Allowed UDP Ports"
+  id: networking.firewall.allowedUDPPorts
+  description: "Allowed UDP Ports."
+  type: !numberlist
+    default: []

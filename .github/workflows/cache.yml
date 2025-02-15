@@ -1,0 +1,26 @@
+name: Build packages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  lints:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v5
+
+      - name: Setup caches
+        uses: DeterminateSystems/magic-nix-cache-action@v2
+
+      - name: Try compiling packages
+        run: |
+          for pkg in `ls packages`; do
+            nix build .#${pkg} -o ${pkg}
+          done
