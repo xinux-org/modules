@@ -6,11 +6,6 @@
 
     # Snowflake provided
 
-    nix-software-center = {
-      url = "github:snowfallorg/nix-software-center";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixos-conf-editor = {
       url = "github:snowfallorg/nixos-conf-editor";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,6 +15,11 @@
 
     xin = {
       url = "github:xinux-org/xin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-software-center = {
+      url = "github:xinux-org/software-center";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
