@@ -1,7 +1,11 @@
-{ lib, config, options, pkgs, ... }:
-
-with lib;
 {
+  lib,
+  config,
+  options,
+  pkgs,
+  ...
+}:
+with lib; {
   options.xinux.graphical = {
     enable = mkEnableOption "Xinux default graphical configurations (not including DE)";
   };

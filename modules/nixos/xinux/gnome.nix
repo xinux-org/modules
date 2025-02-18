@@ -1,6 +1,11 @@
-{ lib, config, options, pkgs, ... }:
-let
-  nixos-background-info = pkgs.stdenv.mkDerivation { name = "nixos-background-info"; };
+{
+  lib,
+  config,
+  options,
+  pkgs,
+  ...
+}: let
+  nixos-background-info = pkgs.stdenv.mkDerivation {name = "nixos-background-info";};
   xinux-background-info = pkgs.writeTextFile rec {
     name = "xinux-background-info";
     text = ''
@@ -20,8 +25,7 @@ let
     '';
     destination = "/share/gnome-background-properties/xinux.xml";
   };
-in
-{
+in {
   options.xinux.gnome = {
     enable = lib.mkEnableOption "Xinux GNOME configuration";
   };
@@ -41,7 +45,7 @@ in
         picture-uri='file://${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.gnomeFilePath}'
       '';
     };
-    environment.gnome.excludePackages = [ nixos-background-info ];
-    environment.systemPackages = [ xinux-background-info ];
+    environment.gnome.excludePackages = [nixos-background-info];
+    environment.systemPackages = [xinux-background-info];
   };
 }

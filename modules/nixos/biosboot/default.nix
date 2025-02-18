@@ -1,10 +1,13 @@
-{ options, config, lib, pkgs, ... }:
-
-with lib;
-let
-  cfg = config.modules.biosboot;
-in
 {
+  options,
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; let
+  cfg = config.modules.biosboot;
+in {
   config = {
     boot.loader = {
       systemd-boot.enable = false;

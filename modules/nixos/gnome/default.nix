@@ -1,10 +1,13 @@
-{ options, config, lib, pkgs, ... }:
-
-with lib;
-let
-  cfg = config.modules.gnome;
-in
 {
+  options,
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; let
+  cfg = config.modules.gnome;
+in {
   options.modules.gnome = with types; {
     gsconnect.enable =
       mkEnableOption "Enable KDE Connect integration";
@@ -13,7 +16,6 @@ in
   };
 
   config = {
-
     # Enable the GNOME Desktop Environment.
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
@@ -29,27 +31,32 @@ in
       enable = true;
     };
 
-    environment.gnome.excludePackages = mkIf cfg.removeUtils.enable (with pkgs.gnome; [
-      baobab
-      cheese
-      eog
-      epiphany
-      file-roller
-      gnome-calculator
-      gnome-calendar
-      gnome-characters
-      gnome-clocks
-      gnome-contacts
-      gnome-font-viewer
-      gnome-logs
-      gnome-maps
-      gnome-music
-      gnome-weather
-      pkgs.gnome-connections
-      pkgs.gnome-photos
-      pkgs.gnome-text-editor
-      simple-scan
-      totem
-    ]);
+    environment.gnome.excludePackages = mkIf cfg.removeUtils.enable (
+      (with pkgs.gnome; [
+        baobab
+        cheese
+        eog
+        epiphany
+        file-roller
+        gnome-calculator
+        gnome-calendar
+        gnome-characters
+        gnome-clocks
+        gnome-contacts
+        gnome-font-viewer
+        gnome-logs
+        gnome-maps
+        gnome-music
+        gnome-weather
+        pkgs.gnome-connections
+        pkgs.gnome-photos
+        pkgs.gnome-text-editor
+        simple-scan
+        totem
+      ])
+      ++ (with pkgs; [
+
+        ])
+    );
   };
 }

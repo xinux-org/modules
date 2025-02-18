@@ -16,15 +16,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    snowflakeos-module-manager = {
-      url = "github:snowfallorg/snowflakeos-module-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Xinux provided
 
     xin = {
       url = "github:xinux-org/xin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    xinux-module-manager = {
+      url = "github:xinux-org/module-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
