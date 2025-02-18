@@ -4,13 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Snowflake provided
-
-    nixos-conf-editor = {
-      url = "github:snowfallorg/nixos-conf-editor";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Xinux provided
 
     xin = {
@@ -25,6 +18,11 @@
 
     xinux-module-manager = {
       url = "github:xinux-org/module-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixos-conf-editor = {
+      url = "github:xinux-org/conf-editor";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
