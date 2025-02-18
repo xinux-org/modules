@@ -28,10 +28,10 @@ in {
       default = true;
       description = "Enable NixOS Configuration Editor, a graphical editor for NixOS configurations";
     };
-    snowflakeosModuleManager.enable = mkOption {
+    xinuxModuleManager.enable = mkOption {
       type = bool;
       default = true;
-      description = "Enable Snowflake Module Manager, a graphical tool for managing Xinux modules";
+      description = "Enable Xinux Module Manager, a graphical tool for managing Xinux modules";
     };
     binaryCompat.enable = mkOption {
       type = bool;
@@ -50,9 +50,9 @@ in {
         nixos-conf-editor.packages.${system}.nixos-conf-editor
       ];
     })
-    (mkIf cfg.snowflakeosModuleManager.enable {
+    (mkIf cfg.xinuxModuleManager.enable {
       environment.systemPackages = with inputs; [
-        snowflakeos-module-manager.packages.${system}.snowflakeos-module-manager
+        xinux-module-manager.packages.${system}.xinux-module-manager
       ];
     })
     (mkIf cfg.binaryCompat.enable {
