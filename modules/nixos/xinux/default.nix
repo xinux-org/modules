@@ -103,9 +103,12 @@ in {
           settings =
             {
               experimental-features = ["nix-command" "flakes"];
-              substituters = ["https://snowflakeos.cachix.org/"];
+              substituters = [
+                "https://cache.xinux.uz/"
+                "https://cache.nixos.org/"
+              ];
               trusted-public-keys = [
-                "snowflakeos.cachix.org-1:gXb32BL86r9bw1kBiw9AJuIkqN49xBvPd1ZW8YlqO70="
+                "cache.xinux.uz-1:gX2Z53woXiIoLANfcC/Qp7vPPKVdK1sEa8MSiRhjj/M="
               ];
             }
             // (mapAttrsRecursive (_: mkDefault) {
