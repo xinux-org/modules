@@ -55,7 +55,6 @@ in {
         totem
       ])
       ++ (with pkgs; [
-
         ])
     );
   };
