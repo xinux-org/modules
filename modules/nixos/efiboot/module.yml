@@ -3,7 +3,7 @@ name: Boot
 id: modules.efiboot
 flake: xinux-modules
 unique_groups:
-- bootloader
+  - bootloader
 description: "EFI Boot module."
 version: 0.0.1
 icon:
@@ -11,21 +11,21 @@ icon:
   path: utilities-terminal-symbolic
 
 options:
-- label: "Bootloader"
-  id: modules.efiboot.bootloader
-  description: "Select a bootloader"
-  type: !enum
-    default: '"systemd-boot"'
-    options:
-      '"systemd-boot"': "SystemD boot"
-      '"grub"': "Grub"
-- label: "Clean /tmp directory"
-  id: boot.tmp.cleanOnBoot
-  description: "Clean the /tmp directory before booting."
-  type: !switch
-    default: true
-- label: "SystemD boot editor"
-  id: boot.loader.systemd-boot.editor
-  description: "Allow editing the kernel command-line before boot. This allows gaining root access by passing init=/bin/sh as a kernel parameter."
-  type: !switch
-    default: false
+  - label: "Bootloader"
+    id: modules.efiboot.bootloader
+    description: "Select a bootloader"
+    type: !enum
+      default: '"grub"'
+      options:
+        '"systemd-boot"': "SystemD boot"
+        '"grub"': "Grub"
+  - label: "Clean /tmp directory"
+    id: boot.tmp.cleanOnBoot
+    description: "Clean the /tmp directory before booting."
+    type: !switch
+      default: true
+  - label: "SystemD boot editor"
+    id: boot.loader.systemd-boot.editor
+    description: "Allow editing the kernel command-line before boot. This allows gaining root access by passing init=/bin/sh as a kernel parameter."
+    type: !switch
+      default: false
