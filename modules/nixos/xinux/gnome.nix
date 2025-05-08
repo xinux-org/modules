@@ -110,6 +110,16 @@ in {
       };
     };
 
+    fonts.packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      liberation_ttf
+      fira-code
+      fira-code-symbols
+      (nerdfonts.override {fonts = ["JetBrainsMono"];})
+    ];
+
     environment.variables = {
       # Disable compositing mode in WebKitGTK
       # https://github.com/NixOS/nixpkgs/issues/32580
