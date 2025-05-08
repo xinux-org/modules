@@ -35,17 +35,68 @@ in {
     services.xserver.desktopManager.gnome = {
       favoriteAppsOverride = lib.mkDefault ''
         [org.gnome.shell]
-        favorite-apps=[ 'firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'dev.vlinkz.NixSoftwareCenter.desktop' ]
+        favorite-apps=[ 'firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'org.xinux.NixSoftwareCenter.desktop' ]
       '';
       extraGSettingsOverrides = ''
         [org.gnome.desktop.background]
         picture-uri='file://${pkgs.nixos-artwork.wallpapers.nineish.gnomeFilePath}'
         picture-uri-dark='file://${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.gnomeFilePath}'
+
         [org.gnome.desktop.screensaver]
         picture-uri='file://${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.gnomeFilePath}'
+
+        [org.gnome.desktop.interface]
+        color-scheme='prefer-dark'
+
+        [org.gnome.shell]
+        disable-user-extensions=false
+
+        [org.gnome.shell]
+        enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'light-style@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']
+
+        [org.gnome.mutter]
+        dynamic-workspaces=true
+
+        [org.gnome.mutter]
+        edge-tiling=true
+
+        [org.gnome.desktop.interface]
+        icon-theme='Papirus-Dark'
+
+        [org.gnome.desktop.interface]
+        color-scheme='default'
+
+        [org.gnome.desktop.datetime]
+        automatic-timezone=true
+
+        [org.gnome.tweaks]
+        show-extensions-notice=false
+
+        [org.gnome.desktop.wm.preferences]
+        button-layout='appmenu:minimize,maximize,close'
+
+        [org.gnome.desktop.interface]
+        monospace-font-name='JetBrainsMono Nerd Font 10'
+
+        [org.gnome.shell.extensions.dash-to-dock]
+        multi-monitor=true
+
+        [org.gnome.shell.extensions.dash-to-dock]
+        apply-custom-theme=true
       '';
     };
-    environment.gnome.excludePackages = [nixos-background-info];
-    environment.systemPackages = [xinux-background-info];
+    environment.gnome.excludePackages = [
+      pkgs.xterm
+      nixos-background-info
+    ];
+    environment.systemPackages = [
+      xinux-background-info
+
+      pkgs.gnomeExtensions.appindicator
+      pkgs.gnomeExtensions.dash-to-dock
+      pkgs.gnomeExtensions.gsconnect
+
+      pkgs.papirus-icon-theme
+    ];
   };
 }
