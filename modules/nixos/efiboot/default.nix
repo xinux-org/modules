@@ -12,7 +12,7 @@ in {
   options.modules.efiboot = with types; {
     bootloader = mkOption {
       type = enum ["grub" "systemd-boot"];
-      default = "systemd-boot";
+      default = "grub";
       description = "The kernel to use for booting.";
     };
   };
