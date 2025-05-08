@@ -84,11 +84,45 @@ in {
         [org.gnome.shell.extensions.dash-to-dock]
         apply-custom-theme=true
       '';
+      extraGSettingsOverridePackages = [
+        pkgs.gsettings-desktop-schemas
+        pkgs.gnome-shell
+      ];
     };
+
+    # Setting daemons
+    services = {
+      # Udev daemon management
+      udev.packages = with pkgs; [gnome-settings-daemon];
+    };
+
+    programs = {
+      gnupg.agent = {
+        enable = true;
+        enableSSHSupport = true;
+      };
+      # Enable the DConf configuration system.
+      dconf.enable = true;
+
+      # Enabling seahorse keyring
+      seahorse = {
+        enable = true;
+      };
+    };
+
+    environment.variables = {
+      # Disable compositing mode in WebKitGTK
+      # https://github.com/NixOS/nixpkgs/issues/32580
+      WEBKIT_DISABLE_COMPOSITING_MODE = 1;
+    };
+
+    services.xserver.excludePackages = [pkgs.xterm];
+
     environment.gnome.excludePackages = [
       pkgs.xterm
       nixos-background-info
     ];
+
     environment.systemPackages = [
       xinux-background-info
 
