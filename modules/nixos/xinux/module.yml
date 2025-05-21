@@ -9,18 +9,23 @@ icon:
   path: weather-xinux-symbolic
 
 options:
-- label: "Enable Nix Software Center"
-  id: modules.xinux.nixSoftwareCenter.enable
-  description: "Enable Nix Software Center, a graphical software center for Nix."
-  type: !switch
-    default: true
-- label: "Enable Configuration Editor"
-  id: modules.xinux.nixosConfEditor.enable
-  description: "Enable NixOS Configuration Editor, a graphical editor for NixOS configurations."
-  type: !switch
-    default: true
-- label: "Enable FHS binary compatibility"
-  id: modules.xinux.binaryCompat.enable
-  description: "Enable FHS binary compatibility, allowing you to run binaries from other Linux distributions. This still may not work for all binaries."
-  type: !switch
-    default: false
+  - label: "Enable Nix Software Center"
+    id: modules.xinux.nixSoftwareCenter.enable
+    description: "Enable Nix Software Center, a graphical software center for Nix."
+    type: !switch
+      default: true
+  - label: "Enable Configuration Editor"
+    id: modules.xinux.nixosConfEditor.enable
+    description: "Enable NixOS Configuration Editor, a graphical editor for NixOS configurations."
+    type: !switch
+      default: true
+  - label: "Enable FHS binary compatibility"
+    id: modules.xinux.binaryCompat.enable
+    description: "Enable FHS binary compatibility, allowing you to run binaries from other Linux distributions. This still may not work for all binaries."
+    type: !switch
+      default: false
+  - label: "Enable E-IMZO integration"
+    id: services.e-imzo.enable
+    description: "Enable services of E-IMZO which will start automatically every time user logs in to the system."
+    type: !switch
+      default: false
