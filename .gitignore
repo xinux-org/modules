@@ -1,2 +1,5 @@
+# Direnv
+.direnv
+
 # Nix outputs
 /result

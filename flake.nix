@@ -37,5 +37,6 @@
       inherit inputs;
       channels-config.allowUnfree = true;
       src = ./.;
+      alias.shells.default = "modules";
     };
 }
