@@ -58,7 +58,7 @@ in {
     (mkIf cfg.eimzoIntegraion.enable {
       services.e-imzo.enable = true;
       environment.systemPackages = with inputs; [
-        e-imzo.packages.${system}.e-imzo
+        e-imzo.packages.${system}.default
       ];
     })
     (mkIf cfg.nixSoftwareCenter.enable {
