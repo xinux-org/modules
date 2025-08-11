@@ -30,6 +30,11 @@
       url = "github:xinux-org/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    e-imzo = {
+      url = "github:xinux-org/e-imzo";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
