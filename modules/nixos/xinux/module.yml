@@ -25,7 +25,7 @@ options:
     type: !switch
       default: false
   - label: "Enable E-IMZO integration"
-    id: services.e-imzo.enable
-    description: "Enable services of E-IMZO which will start automatically every time user logs in to the system."
+    id: modules.xinux.eimzoIntegraion.enable
+    description: "Enable services and install software of E-IMZO for easier management of keys."
     type: !switch
       default: false
