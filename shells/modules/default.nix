@@ -7,13 +7,11 @@
   statix,
   deadnix,
 }:
-
 mkShell {
-  nativeBuildInputs =
-    [
-      nixd
-      alejandra
-      statix
-      deadnix
-    ];
+  nativeBuildInputs = [
+    nixd
+    alejandra
+    statix
+    deadnix
+  ];
 }
