@@ -61,9 +61,9 @@ in {
         e-imzo.packages.${system}.default
       ];
     })
-    (mkIf cfg.nixSoftwareCenter.enable {
+    (mkIf cfg.xinuxModuleManager.enable {
       environment.systemPackages = with inputs; [
-        nix-software-center.packages.${system}.nix-software-center
+        xinux-module-manager.packages.${system}.xinux-module-manager
       ];
     })
     (mkIf cfg.binaryCompat.enable {

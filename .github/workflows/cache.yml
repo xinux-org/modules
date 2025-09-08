@@ -19,5 +19,5 @@ jobs:
       - name: Try compiling packages
         run: |
           for pkg in `ls packages`; do
-            nix build .#${pkg} -o ${pkg}
+            nix build .#${pkg} -o ${pkg} --show-trace
           done
