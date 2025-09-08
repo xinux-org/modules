@@ -33,15 +33,15 @@ in {
       default = true;
       description = "Enable Xinux Module Manager, a graphical tool for managing Xinux modules";
     };
-    eimzoIntegraion.enable = mkOption {
-      type = bool;
-      default = true;
-      description = "Enable services and install software of E-IMZO for easier management of keys";
-    };
     binaryCompat.enable = mkOption {
       type = bool;
       default = false;
       description = "Enables FHS binary compatibility (may not work in all cases)";
+    };
+    eimzoIntegraion.enable = mkOption {
+      type = bool;
+      default = true;
+      description = "Enable services and install software of E-IMZO for easier management of keys";
     };
   };
   config = mkMerge [
