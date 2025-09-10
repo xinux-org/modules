@@ -19,6 +19,11 @@ options:
     description: "Enable NixOS Configuration Editor, a graphical editor for NixOS configurations."
     type: !switch
       default: true
+  - label: "Enable Xinux Module Manager"
+    id: modules.xinux.xinuxModuleManager.enable
+    description: "Enable Xinux Module Manager, a graphical tool for managing Xinux modules"
+    type: !switch
+      default: true
   - label: "Enable FHS binary compatibility"
     id: modules.xinux.binaryCompat.enable
     description: "Enable FHS binary compatibility, allowing you to run binaries from other Linux distributions. This still may not work for all binaries."
