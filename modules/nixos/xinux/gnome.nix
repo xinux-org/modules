@@ -141,6 +141,8 @@ in {
       pkgs.gnomeExtensions.gsconnect
 
       pkgs.papirus-icon-theme
+      pkgs.e-imzo-manager
     ];
+    services.e-imzo.enable = true;
   };
 }
