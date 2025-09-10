@@ -2,7 +2,7 @@
   description = "Xinux Modules";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     # Xinux provided
 
@@ -28,11 +28,6 @@
 
     xinux-lib = {
       url = "github:xinux-org/lib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    e-imzo = {
-      url = "github:xinux-org/e-imzo";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
