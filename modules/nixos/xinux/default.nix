@@ -38,11 +38,6 @@ in {
       default = false;
       description = "Enables FHS binary compatibility (may not work in all cases)";
     };
-    eimzoIntegraion.enable = mkOption {
-      type = bool;
-      default = true;
-      description = "Enable services and install software of E-IMZO for easier management of keys";
-    };
   };
   config = mkMerge [
     (mkIf cfg.nixSoftwareCenter.enable {
@@ -53,12 +48,6 @@ in {
     (mkIf cfg.nixosConfEditor.enable {
       environment.systemPackages = with inputs; [
         nixos-conf-editor.packages.${system}.nixos-conf-editor
-      ];
-    })
-    (mkIf cfg.eimzoIntegraion.enable {
-      services.e-imzo.enable = true;
-      environment.systemPackages = with inputs; [
-        e-imzo.packages.${system}.default
       ];
     })
     (mkIf cfg.xinuxModuleManager.enable {
