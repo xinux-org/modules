@@ -33,11 +33,6 @@ in {
       default = true;
       description = "Enable Xinux Module Manager, a graphical tool for managing Xinux modules";
     };
-    eimzoIntegraion.enable = mkOption {
-      type = bool;
-      default = true;
-      description = "Enable services and install software of E-IMZO for easier management of keys";
-    };
     binaryCompat.enable = mkOption {
       type = bool;
       default = false;
@@ -53,12 +48,6 @@ in {
     (mkIf cfg.nixosConfEditor.enable {
       environment.systemPackages = with inputs; [
         nixos-conf-editor.packages.${system}.nixos-conf-editor
-      ];
-    })
-    (mkIf cfg.eimzoIntegraion.enable {
-      services.e-imzo.enable = true;
-      environment.systemPackages = with inputs; [
-        e-imzo.packages.${system}.default
       ];
     })
     (mkIf cfg.xinuxModuleManager.enable {
