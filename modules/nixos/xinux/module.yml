@@ -34,4 +34,3 @@ options:
     description: "Enable services and install software of E-IMZO for easier management of keys."
     type: !switch
       default: false
-

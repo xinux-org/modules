@@ -8,13 +8,10 @@ on:
 jobs:
   lints:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v5
 
       - name: Try compiling packages
         run: |
