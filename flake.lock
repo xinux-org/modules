@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "e-imzo": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757158540,
+        "narHash": "sha256-8Ib1V89cya1dh/vi5Z7TwYIWbvAYOR2/vfCAfI3SLSM=",
+        "owner": "xinux-org",
+        "repo": "e-imzo",
+        "rev": "ab46e79202962a97a12ecb22cd889220bc929b56",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xinux-org",
+        "repo": "e-imzo",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "locked": {
         "lastModified": 1733328505,
