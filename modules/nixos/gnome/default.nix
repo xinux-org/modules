@@ -20,7 +20,7 @@ in {
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
     services.xserver.enable = true;
-    services.displayMservices.xserver.layoutanager.gdm.wayland = true;
+    services.displayManager.gdm.wayland = true;
 
     # Fix GNOME autologin
     systemd.services."getty@tty1".enable = false;
