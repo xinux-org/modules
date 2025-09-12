@@ -32,19 +32,11 @@ in {
 
   config = lib.mkIf config.xinux.gnome.enable {
     xinux.graphical.enable = true;
-    # programs.dconf.enable = true; # Enable the DConf configuration system.
-    # dconf.settings = {
-    #   "org.gnome.shell" = {
-    #     favorite-apps = lib.mkDefault [
-    #       "firefox.desktop"
-    #       "org.gnome.Geary.desktop"
-    #       "org.gnome.Calendar.desktop"
-    #       "org.gnome.Nautilus.desktop"
-    #       "org.xinux.NixSoftwareCenter.desktop"
-    #     ];
-    #   };
-    # };
-    services.xserver.desktopManager.gnome = {
+    services.desktopManager.gnome = {
+      favoriteAppsOverride = lib.mkDefault ''
+        [org.gnome.shell]
+        favorite-apps=[ 'firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'org.xinux.NixSoftwareCenter.desktop' ]
+      '';
       extraGSettingsOverrides = ''
         [org.gnome.desktop.background]
         picture-uri='file://${pkgs.nixos-artwork.wallpapers.nineish.gnomeFilePath}'
