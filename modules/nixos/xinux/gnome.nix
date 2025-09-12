@@ -32,6 +32,7 @@ in {
 
   config = lib.mkIf config.xinux.gnome.enable {
     xinux.graphical.enable = true;
+    programs.dconf.enable = true; # Enable the DConf configuration system.
     dconf.settings = {
       "org.gnome.shell" = {
         favorite-apps = lib.mkDefault [
@@ -108,9 +109,6 @@ in {
         enable = true;
         enableSSHSupport = true;
       };
-      # Enable the DConf configuration system.
-      dconf.enable = true;
-
       # Enabling seahorse keyring
       seahorse = {
         enable = true;
