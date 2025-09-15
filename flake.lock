@@ -1,26 +1,5 @@
 {
   "nodes": {
-    "e-imzo": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1757158540,
-        "narHash": "sha256-8Ib1V89cya1dh/vi5Z7TwYIWbvAYOR2/vfCAfI3SLSM=",
-        "owner": "xinux-org",
-        "repo": "e-imzo",
-        "rev": "ab46e79202962a97a12ecb22cd889220bc929b56",
-        "type": "github"
-      },
-      "original": {
-        "owner": "xinux-org",
-        "repo": "e-imzo",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "locked": {
         "lastModified": 1733328505,
@@ -341,11 +320,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1757487488,
-        "narHash": "sha256-zwE/e7CuPJUWKdvvTCB7iunV4E/+G0lKfv4kk/5Izdg=",
+        "lastModified": 1757745802,
+        "narHash": "sha256-hLEO2TPj55KcUFUU1vgtHE9UEIOjRcH/4QbmfHNF820=",
         "owner": "xinux-org",
         "repo": "nixpkgs",
-        "rev": "ab0f3607a6c7486ea22229b92ed2d355f1482ee0",
+        "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
         "type": "github"
       },
       "original": {
@@ -592,11 +571,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747858696,
-        "narHash": "sha256-++YS2zJNb416JMt0/A5HWCO0ZI869+Ablq/hJjnT7xk=",
+        "lastModified": 1757920370,
+        "narHash": "sha256-1nOL0AzPB7bjTaGpXeHAnh8eDLcjIOhbqCDRQOPPlW8=",
         "owner": "xinux-org",
         "repo": "lib",
-        "rev": "b6e56c5d5a98eeeaea94559a833786533fce94e3",
+        "rev": "aa5224d48ebc0262e007ef3e34b9a4da7906dce5",
         "type": "github"
       },
       "original": {
