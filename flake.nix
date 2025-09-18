@@ -2,7 +2,7 @@
   description = "Xinux Modules";
 
   inputs = {
-    nixpkgs.url = "github:xinux-org/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:xinux-org/nixpkgs/nixos-25.05";
 
     # Xinux provided
 
