@@ -17,10 +17,10 @@ in {
 
   config = {
     # Enable the GNOME Desktop Environment.
-    services.displayManager.gdm.enable = true;
-    services.desktopManager.gnome.enable = true;
+    services.xserver.displayManager.gdm.enable = true;
+    services.xserver.desktopManager.gnome.enable = true;
     services.xserver.enable = true;
-    services.displayManager.gdm.wayland = true;
+    services.xserver.displayManager.gdm.wayland = true;
 
     # Fix GNOME autologin
     systemd.services."getty@tty1".enable = false;
