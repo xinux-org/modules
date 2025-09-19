@@ -1,5 +1,4 @@
 {
-  options,
   config,
   lib,
   pkgs,
@@ -58,6 +57,7 @@ in {
     (mkIf cfg.eimzoIntegraion.enable {
       services.e-imzo.enable = true;
       environment.systemPackages = with pkgs; [
+        e-imzo-manager.packages.${system}.e-imzo-manager
       ];
     })
     (mkIf cfg.xinuxModuleManager.enable {

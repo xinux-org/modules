@@ -1,12 +1,11 @@
 {
   lib,
   config,
-  options,
   pkgs,
   ...
 }: let
   nixos-background-info = pkgs.stdenv.mkDerivation {name = "nixos-background-info";};
-  xinux-background-info = pkgs.writeTextFile rec {
+  xinux-background-info = pkgs.writeTextFile {
     name = "xinux-background-info";
     text = ''
       <?xml version="1.0"?>

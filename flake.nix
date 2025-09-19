@@ -30,6 +30,10 @@
       url = "github:xinux-org/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    e-imzo-manager = {
+      url = "github:xinux-org/e-imzo-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
