@@ -56,8 +56,8 @@ in {
     })
     (mkIf cfg.eimzoIntegraion.enable {
       services.e-imzo.enable = true;
-      environment.systemPackages = [
-        inputs.e-imzo-manager.packages.${system}.default
+      environment.systemPackages = with inputs; [
+        e-imzo-manager.packages.${system}.default
       ];
     })
     (mkIf cfg.xinuxModuleManager.enable {
