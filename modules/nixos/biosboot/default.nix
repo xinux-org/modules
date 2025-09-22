@@ -13,7 +13,6 @@ in {
       systemd-boot.enable = false;
       grub = {
         enable = true;
-        devices = ["nodev"];
         useOSProber = true;
         theme = pkgs.stdenv.mkDerivation {
           pname = "bootloader-theme";
