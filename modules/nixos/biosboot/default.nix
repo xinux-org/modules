@@ -16,12 +16,12 @@ in {
         useOSProber = true;
         theme = pkgs.stdenv.mkDerivation {
           pname = "bootloader-theme";
-          version = "1.0.2";
+          version = "1.0.3";
           src = pkgs.fetchFromGitHub {
             owner = "xinux-org";
             repo = "bootloader-theme";
-            tag = "v1.0.2";
-            hash = "sha256-uEZfnhmXpjgmikppTlM8OQ5FAsmFdvi8dwIAZtaQ/MQ=";
+            tag = "v1.0.3";
+            hash = "sha256-ipaiJiQ3r2B3si1pFKdp/qykcpaGV+EqXRwl6UkCohs=";
           };
           installPhase = "cp -r $src/nixos $out";
         };
