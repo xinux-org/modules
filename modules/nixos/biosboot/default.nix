@@ -13,18 +13,16 @@ in {
       systemd-boot.enable = false;
       grub = {
         enable = true;
+        #splashImage = ./background.png;
         useOSProber = true;
-        theme = pkgs.stdenv.mkDerivation {
-          pname = "bootloader-theme";
-          version = "1.0.2";
-          src = pkgs.fetchFromGitHub {
+        theme = "${
+          (pkgs.fetchFromGitHub {
             owner = "xinux-org";
             repo = "bootloader-theme";
-            tag = "v1.0.2";
-            hash = "sha256-uEZfnhmXpjgmikppTlM8OQ5FAsmFdvi8dwIAZtaQ/MQ=";
-          };
-          installPhase = "cp -r $src/nixos $out";
-        };
+            tag = "v1.0.3";
+            hash = "sha256-ipaiJiQ3r2B3si1pFKdp/qykcpaGV+EqXRwl6UkCohs=";
+          })
+        }/xinux";
       };
     };
     boot.tmp.cleanOnBoot = mkDefault true;
