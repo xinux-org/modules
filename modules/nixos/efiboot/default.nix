@@ -36,6 +36,7 @@ in {
         efi.canTouchEfiVariables = true;
         grub = {
           enable = true;
+          devices = ["nodev"];
           #splashImage = ./background.png;
           useOSProber = true;
           efiSupport = true;
