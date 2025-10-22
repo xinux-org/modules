@@ -112,7 +112,7 @@ in {
         {
           settings =
             {
-              experimental-features = ["nix-command" "flakes"];
+              experimental-features = ["nix-command" "flakes" "pipe-operators"];
               substituters = ["https://cache.xinux.uz/"];
               trusted-public-keys = [
                 "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
