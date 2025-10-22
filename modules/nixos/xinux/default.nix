@@ -113,26 +113,10 @@ in {
           settings =
             {
               experimental-features = ["nix-command" "flakes"];
-              # substituters = [
-              #   "https://cache.xinux.uz/"
-              #   "https://cache.nixos.org/"
-              # ];
-              # trusted-public-keys = [
-              #   "cache.xinux.uz-1:gX2Z53woXiIoLANfcC/Qp7vPPKVdK1sEa8MSiRhjj/M="
-              # ];
-              extra-substituters = [
-                "https://cache.xinux.uz/"
+              substituters = ["https://cache.xinux.uz/"];
+              trusted-public-keys = [
+                "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
               ];
-              extra-trusted-public-keys = [
-                "cache.xinux.uz-1:gX2Z53woXiIoLANfcC/Qp7vPPKVdK1sEa8MSiRhjj/M="
-              ];
-              # binaryCaches = [
-              #   "https://cache.xinux.uz/"
-              #   "https://cache.nixos.org/"
-              # ];
-              # binaryCachePublicKeys = [
-              #   "cache.xinux.uz-1:gX2Z53woXiIoLANfcC/Qp7vPPKVdK1sEa8MSiRhjj/M="
-              # ];
             }
             // (mapAttrsRecursive (_: mkDefault) {
               connect-timeout = 5;
