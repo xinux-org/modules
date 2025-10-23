@@ -42,5 +42,6 @@
       channels-config.allowUnfree = true;
       src = ./.;
       alias.shells.default = "modules";
+      hydraJobs = inputs.self.packages.x86_64-linux;
     };
 }
