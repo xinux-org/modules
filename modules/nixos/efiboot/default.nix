@@ -25,12 +25,6 @@ in {
         boot.loader.systemd-boot.editor = mkDefault false;
       })
     (mkIf (cfg.bootloader == "grub") {
-      # boot.loader.systemd-boot.enable = false;
-      # boot.loader.efi.canTouchEfiVariables = true;
-      # boot.loader.grub.enable = true;
-      # boot.loader.grub.devices = ["nodev"];
-      # boot.loader.grub.efiSupport = true;
-      # boot.loader.grub.useOSProber = true;
       boot.loader = {
         systemd-boot.enable = false;
         efi.canTouchEfiVariables = true;
