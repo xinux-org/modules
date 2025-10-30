@@ -31,7 +31,7 @@ in {
 
   config = lib.mkIf config.xinux.gnome.enable {
     xinux.graphical.enable = true;
-    services.xserver.desktopManager.gnome = {
+    services.desktopManager.gnome = {
       favoriteAppsOverride = lib.mkDefault ''
         [org.gnome.shell]
         favorite-apps=[ 'firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'org.xinux.NixSoftwareCenter.desktop' ]
@@ -51,7 +51,7 @@ in {
         disable-user-extensions=false
 
         [org.gnome.shell]
-        enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'light-style@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']
+        enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'light-style@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'clipboard-indicator@tudmotu.com']
 
         [org.gnome.mutter]
         dynamic-workspaces=true
