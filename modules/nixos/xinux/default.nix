@@ -11,9 +11,10 @@ with lib; let
 in {
   imports = [
     ./gnome.nix
-    ./graphical.nix
-    ./hardware.nix
     ./version.nix
+    ./keyboard.nix
+    ./hardware.nix
+    ./graphical.nix
   ];
 
   options.modules.xinux = with types; {
