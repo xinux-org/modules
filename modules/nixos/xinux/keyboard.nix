@@ -6,7 +6,7 @@
       extraLayouts.uz = {
         description = "Uzbek (Oʻzbekiston)";
         languages = ["eng" "uzb"];
-        symbolsFile = ../../.github/assets/uz_keyboard;
+        symbolsFile = ../../../.github/assets/uz_keyboard;
       };
       layout = "uz,us,ru";
       variant = "latin";
