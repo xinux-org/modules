@@ -10,11 +10,7 @@ with lib; let
   cfg = config.modules.xinux;
 in {
   imports =
-    mkMerge [
-      mkIf
-      config.modules.gnome.enable
-      [./gnome.nix]
-    ]
+    [mkIf config.modules.gnome.enable [./gnome.nix]]
     ++ [
       ./graphical.nix
       ./hardware.nix
