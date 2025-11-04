@@ -9,18 +9,18 @@
 with lib; let
   cfg = config.modules.xinux;
 in {
-  imports = [
-    ./graphical.nix
-    ./hardware.nix
-    ./version.nix
-    ./gnome.nix
-  ];
-  # [mkIf config.modules.gnome.enable [./gnome.nix]]
-  # ++ [
-  #   ./graphical.nix
-  #   ./hardware.nix
-  #   ./version.nix
-  # ];
+  imports = mkMerge mkIf config.modules.gnome.enable [./gnome.nix]
+    ++ [
+      ./graphical.nix
+      ./hardware.nix
+      ./version.nix
+    ];
+    # [mkIf config.modules.gnome.enable [./gnome.nix]]
+    # ++ [
+    #   ./graphical.nix
+    #   ./hardware.nix
+    #   ./version.nix
+    # ];
 
   options.modules.xinux = with types; {
     nixSoftwareCenter.enable = mkOption {

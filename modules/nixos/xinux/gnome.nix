@@ -30,8 +30,7 @@ in {
   };
 
   config =
-    lib.mkIf config.xinux.gnome.enable
-    && config.modules.gnome.enable {
+    lib.mkIf config.xinux.gnome.enable {
       xinux.graphical.enable = true;
       services.xserver.desktopManager.gnome = {
         favoriteAppsOverride = lib.mkDefault ''
