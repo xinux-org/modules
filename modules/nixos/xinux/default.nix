@@ -9,12 +9,17 @@
 with lib; let
   cfg = config.modules.xinux;
 in {
-  imports = [
-    ./gnome.nix
-    ./graphical.nix
-    ./hardware.nix
-    ./version.nix
-  ];
+  imports =
+    mkMerge [
+      mkIf
+      config.modules.gnome.enable
+      [./gnome.nix]
+    ]
+    ++ [
+      ./graphical.nix
+      ./hardware.nix
+      ./version.nix
+    ];
 
   options.modules.xinux = with types; {
     nixSoftwareCenter.enable = mkOption {
@@ -113,9 +118,15 @@ in {
           settings =
             {
               experimental-features = ["nix-command" "flakes" "pipe-operators"];
-              substituters = ["https://cache.xinux.uz/"];
+              substituters = [
+                "https://cache.nixos.org/"
+                # "https://cache.xinux.uz/"
+                "https://nix-community.cachix.org"
+              ];
               trusted-public-keys = [
-                "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
+                "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" # nixos
+                # "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
+                "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" # cum
               ];
             }
             // (mapAttrsRecursive (_: mkDefault) {
