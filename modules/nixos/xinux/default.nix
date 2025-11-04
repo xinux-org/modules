@@ -9,19 +9,24 @@
 with lib; let
   cfg = config.modules.xinux;
 in {
-  imports =
-    (
-      if config.modules.gnome.enable
-      then [
-        ./gnome.nix
-      ]
-      else []
-    )
-    ++ [
-      ./graphical.nix
-      ./hardware.nix
-      ./version.nix
-    ];
+  imports = [
+    ./graphical.nix
+    ./hardware.nix
+    ./version.nix
+    ./gnome.nix
+  ];
+  # (
+  #   if config.modules.gnome.enable
+  #   then [
+  #     ./gnome.nix
+  #   ]
+  #   else []
+  # )
+  # ++ [
+  #   ./graphical.nix
+  #   ./hardware.nix
+  #   ./version.nix
+  # ];
   # [mkIf config.modules.gnome.enable [./gnome.nix]]
   # ++ [
   #   ./graphical.nix
