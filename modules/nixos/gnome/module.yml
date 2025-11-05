@@ -11,11 +11,6 @@ icon:
   path: start-here-symbolic
 
 options:
-- label: "GNOME"
-  id: modules.gnome.enable
-  description: "Enable GNOME"
-  type: !switch
-    default: true
 - label: "Games"
   id: services.gnome.games.enable
   description: "Enable GNOME games."

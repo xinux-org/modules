@@ -15,24 +15,6 @@ in {
     ./version.nix
     ./gnome.nix
   ];
-  # (
-  #   if config.modules.gnome.enable
-  #   then [
-  #     ./gnome.nix
-  #   ]
-  #   else []
-  # )
-  # ++ [
-  #   ./graphical.nix
-  #   ./hardware.nix
-  #   ./version.nix
-  # ];
-  # [mkIf config.modules.gnome.enable [./gnome.nix]]
-  # ++ [
-  #   ./graphical.nix
-  #   ./hardware.nix
-  #   ./version.nix
-  # ];
 
   options.modules.xinux = with types; {
     nixSoftwareCenter.enable = mkOption {
@@ -55,11 +37,11 @@ in {
       default = false;
       description = "Enables FHS binary compatibility (may not work in all cases)";
     };
-    # eimzoIntegraion.enable = mkOption {
-    #   type = bool;
-    #   default = true;
-    #   description = "Enable services and install software of E-IMZO for easier management of keys";
-    # };
+    eimzoIntegraion.enable = mkOption {
+      type = bool;
+      default = true;
+      description = "Enable services and install software of E-IMZO for easier management of keys";
+    };
   };
   config = mkMerge [
     (mkIf cfg.nixSoftwareCenter.enable {
@@ -72,12 +54,12 @@ in {
         nixos-conf-editor.packages.${system}.nixos-conf-editor
       ];
     })
-    # (mkIf cfg.eimzoIntegraion.enable {
-    #   services.e-imzo.enable = true;
-    #   environment.systemPackages = with inputs; [
-    #     e-imzo-manager.packages.${system}.default
-    #   ];
-    # })
+    (mkIf cfg.eimzoIntegraion.enable {
+      services.e-imzo.enable = true;
+      environment.systemPackages = with inputs; [
+        e-imzo-manager.packages.${system}.default
+      ];
+    })
     (mkIf cfg.xinuxModuleManager.enable {
       environment.systemPackages = with inputs; [
         xinux-module-manager.packages.${system}.xinux-module-manager

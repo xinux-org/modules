@@ -29,4 +29,8 @@ options:
     description: "Enable FHS binary compatibility, allowing you to run binaries from other Linux distributions. This still may not work for all binaries."
     type: !switch
       default: false
-
+  - label: "Enable E-IMZO integration"
+    id: modules.xinux.eimzoIntegraion.enable
+    description: "Enable services and install software of E-IMZO for easier management of keys."
+    type: !switch
+      default: false

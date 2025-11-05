@@ -9,12 +9,6 @@ with lib; let
   cfg = config.modules.gnome;
 in {
   options.modules.gnome = with types; {
-    enable = mkOption {
-      type = lib.types.bool;
-      default = true;
-      example = false;
-      description = "Enable GNOME module";
-    };
     gsconnect.enable =
       mkEnableOption "Enable KDE Connect integration";
     removeUtils.enable =
@@ -22,12 +16,12 @@ in {
   };
 
   config = mkMerge [
-    (mkIf cfg.enable {
+    {
       # Enable the GNOME Desktop Environment.
-      services.xserver.displayManager.gdm.enable = true;
-      services.xserver.desktopManager.gnome.enable = true;
+      services.displayManager.gdm.enable = true;
+      services.desktopManager.gnome.enable = true;
       services.xserver.enable = true;
-      services.xserver.displayManager.gdm.wayland = true;
+      services.displayManager.gdm.wayland = true;
 
       # Fix GNOME autologin
       systemd.services."getty@tty1".enable = false;
@@ -38,7 +32,13 @@ in {
         enable = true;
       };
 
-      environment.gnome.excludePackages = mkIf cfg.removeUtils.enable (
+      environment.systemPackages = [pkgs.epiphany];
+    }
+    (mkIf cfg.removeUtils.enable {
+      modules.xinux.nixosConfEditor.enable = false;
+      modules.xinux.eimzoIntegraion.enable = false;
+
+      environment.gnome.excludePackages = (
         (with pkgs.gnome; [
           baobab
           cheese
@@ -64,21 +64,6 @@ in {
         ++ (with pkgs; [
           ])
       );
-    })
-    (mkIf (!cfg.enable) {
-      # Enable the GNOME Desktop Environment.
-      services.xserver.displayManager.gdm.enable = true;
-      services.xserver.displayManager.gdm.wayland = true;
-      services.xserver.enable = true;
-
-      # Fix GNOME autologin
-      systemd.services."getty@tty1".enable = false;
-      systemd.services."autovt@tty1".enable = false;
-
-      programs.kdeconnect = mkIf cfg.gsconnect.enable {
-        package = pkgs.gnomeExtensions.gsconnect;
-        enable = true;
-      };
     })
   ];
 }
