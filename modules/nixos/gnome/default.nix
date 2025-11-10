@@ -11,8 +11,11 @@ in {
   options.modules.gnome = with types; {
     gsconnect.enable =
       mkEnableOption "Enable KDE Connect integration";
-    removeUtils.enable =
-      mkEnableOption "Remove non-essential GNOME utilities";
+    removeUtils.enable = mkOption {
+      type = bool;
+      default = false;
+      description = "Remove non-essential GNOME utilities";
+    };
   };
 
   config = mkMerge [
@@ -34,7 +37,7 @@ in {
 
       environment.systemPackages = [pkgs.epiphany];
     }
-    (mkIf cfg.gnome.removeUtils.enable {
+    (mkIf cfg.removeUtils.enable {
       modules.xinux.nixosConfEditor.enable = false;
       modules.xinux.eimzoIntegraion.enable = false;
 
