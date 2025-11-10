@@ -35,7 +35,10 @@ in {
         enable = true;
       };
 
-      environment.systemPackages = [pkgs.epiphany];
+      environment.systemPackages = with pkgs; [
+        epiphany
+        baobab
+      ];
     }
     (mkIf cfg.removeUtils.enable {
       modules.xinux.nixosConfEditor.enable = false;
@@ -43,10 +46,8 @@ in {
 
       environment.gnome.excludePackages = (
         (with pkgs.gnome; [
-          baobab
           cheese
           eog
-          epiphany
           file-roller
           gnome-calculator
           gnome-calendar
