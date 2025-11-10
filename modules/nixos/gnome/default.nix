@@ -43,27 +43,29 @@ in {
       modules.xinux.nixosConfEditor.enable = false;
       modules.xinux.eimzoIntegraion.enable = false;
 
-      environment.gnome.excludePackages = with pkgs; [
-        baobab
-        cheese
-        eog
-        file-roller
-        gnome-calculator
-        gnome-calendar
-        gnome-characters
-        gnome-clocks
-        gnome-contacts
-        gnome-font-viewer
-        gnome-logs
-        gnome-maps
-        gnome-music
-        gnome-weather
-        pkgs.gnome-connections
-        pkgs.gnome-photos
-        pkgs.gnome-text-editor
-        simple-scan
-        totem
-      ];
+      services.gnome.core-utilities.enable = false;
+
+      # environment.gnome.excludePackages = with pkgs; [
+      #   baobab
+      #   cheese
+      #   eog
+      #   file-roller
+      #   gnome-calculator
+      #   gnome-calendar
+      #   gnome-characters
+      #   gnome-clocks
+      #   gnome-contacts
+      #   gnome-font-viewer
+      #   gnome-logs
+      #   gnome-maps
+      #   gnome-music
+      #   gnome-weather
+      #   pkgs.gnome-connections
+      #   pkgs.gnome-photos
+      #   pkgs.gnome-text-editor
+      #   simple-scan
+      #   totem
+      # ];
     })
   ];
 }
