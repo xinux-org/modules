@@ -34,7 +34,7 @@ in {
 
       environment.systemPackages = [pkgs.epiphany];
     }
-    (mkIf modules.gnome.removeUtils.enable {
+    (mkIf cfg.gnome.removeUtils.enable {
       modules.xinux.nixosConfEditor.enable = false;
       modules.xinux.eimzoIntegraion.enable = false;
 
