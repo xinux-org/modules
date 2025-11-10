@@ -10,10 +10,11 @@ with lib; let
   cfg = config.modules.xinux;
 in {
   imports = [
-    ./graphical.nix
-    ./hardware.nix
-    ./version.nix
     ./gnome.nix
+    ./version.nix
+    ./hardware.nix
+    ./keyboard.nix
+    ./graphical.nix
   ];
 
   options.modules.xinux = with types; {
@@ -114,14 +115,12 @@ in {
             {
               experimental-features = ["nix-command" "flakes" "pipe-operators"];
               substituters = [
+                "https://cache.xinux.uz/"
                 "https://cache.nixos.org/"
-                # "https://cache.xinux.uz/"
-                "https://nix-community.cachix.org"
               ];
               trusted-public-keys = [
+                "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
                 "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" # nixos
-                # "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
-                "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" # cum
               ];
             }
             // (mapAttrsRecursive (_: mkDefault) {
