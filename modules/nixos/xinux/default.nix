@@ -10,10 +10,10 @@ with lib; let
   cfg = config.modules.xinux;
 in {
   imports = [
+    ./l10n.nix
     ./gnome.nix
     ./version.nix
     ./hardware.nix
-    ./keyboard.nix
     ./graphical.nix
   ];
 

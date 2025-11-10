@@ -14,4 +14,12 @@
   environment.systemPackages = with pkgs; [
     hunspellDicts.uz_UZ
   ];
+
+  i18n = {
+    extraLocales = [
+      "en_US.UTF-8"
+      "ru_RU.UTF-8"
+      "uz_UZ.UTF-8"
+    ];
+  };
 }
