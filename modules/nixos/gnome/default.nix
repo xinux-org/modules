@@ -37,7 +37,6 @@ in {
 
       environment.systemPackages = with pkgs; [
         epiphany
-        baobab
       ];
     }
     (mkIf cfg.removeUtils.enable {
@@ -45,7 +44,8 @@ in {
       modules.xinux.eimzoIntegraion.enable = false;
 
       environment.gnome.excludePackages = (
-        (with pkgs.gnome; [
+        (with pkgs; [
+          baobab
           cheese
           eog
           file-roller
