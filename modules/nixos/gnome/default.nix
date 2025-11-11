@@ -36,7 +36,7 @@ in {
       };
 
       environment.systemPackages = with pkgs; [
-        epiphany
+        gnome-console
       ];
     }
     (mkIf cfg.removeUtils.enable {
@@ -45,27 +45,9 @@ in {
 
       services.gnome.core-utilities.enable = false;
 
-      # environment.gnome.excludePackages = with pkgs; [
-      #   baobab
-      #   cheese
-      #   eog
-      #   file-roller
-      #   gnome-calculator
-      #   gnome-calendar
-      #   gnome-characters
-      #   gnome-clocks
-      #   gnome-contacts
-      #   gnome-font-viewer
-      #   gnome-logs
-      #   gnome-maps
-      #   gnome-music
-      #   gnome-weather
-      #   pkgs.gnome-connections
-      #   pkgs.gnome-photos
-      #   pkgs.gnome-text-editor
-      #   simple-scan
-      #   totem
-      # ];
+      environment.gnome.excludePackages = with pkgs; [
+        gnome-tour
+      ];
     })
   ];
 }
