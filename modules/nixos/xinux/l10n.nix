@@ -11,8 +11,8 @@
       };
     };
   };
-  environment.systemPackages = with pkgs; [
-    hunspellDicts.uz_UZ
+  environment.systemPackages = [
+    pkgs.hunspellDicts.uz_UZ
   ];
 
   i18n = {
