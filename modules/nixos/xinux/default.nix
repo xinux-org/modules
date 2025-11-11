@@ -15,6 +15,7 @@ in {
     ./version.nix
     ./hardware.nix
     ./graphical.nix
+    ./wallpapers.nix
   ];
 
   options.modules.xinux = with types; {

@@ -5,26 +5,8 @@
   ...
 }: let
   nixos-background-info = pkgs.stdenv.mkDerivation {name = "nixos-background-info";};
-  xinux-background-info = pkgs.writeTextFile {
-    name = "xinux-background-info";
-    text = ''
-      <?xml version="1.0"?>
-      <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
-      <wallpapers>
-        <wallpaper deleted="false">
-          <name>Blobs</name>
-          <filename>${pkgs.nixos-artwork.wallpapers.nineish.gnomeFilePath}</filename>
-          <filename-dark>${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.gnomeFilePath}</filename-dark>
-          <options>zoom</options>
-          <shade_type>solid</shade_type>
-          <pcolor>#3a4ba0</pcolor>
-          <scolor>#2f302f</scolor>
-        </wallpaper>
-      </wallpapers>
-    '';
-    destination = "/share/gnome-background-properties/xinux.xml";
-  };
 in {
+
   options.xinux.gnome = {
     enable = lib.mkEnableOption "Xinux GNOME configuration";
   };
@@ -132,8 +114,6 @@ in {
     environment.systemPackages =
       # if minimal mode enabled keep these extensions
       lib.mkIf (!config.modules.gnome.removeUtils.enable) [
-        xinux-background-info
-
         pkgs.gnomeExtensions.appindicator
         pkgs.gnomeExtensions.dash-to-dock
         pkgs.papirus-icon-theme
