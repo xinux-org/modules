@@ -403,11 +403,11 @@
         "xinux-lib": "xinux-lib"
       },
       "locked": {
-        "lastModified": 1762515266,
-        "narHash": "sha256-TXTezsa6ZNk766kgTJ/xIjsM7ZpxK3QhdZEB7ld+j3c=",
+        "lastModified": 1763042559,
+        "narHash": "sha256-bY5TXVspnEHZ+Yt4oPNGq6vrPgojsHTSMlzHJ3Cu+jo=",
         "owner": "xinux-org",
         "repo": "software-center",
-        "rev": "1172e46a30f1feb41f4ef5ff2bfb2e8e1596b4a2",
+        "rev": "d28e0505132ad499afb856dcf8331b405eb8ea61",
         "type": "github"
       },
       "original": {
