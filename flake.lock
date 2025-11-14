@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762950366,
-        "narHash": "sha256-+BV0kmUZ2vayTZ8fikp2t+ghNILe9Kl4eo+JPKV/vmU=",
+        "lastModified": 1763103187,
+        "narHash": "sha256-Eg3q1e1E7XVavvvWEPPJC3DOI4pQ/iTRZfeI/074Za0=",
         "owner": "xinux-org",
         "repo": "e-imzo-manager",
-        "rev": "770d89d9f1a1532e6ad8e19d905216d05c608a24",
+        "rev": "91b0d8a999c22fb3617ed4c80662645b2eee1fdf",
         "type": "github"
       },
       "original": {
