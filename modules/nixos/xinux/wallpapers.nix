@@ -54,7 +54,7 @@
   # ] -> {xinux-orange = pkgs.writeTextFile {}}; { xinux-orange = pkgs.writeTextFile {};}
 in {
   options.xinux.wallpapers = lib.mkOption {
-    type = lib.types.attrs; #lib.types.path;
+    type = lib.types.attrs; #lib.types.path; # this should be ablolute path bruh.
     default = {};
     example = {
       xinux-orange = pkgs.writeTextFile {};
