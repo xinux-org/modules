@@ -1,6 +1,7 @@
 # Original from: uzinfocom-org/instances
 {
   pkgs,
+  lib,
   ...
 }: let
   wallpapers = [
@@ -41,9 +42,30 @@
       destination = "/share/gnome-background-properties/${i.name}.xml";
     };
 
-  mkWallpapers = wallpapers:
-  # mapped backgrounds
-    builtins.map mkWallpaper wallpapers; # [pkgs.writeTextFile {} pkgs.writeTextFile {}]
+  mkWallpapers = builtins.listToAttrs (builtins.map (wp: {
+      name = wp.name;
+      value = builtins.map mkWallpaper wp;
+    })
+    wallpapers);
+  # imagination:
+  # [ { name = "foo"; value = pkgs.writeTextFile{}; }
+  #   { name = "bar"; value = pkgs.writeTextFile{}; }
+  #   { name = "bar"; value = pkgs.writeTextFile{}; }
+  # ] -> {xinux-orange = pkgs.writeTextFile {}}; { xinux-orange = pkgs.writeTextFile {};}
 in {
-  config.environment.systemPackages = mkWallpapers wallpapers;
+  options.xinux.wallpapers = lib.mkOption {
+    type = lib.types.attrsOf lib.types.derivation;
+    default = {};
+    example = {
+      xinux-orange = pkgs.writeTextFile {};
+      xinux-blue = pkgs.writeTextFile {};
+    };
+    description = "A set of custom wallpaper derivations.";
+  };
+
+  config = {
+    xinux.wallpaper = mkWallpapers;
+
+    environment.systemPackages = builtins.attrValues mkWallpapers; # [pkgs.writeTextFile{} pkgs.writeTextFile{}]
+  };
 }

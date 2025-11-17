@@ -20,11 +20,11 @@ in {
       '';
       extraGSettingsOverrides = ''
         [org.gnome.desktop.background]
-        picture-uri='file://${config.environment.systemPackages."xinux-orange".source}'
-        picture-uri-dark='file://${config.environment.systemPackages."xinux-orange".source}'
+        picture-uri='file://${config.xinux.wallpapers."xinux-orange"}'
+        picture-uri-dark='file://${config.xinux.wallpapers."xinux-orange"}'
 
         [org.gnome.desktop.screensaver]
-        picture-uri='file://${config.environment.systemPackages."xinux-orange".source}'
+        picture-uri='file://${config.xinux.wallpapers."xinux-orange"}'
 
         [org.gnome.desktop.interface]
         color-scheme='prefer-dark'
