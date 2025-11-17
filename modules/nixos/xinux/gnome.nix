@@ -20,11 +20,11 @@ in {
       '';
       extraGSettingsOverrides = ''
         [org.gnome.desktop.background]
-        picture-uri='file://${pkgs.nixos-artwork.wallpapers.nineish.gnomeFilePath}'
-        picture-uri-dark='file://${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.gnomeFilePath}'
+        picture-uri='file://${config.environment.systemPackages."xinux-orange".source}'
+        picture-uri-dark='file://${config.environment.systemPackages."xinux-orange".source}'
 
         [org.gnome.desktop.screensaver]
-        picture-uri='file://${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.gnomeFilePath}'
+        picture-uri='file://${config.environment.systemPackages."xinux-orange".source}'
 
         [org.gnome.desktop.interface]
         color-scheme='prefer-dark'
