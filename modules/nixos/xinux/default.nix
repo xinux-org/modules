@@ -96,9 +96,10 @@ in {
       xinux.osInfo.enable = mkDefault true;
       xinux.gnome.enable = mkDefault true;
 
-      environment.systemPackages = with inputs; [
-        xin.packages.${system}.xin
+      environment.systemPackages = [
+        inputs.xin.packages.${system}.xin
         pkgs.git # For rebuiling with github flakes
+        pkgs.libreoffice
       ];
 
       # Some programs need SUID wrappers, can be configured further or are
