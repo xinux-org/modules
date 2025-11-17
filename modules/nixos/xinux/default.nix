@@ -41,7 +41,7 @@ in {
     };
     eimzoIntegraion.enable = mkOption {
       type = bool;
-      default = false;
+      default = true;
       description = "Enable services and install software of E-IMZO for easier management of keys";
     };
   };
@@ -57,7 +57,7 @@ in {
       ];
     })
     (mkIf cfg.eimzoIntegraion.enable {
-      services.e-imzo.enable = true;
+      services.e-imzo.enable = mkForce true;
       environment.systemPackages = with inputs; [
         e-imzo-manager.packages.${system}.default
       ];
