@@ -64,7 +64,7 @@ in {
   };
 
   config = {
-    xinux.wallpaper = mkWallpapers;
+    xinux.wallpapers = mkWallpapers;
 
     environment.systemPackages = builtins.attrValues mkWallpapers; # [pkgs.writeTextFile{} pkgs.writeTextFile{}]
   };
