@@ -44,7 +44,7 @@
 
   mkWallpapers = builtins.listToAttrs (builtins.map (wp: {
       name = wp.name;
-      value = builtins.map mkWallpaper wp;
+      value = mkWallpaper wp;
     })
     wallpapers);
   # imagination:
