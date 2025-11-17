@@ -11,13 +11,13 @@
     }
     {
       name = "xinux-blue";
-      light = ../../../.github/assets/wallpapers/xinux-l.jpg;
-      dark = ../../../.github/assets/wallpapers/xinux-d.jpg;
+      light = ../../../../.github/assets/wallpapers/xinux-l.jpg;
+      dark = ../../../../.github/assets/wallpapers/xinux-d.jpg;
     }
     {
       name = "xinux-orange";
-      light = ../../../.github/assets/wallpapers/xinux-orange.jpg;
-      dark = .../../../.github/assets/wallpapers/xinux-orange.jpg;
+      light = ../../../../.github/assets/wallpapers/xinux-orange.jpg;
+      dark = ../.../../../.github/assets/wallpapers/xinux-orange.jpg;
     }
   ];
   mkWallpaper = i:
