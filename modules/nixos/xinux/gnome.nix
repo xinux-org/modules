@@ -113,7 +113,7 @@ in {
 
     environment.systemPackages =
       # if minimal mode enabled keep these extensions
-      lib.mkIf (!config.modules.gnome.removeUtils.enable) [
+      (lib.mkIf (!config.modules.gnome.removeUtils.enable)) [
         pkgs.gnomeExtensions.appindicator
         pkgs.gnomeExtensions.dash-to-dock
         pkgs.papirus-icon-theme
