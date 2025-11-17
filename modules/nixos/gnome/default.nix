@@ -40,8 +40,8 @@ in {
       ];
     }
     (mkIf cfg.removeUtils.enable {
-      modules.xinux.nixosConfEditor.enable = false;
-      modules.xinux.eimzoIntegraion.enable = false;
+      modules.xinux.nixosConfEditor.enable = lib.mkDefault false;
+      modules.xinux.eimzoIntegraion.enable = lib.mkDefault false;
 
       services.gnome.core-utilities.enable = false;
 
