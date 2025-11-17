@@ -54,13 +54,13 @@
   # ] -> {xinux-orange = pkgs.writeTextFile {}}; { xinux-orange = pkgs.writeTextFile {};}
 in {
   options.xinux.wallpapers = lib.mkOption {
-    type = lib.types.attrsOf lib.types.derivation;
+    type = lib.types.listOf lib.types.path;
     default = {};
     example = {
       xinux-orange = pkgs.writeTextFile {};
       xinux-blue = pkgs.writeTextFile {};
     };
-    description = "A set of custom wallpaper derivations.";
+    description = "A set of custom wallpapers";
   };
 
   config = {
