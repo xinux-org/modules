@@ -99,7 +99,6 @@ in {
       environment.systemPackages = [
         inputs.xin.packages.${system}.xin
         pkgs.git # For rebuiling with github flakes
-        pkgs.libreoffice
       ];
 
       # Some programs need SUID wrappers, can be configured further or are
