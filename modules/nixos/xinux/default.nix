@@ -99,6 +99,7 @@ in {
       environment.systemPackages = [
         inputs.xin.packages.${system}.xin
         pkgs.git # For rebuiling with github flakes
+        pkgs.firefox
       ];
 
       # Some programs need SUID wrappers, can be configured further or are
