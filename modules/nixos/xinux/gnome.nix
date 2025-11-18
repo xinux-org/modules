@@ -5,7 +5,7 @@
   ...
 }: let
   nixos-background-info = pkgs.stdenv.mkDerivation {name = "nixos-background-info";};
-  xinux-wallpapers = lib.recurseIntoAttrs (pkgs.callPackage ./wallpapers {});
+  xinux-wallpapers = lib.recurseIntoAttrs (pkgs.callPackage ./wallpapers.nix {});
 in {
   options.xinux.gnome = {
     enable = lib.mkEnableOption "Xinux GNOME configuration";
