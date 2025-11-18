@@ -5,8 +5,8 @@
   ...
 }: let
   nixos-background-info = pkgs.stdenv.mkDerivation {name = "nixos-background-info";};
+  xinux-wallpapers = lib.recurseIntoAttrs (pkgs.callPackage ./wallpapers {});
 in {
-
   options.xinux.gnome = {
     enable = lib.mkEnableOption "Xinux GNOME configuration";
   };
@@ -111,7 +111,7 @@ in {
       nixos-background-info
     ];
 
-    environment.systemPackages = 
+    environment.systemPackages =
       # if minimal mode enabled keep these extensions
       (lib.optionals (!config.modules.gnome.removeUtils.enable) [
         pkgs.gnomeExtensions.appindicator
@@ -121,6 +121,11 @@ in {
       ++ [
         pkgs.gnomeExtensions.gsconnect
         pkgs.gnomeExtensions.clipboard-indicator
+
+        # wallpapers
+        xinux-wallpapers.xinux-blue-light
+        xinux-wallpapers.xinux-blue-dark
+        xinux-wallpapers.xinux-orange
       ];
   };
 }
