@@ -5,7 +5,7 @@
     nixpkgs.url = "github:xinux-org/nixpkgs/nixos-unstable";
 
     # Xinux provided
-    
+
     xin = {
       url = "github:xinux-org/xin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +32,10 @@
     };
     e-imzo-manager = {
       url = "github:xinux-org/e-imzo-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    mac-style-plymouth = {
+      url = "github:xinux-org/xinux-plymouth-theme";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

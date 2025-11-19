@@ -109,6 +109,11 @@ in {
         enableSSHSupport = mkDefault true;
       };
 
+      nixpkgs = {
+        overlays = [
+          inputs.mac-style-plymouth.overlays.default
+        ];
+      };
       # Reasonable Defaults
       nix =
         {
