@@ -797,11 +797,11 @@
         "xinux-lib": "xinux-lib_6"
       },
       "locked": {
-        "lastModified": 1763559133,
-        "narHash": "sha256-Alaa0SHSFK1iy25ucR+fVkgeC1GyzHccByI0uineRoM=",
+        "lastModified": 1763562960,
+        "narHash": "sha256-v1olx0GGmYyzjl+BqHTTd5qyqFZem2jgmmp3QQ/Vf6A=",
         "owner": "xinux-org",
         "repo": "module-manager",
-        "rev": "767c9516f0d1a128b64317d3a1e68f3db3657cf5",
+        "rev": "974248bab82db10ad9cede211c458b2e990033e6",
         "type": "github"
       },
       "original": {
