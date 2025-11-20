@@ -26,11 +26,6 @@ in {
           }/xinux";
         };
       };
-      # plymouth = {
-      #   enable = true;
-      #   theme = "mac-style";
-      #   themePackages = [pkgs.mac-style-plymouth];
-      # };
     };
     boot.tmp.cleanOnBoot = mkDefault true;
   };
