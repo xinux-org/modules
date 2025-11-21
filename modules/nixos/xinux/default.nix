@@ -40,7 +40,7 @@ in {
     };
     eimzoIntegraion.enable = mkOption {
       type = bool;
-      default = true;
+      default = false;
       description = "Enable services and install software of E-IMZO for easier management of keys";
     };
   };
