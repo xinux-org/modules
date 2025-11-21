@@ -419,11 +419,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763733419,
-        "narHash": "sha256-PUBQtjkLeP2XOr8RbEUOetNG/5DL2SwFYd39uJdJQwo=",
+        "lastModified": 1763734980,
+        "narHash": "sha256-7p2OYlhPiHXNYHcBvBkvz9cxyku1C0uTe6p0Wtiwl1k=",
         "owner": "xinux-org",
         "repo": "xinux-plymouth-theme",
-        "rev": "85acf3112d69051e9320c311621f17994b9dbc0e",
+        "rev": "6c0b648e35ba6394c8aff1421be296e331c3e8d4",
         "type": "github"
       },
       "original": {
