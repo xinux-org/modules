@@ -138,6 +138,7 @@ in {
         xinux-wallpapers.xinux-roses
         xinux-wallpapers.xinux-wheel
         xinux-wallpapers.xinux-white-flower
+        xinux-wallpapers.xinux-sky
       ];
   };
 }
