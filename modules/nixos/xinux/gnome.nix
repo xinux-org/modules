@@ -109,6 +109,7 @@ in {
     environment.gnome.excludePackages = [
       pkgs.xterm
       nixos-background-info
+      gnome-backgrounds
     ];
 
     environment.systemPackages =
