@@ -168,8 +168,14 @@ in {
   xinux-white-flower = mkNixBackground {
     name = "xinux-white-flower";
     description = "xinux-white-flower";
-    src = ../../../.github/assets/wallpapers/xinux-white-flower.jpg;
+    src = ../../../.github/assets/wallpapers/white-flower.jpg;
     license = lib.licenses.cc-by-sa-40;
   };
   
+  xinux-sky = mkNixBackground {
+    name = "xinux-sky";
+    description = "xinux-sky";
+    src = ../../../.github/assets/wallpapers/sky.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
 }

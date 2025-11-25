@@ -109,6 +109,7 @@ in {
     environment.gnome.excludePackages = [
       pkgs.xterm
       nixos-background-info
+      gnome-backgrounds
     ];
 
     environment.systemPackages =
@@ -138,6 +139,7 @@ in {
         xinux-wallpapers.xinux-roses
         xinux-wallpapers.xinux-wheel
         xinux-wallpapers.xinux-white-flower
+        xinux-wallpapers.xinux-sky
       ];
   };
 }
