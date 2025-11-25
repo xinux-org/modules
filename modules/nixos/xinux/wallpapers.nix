@@ -87,4 +87,89 @@ in {
     src = ../../../.github/assets/wallpapers/xinux-orange.jpg;
     license = lib.licenses.cc-by-sa-40;
   };
+
+  xinux-ant = mkNixBackground {
+    name = "xinux-ant";
+    description = "xinux-ant";
+    src = ../../../.github/assets/wallpapers/ant.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+
+  xinux-grass = mkNixBackground {
+    name = "xinux-grass";
+    description = "xinux-grass";
+    src = ../../../.github/assets/wallpapers/grass.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+
+  xinux-hill = mkNixBackground {
+    name = "xinux-hill";
+    description = "xinux-hill";
+    src = ../../../.github/assets/wallpapers/hill.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+
+  xinux-lake = mkNixBackground {
+    name = "xinux-lake";
+    description = "xinux-lake";
+    src = ../../../.github/assets/wallpapers/lake.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+
+  xinux-mountain = mkNixBackground {
+    name = "xinux-mountain";
+    description = "xinux-mountain";
+    src = ../../../.github/assets/wallpapers/mountain.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+  
+  xinux-orange-flower = mkNixBackground {
+    name = "xinux-orange-flower";
+    description = "xinux-orange-flower";
+    src = ../../../.github/assets/wallpapers/orange-flower.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+
+  xinux-pink-flower = mkNixBackground {
+    name = "xinux-pink-flower";
+    description = "xinux-pink-flower";
+    src = ../../../.github/assets/wallpapers/pink-flower.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+
+  xinux-red-flower = mkNixBackground {
+    name = "xinux-red-flower";
+    description = "xinux-red-flower";
+    src = ../../../.github/assets/wallpapers/red-flower.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+
+  xinux-river = mkNixBackground {
+    name = "xinux-river";
+    description = "xinux-river";
+    src = ../../../.github/assets/wallpapers/river.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+  
+  xinux-roses = mkNixBackground {
+    name = "xinux-roses";
+    description = "xinux-roses";
+    src = ../../../.github/assets/wallpapers/roses.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+
+  xinux-wheel = mkNixBackground {
+    name = "xinux-wheel";
+    description = "xinux-wheel";
+    src = ../../../.github/assets/wallpapers/wheel.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+
+  xinux-white-flower = mkNixBackground {
+    name = "xinux-white-flower";
+    description = "xinux-white-flower";
+    src = ../../../.github/assets/wallpapers/xinux-white-flower.jpg;
+    license = lib.licenses.cc-by-sa-40;
+  };
+  
 }

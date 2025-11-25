@@ -126,6 +126,18 @@ in {
         xinux-wallpapers.xinux-blue-light
         xinux-wallpapers.xinux-blue-dark
         xinux-wallpapers.xinux-orange
+        xinux-wallpapers.xinux-ant
+        xinux-wallpapers.xinux-grass
+        xinux-wallpapers.xinux-hill
+        xinux-wallpapers.xinux-lake
+        xinux-wallpapers.xinux-mountain
+        xinux-wallpapers.xinux-orange-flower
+        xinux-wallpapers.xinux-pink-flower
+        xinux-wallpapers.xinux-red-flower
+        xinux-wallpapers.xinux-river
+        xinux-wallpapers.xinux-roses
+        xinux-wallpapers.xinux-wheel
+        xinux-wallpapers.xinux-white-flower
       ];
   };
 }
