@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763997350,
-        "narHash": "sha256-dqNOstsw/SPsanNE7aRFM9XztD7j3MHtdhmQJyps0uM=",
+        "lastModified": 1764164845,
+        "narHash": "sha256-VL2mhi/bBE73nLOvFqlQYu3/oN3dmPIqFdTdK/VfPXM=",
         "owner": "xinux-org",
         "repo": "e-imzo-manager",
-        "rev": "af72dc0cdfa0203ac7dabbf090b3063ed22a4985",
+        "rev": "e0fe38195a299b5d7319b3aa5b34606431b28379",
         "type": "github"
       },
       "original": {
@@ -505,16 +505,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1763966396,
-        "narHash": "sha256-6eeL1YPcY1MV3DDStIDIdy/zZCDKgHdkCmsrLJFiZf0=",
+        "lastModified": 1764020296,
+        "narHash": "sha256-6zddwDs2n+n01l+1TG6PlyokDdXzu/oBmEejcH5L5+A=",
         "owner": "xinux-org",
         "repo": "nixpkgs",
-        "rev": "5ae3b07d8d6527c42f17c876e404993199144b6a",
+        "rev": "a320ce8e6e2cc6b4397eef214d202a50a4583829",
         "type": "github"
       },
       "original": {
         "owner": "xinux-org",
-        "ref": "nixos-unstable",
+        "ref": "nixos-25.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -852,11 +852,11 @@
         "xinux-lib": "xinux-lib_6"
       },
       "locked": {
-        "lastModified": 1763806763,
-        "narHash": "sha256-t+8tubqJJksAVjB3k2ofSVuTdXptuD77iKfpU3GA7sA=",
+        "lastModified": 1764240525,
+        "narHash": "sha256-/QSNchZaYOBpreekHkgAg8tznAq62uOoulz+0ZndHU4=",
         "owner": "xinux-org",
         "repo": "module-manager",
-        "rev": "98445a5fd318246205a5c12206fae6c2273d9f04",
+        "rev": "2e109406d244981a9357963169769e96d53dd4e1",
         "type": "github"
       },
       "original": {
