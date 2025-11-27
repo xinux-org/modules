@@ -34,3 +34,12 @@ options:
     description: "Enable services and install software of E-IMZO for easier management of keys."
     type: !switch
       default: false
+  - label: "change language"
+    id: modules.xinux.language
+    description: "set language"
+    type: !enum
+      default: '"uz_UZ.UTF-8"'
+      options:
+        '"ru_RU.UTF-8"': "ruscha"
+        '"en_US.UTF-8"': "inglizcha"
+        '"uz_UZ.UTF-8"': "oʻzbekcha"
