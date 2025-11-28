@@ -852,11 +852,11 @@
         "xinux-lib": "xinux-lib_6"
       },
       "locked": {
-        "lastModified": 1764328222,
+        "lastModified": 1764336107,
         "narHash": "sha256-X6X1jeVTrhGatllrsFuEA5vISz/jGlBTfp6dzUllUkM=",
         "owner": "xinux-org",
         "repo": "module-manager",
-        "rev": "76eac50c74ac3c4e3f0d2071d9f24ba20ae56295",
+        "rev": "b30abec5eebd29abc6cd007e5b9027d2d64e44ca",
         "type": "github"
       },
       "original": {
