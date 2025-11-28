@@ -16,7 +16,7 @@ in {
     services.desktopManager.gnome = {
       favoriteAppsOverride = lib.mkDefault ''
         [org.gnome.shell]
-        favorite-apps=[ 'firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'org.xinux.NixSoftwareCenter.desktop' ]
+        favorite-apps=[ 'firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'org.xinux.NixSoftwareCenter.desktop', 'org.xinux.NixosConfEditor.desktop', 'org.xinux.XinuxModuleManager.desktop', 'uz.xinux.EIMZOManager.desktop' ]
       '';
       extraGSettingsOverrides = ''
         [org.gnome.desktop.background]
