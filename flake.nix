@@ -5,33 +5,33 @@
     nixpkgs.url = "github:xinux-org/nixpkgs/nixos-25.11";
 
     # Xinux provided
+    xinux-lib = {
+      url = "github:xinux-org/lib/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     xin = {
-      url = "github:xinux-org/xin";
+      url = "github:xinux-org/xin/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-software-center = {
-      url = "github:xinux-org/software-center";
+      url = "github:xinux-org/software-center/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     xinux-module-manager = {
-      url = "github:xinux-org/module-manager";
+      url = "github:xinux-org/module-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nixos-conf-editor = {
-      url = "github:xinux-org/conf-editor";
+      url = "github:xinux-org/conf-editor/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    xinux-lib = {
-      url = "github:xinux-org/lib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     e-imzo-manager = {
-      url = "github:xinux-org/e-imzo-manager";
+      url = "github:xinux-org/e-imzo-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     mac-style-plymouth = {
