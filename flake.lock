@@ -907,11 +907,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764764029,
-        "narHash": "sha256-ow+vXXE4QtHmxH/+5jrHRydMdjAZWMakSqIm1aw4wnA=",
+        "lastModified": 1764772891,
+        "narHash": "sha256-3BDE4UghbOKkC/RD44PkyJnz/tnjqPzSZqZnGASXftI=",
         "owner": "xinux-org",
         "repo": "xinux-tour",
-        "rev": "81ec085c57f1950118b0bc5e97b8d394303351b1",
+        "rev": "8e19cf6eb823b3a166ad6401a7af469a010863fa",
         "type": "github"
       },
       "original": {
