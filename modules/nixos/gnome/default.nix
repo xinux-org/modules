@@ -3,6 +3,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 with lib; let
@@ -61,11 +62,7 @@ in {
 
       environment.systemPackages = with pkgs; [
         gnome-console
-<<<<<<< Updated upstream
-        inputs.xinux-tour.packages.${pkgs.stenv.hostPlatform.system}.default;
-=======
-        inputs.xinux-tour.packages.${pkgs.stdenv.hostPlatform.system}.default
->>>>>>> Stashed changes
+        inputs.xinux-tour.packages.${pkgs.stenv.hostPlatform.system}.default
       ];
     }
     (mkIf cfg.removeUtils.enable {
