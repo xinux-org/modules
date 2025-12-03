@@ -38,6 +38,10 @@
       url = "github:xinux-org/xinux-plymouth-theme";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    xinux-tour = {
+      url = "github:xinux-org/xinux-tour";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:

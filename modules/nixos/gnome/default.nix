@@ -8,6 +8,30 @@
 with lib; let
   cfg = config.modules.gnome;
 in {
+  };
+
+  config = mkMerge [
+    {
+      # Enable the GNOME Desktop Environment.
+      services.displayManager.gdm.enable = true;
+      services.desktopManager.gnome.enable = true;
+      services.xserver.enable = true;
+  };
+
+  config = mkMerge [
+    {
+      # Enable the GNOME Desktop Environment.
+      services.displayManager.gdm.enable = true;
+      services.desktopManager.gnome.enable = true;
+      services.xserver.enable = true;
+  };
+
+  config = mkMerge [
+    {
+      # Enable the GNOME Desktop Environment.
+      services.displayManager.gdm.enable = true;
+      services.desktopManager.gnome.enable = true;
+      services.xserver.enable = true;
   options.modules.gnome = with types; {
     gsconnect.enable =
       mkEnableOption "Enable KDE Connect integration";
@@ -37,6 +61,7 @@ in {
 
       environment.systemPackages = with pkgs; [
         gnome-console
+        inputs.xinux-tour.packages.${pkgs.stenv.hostPlatform.system}.default;
       ];
     }
     (mkIf cfg.removeUtils.enable {

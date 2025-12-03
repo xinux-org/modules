@@ -110,6 +110,7 @@ in {
       pkgs.xterm
       nixos-background-info
       pkgs.gnome-backgrounds
+      pkgs.gnome-tour
     ];
 
     environment.systemPackages =
