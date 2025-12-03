@@ -37,6 +37,7 @@ in {
 
       environment.systemPackages = with pkgs; [
         gnome-console
+        inputs.xinux-tour.packages.${pkgs.stenv.hostPlatform.system}.default
       ];
     }
     (mkIf cfg.removeUtils.enable {
