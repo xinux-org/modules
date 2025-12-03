@@ -61,7 +61,11 @@ in {
 
       environment.systemPackages = with pkgs; [
         gnome-console
+<<<<<<< Updated upstream
         inputs.xinux-tour.packages.${pkgs.stenv.hostPlatform.system}.default;
+=======
+        inputs.xinux-tour.packages.${pkgs.stdenv.hostPlatform.system}.default
+>>>>>>> Stashed changes
       ];
     }
     (mkIf cfg.removeUtils.enable {
