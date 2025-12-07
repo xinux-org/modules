@@ -460,11 +460,11 @@
         "xinux-lib": "xinux-lib"
       },
       "locked": {
-        "lastModified": 1765062460,
-        "narHash": "sha256-1IYjyo7D9RRjQmAg/0KM59ae9ZnTS7jKg2BDMkfwYUU=",
+        "lastModified": 1765131889,
+        "narHash": "sha256-aqjMV1GrQLsGp8nvVgqgfcS5f4IAdPnwzL9CU7f1hWk=",
         "owner": "xinux-org",
         "repo": "software-center",
-        "rev": "830a53fe5622719fc119c83c1e0e31824591d843",
+        "rev": "b4316d3095b7239d017e2878e8656685a06d7da1",
         "type": "github"
       },
       "original": {
