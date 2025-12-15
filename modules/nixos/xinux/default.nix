@@ -52,23 +52,23 @@ in {
   config = mkMerge [
     (mkIf cfg.nixSoftwareCenter.enable {
       environment.systemPackages = with inputs; [
-        nix-software-center.packages.${system}.nix-software-center
+        nix-software-center.packages."${pkgs.stdenv.hostPlatform.system}".nix-software-center
       ];
     })
     (mkIf cfg.nixosConfEditor.enable {
       environment.systemPackages = with inputs; [
-        nixos-conf-editor.packages.${system}.nixos-conf-editor
+        nixos-conf-editor.packages."${pkgs.stdenv.hostPlatform.system}".nixos-conf-editor
       ];
     })
     (mkIf cfg.eimzoIntegraion.enable {
       services.e-imzo.enable = mkForce true;
       environment.systemPackages = with inputs; [
-        e-imzo-manager.packages.${system}.default
+        e-imzo-manager.packages."${pkgs.stdenv.hostPlatform.system}".default
       ];
     })
     (mkIf cfg.xinuxModuleManager.enable {
       environment.systemPackages = with inputs; [
-        xinux-module-manager.packages.${system}.xinux-module-manager
+        xinux-module-manager.packages."${pkgs.stdenv.hostPlatform.system}".xinux-module-manager
       ];
     })
     (mkIf (cfg.language == "uz_UZ.UTF-8")
