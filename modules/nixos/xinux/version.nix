@@ -44,7 +44,7 @@ in {
     enable = mkEnableOption "Xinux Main System";
     codeName = mkOption {
       type = types.str;
-      default = "Jadid";
+      default = "Mahalla";
       description = "Codename for the current release";
     };
   };
