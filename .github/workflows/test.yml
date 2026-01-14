@@ -17,7 +17,7 @@ jobs:
   update-merge:
     name: "Merge Update PRs"
     needs: [test-flake]
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     if: ${{ github.event.pull_request.user.login == 'xinuxmgrbot' && github.event_name == 'pull_request'}}
 
     steps:
