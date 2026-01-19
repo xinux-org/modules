@@ -9,7 +9,7 @@ in {
       uz = {
         description = "Uzbek";
         languages = ["uzb"];
-        symbolsFile = "${xkbPath}/uz_latin";
+        symbolsFile = "${xkbPath}/uz";
       };
       uz-us = {
         description = "Uzbek (US)";
