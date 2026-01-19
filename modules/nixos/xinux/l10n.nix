@@ -6,8 +6,8 @@ in {
 
     # add uzbek keyboard
     xkb = {
-	  # Switch between layouts using Alt+Shift
-      options = "grp:alt_shift_toggle";
+      # Switch between layouts using Alt+Shift
+      options = "grp:alt_shift_toggle,lv3:ralt_switch";
       variant = "latin";
       layout = "uz,uz(latin),us,ru";
 
@@ -34,8 +34,6 @@ in {
         };
       };
     };
-
-    # Switch between layouts using Alt+Shift
   };
   environment.systemPackages = [
     pkgs.hunspellDicts.uz_UZ
