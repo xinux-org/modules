@@ -6,6 +6,8 @@ in {
 
     # add uzbek keyboard
     xkb = {
+	  # Switch between layouts using Alt+Shift
+      options = "grp:alt_shift_toggle";
       variant = "latin";
       layout = "uz,uz(latin),us,ru";
 
