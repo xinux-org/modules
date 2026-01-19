@@ -29,7 +29,6 @@ in {
     };
 
     # Switch between layouts using Alt+Shift
-    xkb.options = "grp:alt_shift_toggle";
   };
   environment.systemPackages = [
     pkgs.hunspellDicts.uz_UZ
