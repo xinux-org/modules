@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  xkbPath = "../../../.github/assest/xkb";
+  xkbPath = "./xkb";
 in {
   services.xserver = {
     enable = true;
