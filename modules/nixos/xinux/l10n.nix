@@ -1,6 +1,5 @@
-{pkgs, ...}: let
-  xkbPath = "./xkb";
-in {
+{pkgs, ...}:
+{
   services.xserver = {
     enable = true;
 
@@ -15,22 +14,22 @@ in {
         uz = {
           description = "Uzbek";
           languages = ["uzb"];
-          symbolsFile = "${xkbPath}/uz";
+          symbolsFile = .xkb/uz;
         };
         uz-us = {
           description = "Uzbek (US)";
           languages = ["uzb"];
-          symbolsFile = "${xkbPath}/uz_us";
+          symbolsFile = .xkb/uz_us;
         };
         uz-2023 = {
           description = "Uzbek (2023)";
           languages = ["uzb"];
-          symbolsFile = "${xkbPath}/uz_2023";
+          symbolsFile = .xkb/uz_2023;
         };
         uz-cyrillic = {
           description = "Uzbek (Cyrillic)";
           languages = ["uzb"];
-          symbolsFile = "${xkbPath}/uz_cyrillic";
+          symbolsFile = .xkb/uz_cyrillic;
         };
       };
     };
