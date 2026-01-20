@@ -1,41 +1,37 @@
-{pkgs, ...}: let
-  xkbPath = "../../../.github/assest/xkb";
-in {
+{pkgs, ...}: {
   services.xserver = {
     enable = true;
 
     # add uzbek keyboard
     xkb = {
-	  # Switch between layouts using Alt+Shift
-      options = "grp:alt_shift_toggle";
+      # Switch between layouts using Alt+Shift
+      options = "grp:alt_shift_toggle,lv3:ralt_switch";
       variant = "latin";
-      layout = "uz,uz(latin),us,ru";
+      layout = "uz,uz-cyrillic,us,ru";
 
       extraLayouts = {
         uz = {
           description = "Uzbek";
           languages = ["uzb"];
-          symbolsFile = "${xkbPath}/uz";
+          symbolsFile = ./xkb/uz;
         };
         uz-us = {
           description = "Uzbek (US)";
           languages = ["uzb"];
-          symbolsFile = "${xkbPath}/uz_us";
+          symbolsFile = ./xkb/uz_us;
         };
         uz-2023 = {
           description = "Uzbek (2023)";
           languages = ["uzb"];
-          symbolsFile = "${xkbPath}/uz_2023";
+          symbolsFile = ./xkb/uz_2023;
         };
         uz-cyrillic = {
           description = "Uzbek (Cyrillic)";
           languages = ["uzb"];
-          symbolsFile = "${xkbPath}/uz_cyrillic";
+          symbolsFile = ./xkb/uz_cyrillic;
         };
       };
     };
-
-    # Switch between layouts using Alt+Shift
   };
   environment.systemPackages = [
     pkgs.hunspellDicts.uz_UZ
