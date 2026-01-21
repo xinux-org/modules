@@ -7,7 +7,6 @@
       # Switch between layouts using Alt+Shift
       options = "grp:alt_shift_toggle,lv3:ralt_switch";
       variant = "latin";
-      layout = "uz,uz-cyrillic,us,ru";
 
       extraLayouts = {
         uz = {
