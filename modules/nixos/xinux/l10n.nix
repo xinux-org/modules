@@ -9,6 +9,11 @@
       options = "grp:alt_shift_toggle,lv3:ralt_switch";
 
       extraLayouts = {
+        uz = {
+          description = "Uzbek";
+          languages = [ "uzb" ];
+          symbolsFile = "${inputs.uz-xkb}/uz_compat";
+        };
         uzx = {
           description = "Uzbek (Custom, Latin)";
           languages = [ "uzb" ];

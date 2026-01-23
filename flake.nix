@@ -43,7 +43,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     uz-xkb = {
-      url = "github:itsbilolbek/uzbek-linux-keyboard";
+      url = "github:itsbilolbek/uzbek-linux-keyboard/compat";
       flake = false;
     };
   };

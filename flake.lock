@@ -685,15 +685,16 @@
     "uz-xkb": {
       "flake": false,
       "locked": {
-        "lastModified": 1768823445,
-        "narHash": "sha256-Q6ic3uT63zyF4BR5/JxtSzO/CBk4BdMLPifkelcmrxg=",
+        "lastModified": 1769174907,
+        "narHash": "sha256-Bd7HasSTVPTV3cZSFTr59Ll6J1OQTWIDvSfhqeaouho=",
         "owner": "itsbilolbek",
         "repo": "uzbek-linux-keyboard",
-        "rev": "770e61c0a8e69a1692603189c7042b6072bf7fc1",
+        "rev": "4702b2150b3689b914238893601442d2701c1624",
         "type": "github"
       },
       "original": {
         "owner": "itsbilolbek",
+        "ref": "compat",
         "repo": "uzbek-linux-keyboard",
         "type": "github"
       }
