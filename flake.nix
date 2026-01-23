@@ -49,7 +49,7 @@
   };
 
   outputs =
-    { uz-xkb, ... }@inputs:
+    inputs:
     inputs.xinux-lib.mkFlake {
       inherit inputs;
       channels-config.allowUnfree = true;

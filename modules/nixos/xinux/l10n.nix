@@ -1,4 +1,4 @@
-{ pkgs, uz-xkb, ... }:
+{ inputs, pkgs, ... }:
 {
   services.xserver = {
     enable = true;
@@ -9,25 +9,25 @@
       options = "grp:alt_shift_toggle,lv3:ralt_switch";
 
       extraLayouts = {
-        uz = {
-          description = "Uzbek";
+        uzx = {
+          description = "Uzbek (Custom)";
           languages = [ "uzb" ];
-          symbolsFile = "${uz-xkb}/uz";
+          symbolsFile = "${inputs.uz-xkb}/uz_latin";
         };
-        uz-us = {
-          description = "Uzbek (US)";
+        uzx-us = {
+          description = "Uzbek (Custom, US)";
           languages = [ "uzb" ];
-          symbolsFile = "${uz-xkb}/uz_us";
+          symbolsFile = "${inputs.uz-xkb}/uz_us";
         };
-        uz-2023 = {
-          description = "Uzbek (2023)";
+        uzx-2023 = {
+          description = "Uzbek (Custom, 2023)";
           languages = [ "uzb" ];
-          symbolsFile = "${uz-xkb}/uz_2023";
+          symbolsFile = "${inputs.uz-xkb}/uz_2023";
         };
-        uz-cyrillic = {
-          description = "Uzbek (Cyrillic)";
+        uzx-cyrillic = {
+          description = "Uzbek (Custom, Cyrillic)";
           languages = [ "uzb" ];
-          symbolsFile = "${uz-xkb}/uz_cyrillic";
+          symbolsFile = "${inputs.uz-xkb}/uz_cyrillic";
         };
       };
     };
