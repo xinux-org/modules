@@ -10,7 +10,7 @@
 
       extraLayouts = {
         uzx = {
-          description = "Uzbek (Custom)";
+          description = "Uzbek (Custom, Latin)";
           languages = [ "uzb" ];
           symbolsFile = "${inputs.uz-xkb}/uz_latin";
         };
