@@ -540,6 +540,7 @@
         "nix-software-center": "nix-software-center",
         "nixos-conf-editor": "nixos-conf-editor",
         "nixpkgs": "nixpkgs",
+        "uz-xkb": "uz-xkb",
         "xin": "xin",
         "xinux-lib": "xinux-lib_4",
         "xinux-module-manager": "xinux-module-manager",
@@ -678,6 +679,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "uz-xkb": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1768823445,
+        "narHash": "sha256-Q6ic3uT63zyF4BR5/JxtSzO/CBk4BdMLPifkelcmrxg=",
+        "owner": "itsbilolbek",
+        "repo": "uzbek-linux-keyboard",
+        "rev": "770e61c0a8e69a1692603189c7042b6072bf7fc1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "itsbilolbek",
+        "repo": "uzbek-linux-keyboard",
         "type": "github"
       }
     },

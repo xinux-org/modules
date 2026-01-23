@@ -42,9 +42,14 @@
       url = "github:xinux-org/xinux-tour";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    uz-xkb = {
+      url = "github:itsbilolbek/uzbek-linux-keyboard";
+      flake = false;
+    };
   };
 
-  outputs = inputs:
+  outputs =
+    { uz-xkb, ... }@inputs:
     inputs.xinux-lib.mkFlake {
       inherit inputs;
       channels-config.allowUnfree = true;
