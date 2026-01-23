@@ -14,26 +14,6 @@
           languages = [ "uzb" ];
           symbolsFile = "${inputs.uz-xkb}/uz_compat";
         };
-        uzx = {
-          description = "Uzbek (Custom, Latin)";
-          languages = [ "uzb" ];
-          symbolsFile = "${inputs.uz-xkb}/uz_latin";
-        };
-        uzx-us = {
-          description = "Uzbek (Custom, US)";
-          languages = [ "uzb" ];
-          symbolsFile = "${inputs.uz-xkb}/uz_us";
-        };
-        uzx-2023 = {
-          description = "Uzbek (Custom, 2023)";
-          languages = [ "uzb" ];
-          symbolsFile = "${inputs.uz-xkb}/uz_2023";
-        };
-        uzx-cyrillic = {
-          description = "Uzbek (Custom, Cyrillic)";
-          languages = [ "uzb" ];
-          symbolsFile = "${inputs.uz-xkb}/uz_cyrillic";
-        };
       };
     };
   };
