@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ inputs, pkgs, ... }:
+{
   services.xserver = {
     enable = true;
 
@@ -10,23 +11,8 @@
       extraLayouts = {
         uz = {
           description = "Uzbek";
-          languages = ["uzb"];
-          symbolsFile = ./xkb/uz;
-        };
-        uz-us = {
-          description = "Uzbek (US)";
-          languages = ["uzb"];
-          symbolsFile = ./xkb/uz_us;
-        };
-        uz-2023 = {
-          description = "Uzbek (2023)";
-          languages = ["uzb"];
-          symbolsFile = ./xkb/uz_2023;
-        };
-        uz-cyrillic = {
-          description = "Uzbek (Cyrillic)";
-          languages = ["uzb"];
-          symbolsFile = ./xkb/uz_cyrillic;
+          languages = [ "uzb" ];
+          symbolsFile = "${inputs.uz-xkb}/uz_compat";
         };
       };
     };
