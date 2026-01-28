@@ -474,11 +474,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769606508,
-        "narHash": "sha256-PhW7Bdac/VCnIu3QUzdXLq8LzJmAcYIM7bYM6F96LUU=",
+        "lastModified": 1769625017,
+        "narHash": "sha256-KwdctGfzR2H8GbAL7OWizM2Y6afoQEJKjuffUS1mmnI=",
         "owner": "xinux-org",
         "repo": "software-center",
-        "rev": "cb5ca13f465b77bee8c459208fce56de92d053cd",
+        "rev": "8e4f4af3956055bdbc961c2a55bcd0303062b9cc",
         "type": "github"
       },
       "original": {
