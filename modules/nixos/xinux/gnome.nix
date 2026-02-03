@@ -64,6 +64,10 @@ in {
 
         [org.gnome.shell.extensions.dash-to-dock]
         apply-custom-theme=true
+
+
+        [org.gnome.shell.extensions.dash-to-dock]
+        click-action='minimize'
       '';
       extraGSettingsOverridePackages = [
         pkgs.gsettings-desktop-schemas
