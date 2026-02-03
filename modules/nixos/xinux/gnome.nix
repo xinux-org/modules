@@ -65,7 +65,6 @@ in {
         [org.gnome.shell.extensions.dash-to-dock]
         apply-custom-theme=true
 
-
         [org.gnome.settings-daemon.plugins.media-keys]
         custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
         screensaver=['<Control><Alt>l']
@@ -74,6 +73,9 @@ in {
         binding='<Shift><Control>t'
         command='kgx --tab'
         name='open terminal'
+
+        [org.gnome.shell.extensions.dash-to-dock]
+        click-action='minimize'
       '';
       extraGSettingsOverridePackages = [
         pkgs.gsettings-desktop-schemas
