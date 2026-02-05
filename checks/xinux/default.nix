@@ -1,3 +1,4 @@
+# source: https://discourse.nixos.org/t/nixostest-with-flake-configurations/11542/5
 {
   inputs,
   pkgs,
