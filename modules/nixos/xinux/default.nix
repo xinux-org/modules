@@ -158,9 +158,10 @@ in {
             });
         }
         // (mapAttrsRecursive (_: mkDefault) {
-          linkInputs = true;
-          generateNixPathFromInputs = true;
-          generateRegistryFromInputs = true;
+          # what the hell is this below
+          # linkInputs = true;
+          # generateNixPathFromInputs = true;
+          # generateRegistryFromInputs = true;
         });
     }
   ];
