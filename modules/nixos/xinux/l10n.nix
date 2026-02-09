@@ -2,7 +2,8 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   services.xserver = {
     enable = true;
 
@@ -14,7 +15,7 @@
       extraLayouts = {
         uz = {
           description = "Uzbek";
-          languages = ["uzb"];
+          languages = [ "uzb" ];
           symbolsFile = "${inputs.uz-xkb}/uz_compat";
         };
       };

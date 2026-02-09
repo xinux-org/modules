@@ -1,5 +1,5 @@
 {
   inputs,
-  system,
+  pkgs,
 }:
-inputs.nix-software-center.packages.${system}.default
+inputs.nix-software-center.packages.${pkgs.stdenv.hostPlatform.system}.default

@@ -5,7 +5,8 @@
   pkgs,
   ...
 }:
-with lib; let
+with lib;
+let
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
     export __NV_PRIME_RENDER_OFFLOAD=1
     export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
@@ -13,10 +14,9 @@ with lib; let
     export __VK_LAYER_NV_optimus=NVIDIA_only
     exec "$@"
   '';
-in {
-  config =
-    mkIf (config.hardware.nvidia.prime.offload.enable && config.xinux.graphical.enable)
-    {
-      environment.systemPackages = [nvidia-offload];
-    };
+in
+{
+  config = mkIf (config.hardware.nvidia.prime.offload.enable && config.xinux.graphical.enable) {
+    environment.systemPackages = [ nvidia-offload ];
+  };
 }

@@ -5,7 +5,8 @@
   pkgs,
   ...
 }:
-with lib; {
+with lib;
+{
   options.xinux.graphical = {
     enable = mkEnableOption "Xinux default graphical configurations (not including DE)";
   };

@@ -4,7 +4,8 @@
   pkgs,
   ...
 }:
-with lib; {
+with lib;
+{
   config = {
     boot.kernelPackages = mkDefault pkgs.linuxPackages_latest;
   };

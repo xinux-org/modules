@@ -1,5 +1,5 @@
 {
   inputs,
-  system,
+  pkgs,
 }:
-inputs.xin.packages.${system}.xin
+inputs.xin.packages.${pkgs.stdenv.hostPlatform.system}.xin

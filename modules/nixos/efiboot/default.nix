@@ -6,25 +6,29 @@
   inputs,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.modules.efiboot;
   efiSysMountPoint = config.boot.loader.efi.efiSysMountPoint;
-in {
+in
+{
   options.modules.efiboot = with types; {
     bootloader = mkOption {
-      type = enum ["grub" "systemd-boot"];
+      type = enum [
+        "grub"
+        "systemd-boot"
+      ];
       default = "grub";
       description = "The kernel to use for booting.";
     };
   };
 
   config = mkMerge [
-    (mkIf (cfg.bootloader == "systemd-boot")
-      {
-        boot.loader.systemd-boot.enable = true;
-        boot.loader.efi.canTouchEfiVariables = true;
-        boot.loader.systemd-boot.editor = mkDefault false;
-      })
+    (mkIf (cfg.bootloader == "systemd-boot") {
+      boot.loader.systemd-boot.enable = true;
+      boot.loader.efi.canTouchEfiVariables = true;
+      boot.loader.systemd-boot.editor = mkDefault false;
+    })
     (mkIf (cfg.bootloader == "grub") {
       boot = {
         loader = {
@@ -32,7 +36,7 @@ in {
           efi.canTouchEfiVariables = true;
           grub = {
             enable = true;
-            devices = ["nodev"];
+            devices = [ "nodev" ];
             useOSProber = true;
             efiSupport = true;
             theme = "${
@@ -57,8 +61,9 @@ in {
     {
       boot.tmp.cleanOnBoot = mkDefault true;
       # Temporary workaround for "random seed file is world accessible"
-      fileSystems.${efiSysMountPoint}.options =
-        mkIf (config.fileSystems.${efiSysMountPoint}.fsType == "vfat") ["umask=0077"];
+      fileSystems.${efiSysMountPoint}.options = mkIf (
+        config.fileSystems.${efiSysMountPoint}.fsType == "vfat"
+      ) [ "umask=0077" ];
     }
   ];
 }

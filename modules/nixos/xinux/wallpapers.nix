@@ -2,71 +2,75 @@
 {
   lib,
   stdenv,
-}: let
-  mkNixBackground = {
-    name,
-    src,
-    description,
-    license ? lib.licenses.free,
-  }: let
-    pkg = stdenv.mkDerivation {
-      inherit name src;
+}:
+let
+  mkNixBackground =
+    {
+      name,
+      src,
+      description,
+      license ? lib.licenses.free,
+    }:
+    let
+      pkg = stdenv.mkDerivation {
+        inherit name src;
 
-      dontUnpack = true;
+        dontUnpack = true;
 
-      installPhase = ''
-                runHook preInstall
+        installPhase = ''
+                  runHook preInstall
 
-                # GNOME
-                mkdir -p $out/share/backgrounds/nixos
-                ln -s $src $out/share/backgrounds/nixos/${baseNameOf src}
+                  # GNOME
+                  mkdir -p $out/share/backgrounds/nixos
+                  ln -s $src $out/share/backgrounds/nixos/${baseNameOf src}
 
-                mkdir -p $out/share/gnome-background-properties/
-                cat <<EOF > $out/share/gnome-background-properties/${name}.xml
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
-        <wallpapers>
-          <wallpaper deleted="false">
-            <name>${name}</name>
-            <filename>${src}</filename>
-            <options>zoom</options>
-            <shade_type>solid</shade_type>
-            <pcolor>#ffffff</pcolor>
-            <scolor>#000000</scolor>
-          </wallpaper>
-        </wallpapers>
-        EOF
+                  mkdir -p $out/share/gnome-background-properties/
+                  cat <<EOF > $out/share/gnome-background-properties/${name}.xml
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+          <wallpapers>
+            <wallpaper deleted="false">
+              <name>${name}</name>
+              <filename>${src}</filename>
+              <options>zoom</options>
+              <shade_type>solid</shade_type>
+              <pcolor>#ffffff</pcolor>
+              <scolor>#000000</scolor>
+            </wallpaper>
+          </wallpapers>
+          EOF
 
-                # TODO: is this path still needed?
-                mkdir -p $out/share/artwork/gnome
-                ln -s $src $out/share/artwork/gnome/${baseNameOf src}
+                  # TODO: is this path still needed?
+                  mkdir -p $out/share/artwork/gnome
+                  ln -s $src $out/share/artwork/gnome/${baseNameOf src}
 
-                # KDE
-                mkdir -p $out/share/wallpapers/${name}/contents/images
-                ln -s $src $out/share/wallpapers/${name}/contents/images/${baseNameOf src}
-                cat >>$out/share/wallpapers/${name}/metadata.desktop <<_EOF
-        [Desktop Entry]
-        Name=${name}
-        X-KDE-PluginInfo-Name=${name}
-        _EOF
+                  # KDE
+                  mkdir -p $out/share/wallpapers/${name}/contents/images
+                  ln -s $src $out/share/wallpapers/${name}/contents/images/${baseNameOf src}
+                  cat >>$out/share/wallpapers/${name}/metadata.desktop <<_EOF
+          [Desktop Entry]
+          Name=${name}
+          X-KDE-PluginInfo-Name=${name}
+          _EOF
 
-                runHook postInstall
-      '';
+                  runHook postInstall
+        '';
 
-      passthru = {
-        gnomeFilePath = "${pkg}/share/backgrounds/nixos/${baseNameOf src}";
-        kdeFilePath = "${pkg}/share/wallpapers/${name}/contents/images/${baseNameOf src}";
+        passthru = {
+          gnomeFilePath = "${pkg}/share/backgrounds/nixos/${baseNameOf src}";
+          kdeFilePath = "${pkg}/share/wallpapers/${name}/contents/images/${baseNameOf src}";
+        };
+
+        meta = with lib; {
+          inherit description license;
+          homepage = "https://github.com/NixOS/nixos-artwork";
+          platforms = platforms.all;
+        };
       };
-
-      meta = with lib; {
-        inherit description license;
-        homepage = "https://github.com/NixOS/nixos-artwork";
-        platforms = platforms.all;
-      };
-    };
-  in
+    in
     pkg;
-in {
+in
+{
   xinux-blue-light = mkNixBackground {
     name = "xinux-blue-light";
     description = "xinux-blue-light";
@@ -122,7 +126,7 @@ in {
     src = ../../../.github/assets/wallpapers/mountain.jpg;
     license = lib.licenses.cc-by-sa-40;
   };
-  
+
   xinux-orange-flower = mkNixBackground {
     name = "xinux-orange-flower";
     description = "xinux-orange-flower";
@@ -150,7 +154,7 @@ in {
     src = ../../../.github/assets/wallpapers/river.jpg;
     license = lib.licenses.cc-by-sa-40;
   };
-  
+
   xinux-roses = mkNixBackground {
     name = "xinux-roses";
     description = "xinux-roses";
@@ -171,7 +175,7 @@ in {
     src = ../../../.github/assets/wallpapers/white-flower.jpg;
     license = lib.licenses.cc-by-sa-40;
   };
-  
+
   xinux-sky = mkNixBackground {
     name = "xinux-sky";
     description = "xinux-sky";

@@ -6,6 +6,7 @@
   alejandra,
   statix,
   deadnix,
+  nixfmt,
 }:
 mkShell {
   nativeBuildInputs = [
@@ -13,5 +14,6 @@ mkShell {
     alejandra
     statix
     deadnix
+    nixfmt
   ];
 }

@@ -50,11 +50,31 @@
 
   outputs =
     inputs:
+    # Let the xinux-lib/mkFlake manage
     inputs.xinux-lib.mkFlake {
+      # For mkFlake parsing
       inherit inputs;
-      channels-config.allowUnfree = true;
+
+      # Nixpkgs configs
+      channels-config = {
+        # Allow unfree software
+        allowUnfree = true;
+        # Allow NVIDIA's prop. software
+        nvidia.acceptLicense = true;
+      };
+
+      # Source code
       src = ./.;
+
+      # Extra nix flags to set
+      outputs-builder = channels: {
+        formatter = channels.nixpkgs.nixfmt-tree;
+      };
+
+      # Default shell environment
       alias.shells.default = "modules";
+
+      # Hydra jobs for building caches
       hydraJobs = inputs.self.packages.x86_64-linux;
     };
 }

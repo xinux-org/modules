@@ -5,9 +5,11 @@
   pkgs,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.modules.biosboot;
-in {
+in
+{
   config = {
     boot = {
       loader = {

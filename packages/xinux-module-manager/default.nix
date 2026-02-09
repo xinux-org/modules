@@ -1,5 +1,5 @@
 {
   inputs,
-  system,
+  pkgs,
 }:
-inputs.xinux-module-manager.packages.${system}.xinux-module-manager
+inputs.xinux-module-manager.packages.${pkgs.stdenv.hostPlatform.system}.xinux-module-manager

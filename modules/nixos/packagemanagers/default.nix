@@ -5,15 +5,16 @@
   pkgs,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.modules.packagemanagers;
-in {
+in
+{
   options.modules.packagemanagers = with types; {
-    appimage.enable =
-      mkEnableOption "Enable AppImage";
+    appimage.enable = mkEnableOption "Enable AppImage";
   };
 
   config = mkIf cfg.appimage.enable {
-    environment.systemPackages = [pkgs.appimage-run];
+    environment.systemPackages = [ pkgs.appimage-run ];
   };
 }

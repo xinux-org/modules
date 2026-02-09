@@ -1,5 +1,5 @@
 {
   inputs,
-  system,
+  pkgs,
 }:
-inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
+inputs.nixos-conf-editor.packages.${pkgs.stdenv.hostPlatform.system}.nixos-conf-editor

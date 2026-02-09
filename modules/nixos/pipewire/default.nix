@@ -5,9 +5,11 @@
   pkgs,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.modules.pipewire;
-in {
+in
+{
   options.modules.pipewire = with types; {
     enable = mkOption {
       type = bool;

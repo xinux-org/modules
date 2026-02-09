@@ -5,19 +5,15 @@
   pkgs,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.system.nixos;
   mcfg = config.xinux.osInfo;
   needsEscaping = s: null != builtins.match "[a-zA-Z0-9]+" s;
-  escapeIfNeccessary = s:
-    if needsEscaping s
-    then s
-    else ''"${escape ["\$" "\"" "\\" "\`"] s}"'';
-  attrsToText = attrs:
-    concatStringsSep "\n"
-    (
-      mapAttrsToList (n: v: ''${n}=${escapeIfNeccessary (toString v)}'') attrs
-    )
+  escapeIfNeccessary = s: if needsEscaping s then s else ''"${escape [ "\$" "\"" "\\" "\`" ] s}"'';
+  attrsToText =
+    attrs:
+    concatStringsSep "\n" (mapAttrsToList (n: v: "${n}=${escapeIfNeccessary (toString v)}") attrs)
     + "\n";
   osReleaseContents = {
     NAME = "Xinux";
@@ -33,13 +29,12 @@ with lib; let
     SUPPORT_URL = "";
     BUG_REPORT_URL = "";
   };
-  initrdReleaseContents =
-    osReleaseContents
-    // {
-      PRETTY_NAME = "${osReleaseContents.PRETTY_NAME} (Initrd)";
-    };
+  initrdReleaseContents = osReleaseContents // {
+    PRETTY_NAME = "${osReleaseContents.PRETTY_NAME} (Initrd)";
+  };
   initrdRelease = pkgs.writeText "initrd-release" (attrsToText initrdReleaseContents);
-in {
+in
+{
   options.xinux.osInfo = {
     enable = mkEnableOption "Xinux Main System";
     codeName = mkOption {

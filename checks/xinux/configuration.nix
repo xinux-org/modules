@@ -1,7 +1,8 @@
 {
   pkgs,
   ...
-}: {
+}:
+{
   networking.hostName = "xinux";
 
   # Select internationalisation properties.
@@ -17,7 +18,11 @@
   users.users."a" = {
     isNormalUser = true;
     description = "a";
-    extraGroups = ["wheel" "networkmanager" "dialout"];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "dialout"
+    ];
   };
 
   # Allow unfree packages
