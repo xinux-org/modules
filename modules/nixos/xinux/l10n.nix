@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   ...
 }:
@@ -16,7 +15,7 @@
         uz = {
           description = "Uzbek";
           languages = [ "uzb" ];
-          symbolsFile = "${inputs.uz-xkb}/uz_compat";
+          symbolsFile = ./uz_compat;
         };
       };
     };
