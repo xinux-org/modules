@@ -20,12 +20,6 @@
       url = "github:xinux-org/module-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nixos-conf-editor = {
-      url = "github:xinux-org/conf-editor";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     xinux-lib = {
       url = "github:xinux-org/lib";
       inputs.nixpkgs.follows = "nixpkgs";

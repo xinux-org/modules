@@ -14,11 +14,6 @@ options:
     description: "Enable Nix Software Center, a graphical software center for Nix."
     type: !switch
       default: true
-  - label: "Enable Configuration Editor"
-    id: modules.xinux.nixosConfEditor.enable
-    description: "Enable NixOS Configuration Editor, a graphical editor for NixOS configurations."
-    type: !switch
-      default: true
   - label: "Enable Xinux Module Manager"
     id: modules.xinux.xinuxModuleManager.enable
     description: "Enable Xinux Module Manager, a graphical tool for managing Xinux modules"

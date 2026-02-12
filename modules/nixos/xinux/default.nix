@@ -60,11 +60,6 @@ in {
         nix-software-center.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
     })
-    (mkIf cfg.nixosConfEditor.enable {
-      environment.systemPackages = with inputs; [
-        nixos-conf-editor.packages."${pkgs.stdenv.hostPlatform.system}".nixos-conf-editor
-      ];
-    })
     (mkIf cfg.eimzoIntegraion.enable {
       services.e-imzo.enable = mkForce true;
       environment.systemPackages = with inputs; [
