@@ -6,11 +6,9 @@
   system,
   ...
 }:
-with lib;
-let
+with lib; let
   cfg = config.modules.xinux;
-in
-{
+in {
   imports = [
     ./l10n.nix
     ./gnome.nix
@@ -59,8 +57,8 @@ in
     })
     (mkIf cfg.eimzoIntegraion.enable {
       services.e-imzo.enable = mkForce true;
-      environment.systemPackages = with inputs; [
-        e-imzo-manager.packages."${pkgs.stdenv.hostPlatform.system}".default
+      environment.systemPackages = with pkgs; [
+        e-imzo-manager
       ];
     })
     (mkIf cfg.xinuxModuleManager.enable {
@@ -133,47 +131,50 @@ in
           value = {
             source = value.outPath;
           };
-        }) inputs
+        })
+        inputs
       );
 
       # Reasonable Defaults
-      nix = {
-        settings = {
-          experimental-features = [
-            "nix-command"
-            "flakes"
-            "pipe-operators"
-          ];
-          substituters = [
-            "https://cache.xinux.uz/"
-            "https://cache.nixos.org/"
-          ];
-          trusted-public-keys = [
-            "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
-            "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" # nixos
-          ];
+      nix =
+        {
+          settings =
+            {
+              experimental-features = [
+                "nix-command"
+                "flakes"
+                "pipe-operators"
+              ];
+              substituters = [
+                "https://cache.xinux.uz/"
+                "https://cache.nixos.org/"
+              ];
+              trusted-public-keys = [
+                "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
+                "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" # nixos
+              ];
+            }
+            // (mapAttrsRecursive (_: mkDefault) {
+              connect-timeout = 5;
+              log-lines = 25;
+              min-free = 128000000;
+              max-free = 1000000000;
+              fallback = true;
+              warn-dirty = false;
+              auto-optimise-store = true;
+            });
         }
         // (mapAttrsRecursive (_: mkDefault) {
-          connect-timeout = 5;
-          log-lines = 25;
-          min-free = 128000000;
-          max-free = 1000000000;
-          fallback = true;
-          warn-dirty = false;
-          auto-optimise-store = true;
-        });
-      }
-      // (mapAttrsRecursive (_: mkDefault) {
-        # flake-plus-utils provided options
-        # linkInputs = true;
-        # generateNixPathFromInputs = true;
-        # generateRegistryFromInputs = true;
+          # flake-plus-utils provided options
+          # linkInputs = true;
+          # generateNixPathFromInputs = true;
+          # generateRegistryFromInputs = true;
 
-        # Manually implemented nixPath and registry
-        # Because flake-utils-plus options arent' working
-        registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
-        nixPath = [ "/etc/nix/inputs" ];
-      });
+          # Manually implemented nixPath and registry
+          # Because flake-utils-plus options arent' working
+          registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
+          nixPath = ["/etc/nix/inputs"];
+        });
     }
   ];
 }
