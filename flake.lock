@@ -1152,11 +1152,11 @@
         "treefmt-nix": "treefmt-nix_3"
       },
       "locked": {
-        "lastModified": 1770183327,
-        "narHash": "sha256-EitL9fLFiDW4TGfwm14n7ZdW3Axqj1lea8TOYlp3V8U=",
+        "lastModified": 1770923191,
+        "narHash": "sha256-f4nFocQaoDXXDriRKo+Gh6Y/dC2MPv0LkLzSHqln5VE=",
         "owner": "xinux-org",
         "repo": "lib",
-        "rev": "09c4e04dd0746df602521b26c4c961d0a51d4f73",
+        "rev": "7d86a57989052127956dd0cc36e735d4c9de2d1c",
         "type": "github"
       },
       "original": {
