@@ -5,7 +5,8 @@
   pkgs,
   ...
 }:
-with lib; {
+with lib;
+{
   options.xinux.debug = {
     enable = mkEnableOption "Enable debug mode for internal remote development.";
   };
