@@ -26,11 +26,6 @@ in
       default = true;
       description = "Enable Nix Software Center, a graphical software center for Nix";
     };
-    nixosConfEditor.enable = mkOption {
-      type = bool;
-      default = true;
-      description = "Enable NixOS Configuration Editor, a graphical editor for NixOS configurations";
-    };
     xinuxModuleManager.enable = mkOption {
       type = bool;
       default = true;

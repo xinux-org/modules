@@ -6,11 +6,9 @@
   inputs,
   ...
 }:
-with lib;
-let
+with lib; let
   cfg = config.modules.gnome;
-in
-{
+in {
   options.modules.gnome = with types; {
     gsconnect.enable = mkEnableOption "Enable KDE Connect integration";
     removeUtils.enable = mkOption {
@@ -43,7 +41,6 @@ in
       ];
     }
     (mkIf cfg.removeUtils.enable {
-      modules.xinux.nixosConfEditor.enable = lib.mkDefault false;
       modules.xinux.eimzoIntegraion.enable = lib.mkDefault false;
 
       services.gnome.core-utilities.enable = false;
