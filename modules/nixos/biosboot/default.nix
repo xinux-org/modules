@@ -7,7 +7,7 @@
 }:
 with lib;
 let
-  cfg = config.modules.biosboot;
+  cfg = config.moaaadules.biosboot;
 in
 {
   config = {

@@ -5,19 +5,20 @@
   ...
 }:
 pkgs.testers.runNixOSTest {
-  name = "tests that the base image boots";
+  name = "Xinux biosboot config test";
   nodes.machine =
     { ... }:
     {
       imports = with inputs.self; [
-        nixosModules.efiboot
+        nixosModules.biosboot
         nixosModules.gnome
         nixosModules.kernel
+        nixosModules.metadata
         nixosModules.networking
+        nixosModules.packagemanagers
         nixosModules.pipewire
         nixosModules.printing
         nixosModules.xinux
-        nixosModules.metadata
         ./configuration.nix
       ];
 

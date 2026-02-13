@@ -15,13 +15,12 @@
   };
   console.useXkbConfig = true;
 
-  users.users."a" = {
+  users.users."xinux" = {
     isNormalUser = true;
     description = "a";
     extraGroups = [
       "wheel"
       "networkmanager"
-      "dialout"
     ];
   };
 
