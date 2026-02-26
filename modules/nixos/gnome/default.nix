@@ -6,9 +6,11 @@
   inputs,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.modules.gnome;
-in {
+in
+{
   options.modules.gnome = with types; {
     gsconnect.enable = mkEnableOption "Enable KDE Connect integration";
     removeUtils.enable = mkOption {

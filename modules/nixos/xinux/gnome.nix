@@ -3,10 +3,12 @@
   config,
   pkgs,
   ...
-}: let
-  nixos-background-info = pkgs.stdenv.mkDerivation {name = "nixos-background-info";};
-  xinux-wallpapers = lib.recurseIntoAttrs (pkgs.callPackage ./wallpapers.nix {});
-in {
+}:
+let
+  nixos-background-info = pkgs.stdenv.mkDerivation { name = "nixos-background-info"; };
+  xinux-wallpapers = lib.recurseIntoAttrs (pkgs.callPackage ./wallpapers.nix { });
+in
+{
   options.xinux.gnome = {
     enable = lib.mkEnableOption "Xinux GNOME configuration";
   };
@@ -86,7 +88,7 @@ in {
     # Setting daemons
     services = {
       # Udev daemon management
-      udev.packages = with pkgs; [gnome-settings-daemon];
+      udev.packages = with pkgs; [ gnome-settings-daemon ];
     };
 
     programs = {
@@ -116,7 +118,7 @@ in {
       WEBKIT_DISABLE_COMPOSITING_MODE = 1;
     };
 
-    services.xserver.excludePackages = [pkgs.xterm];
+    services.xserver.excludePackages = [ pkgs.xterm ];
 
     environment.gnome.excludePackages = [
       pkgs.xterm
