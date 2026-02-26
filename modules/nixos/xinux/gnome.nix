@@ -130,13 +130,13 @@ in
     environment.systemPackages =
       # if minimal mode enabled keep these extensions
       (lib.optionals (!config.modules.gnome.removeUtils.enable) [
+        pkgs.gnomeExtensions.gsconnect
+        pkgs.gnomeExtensions.clipboard-indicator
+      ])
+      ++ [
         pkgs.gnomeExtensions.appindicator
         pkgs.gnomeExtensions.dash-to-dock
         pkgs.papirus-icon-theme
-      ])
-      ++ [
-        pkgs.gnomeExtensions.gsconnect
-        pkgs.gnomeExtensions.clipboard-indicator
 
         # wallpapers
         xinux-wallpapers.xinux-blue-light
