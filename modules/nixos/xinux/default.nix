@@ -107,8 +107,14 @@ in {
       services.envfs.enable = mkDefault true;
     })
     {
-      xinux.osInfo.enable = mkDefault true;
-      xinux.gnome.enable = mkDefault true;
+      xinux = {
+        osInfo.enable = mkDefault true;
+        gnome.enable = mkDefault true;
+      };
+
+      security = {
+        sudo-rs.enable = true;
+      };
 
       environment.systemPackages = [
         inputs.xin.packages.${system}.xin
@@ -116,12 +122,14 @@ in {
         pkgs.firefox
       ];
 
-      # Some programs need SUID wrappers, can be configured further or are
-      # started in user sessions.
-      programs.mtr.enable = mkDefault true;
-      programs.gnupg.agent = {
-        enable = mkDefault true;
-        enableSSHSupport = mkDefault true;
+      programs = {
+        # Some programs need SUID wrappers, can be configured further or are
+        # started in user sessions.
+        mtr.enable = mkDefault true;
+        gnupg.agent = {
+          enable = mkDefault true;
+          enableSSHSupport = mkDefault true;
+        };
       };
 
       # Generate nix inputs at etc
