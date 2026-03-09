@@ -8,7 +8,7 @@ on:
 jobs:
   lints:
     name: Build
-    runs-on: self-hosted
+    runs-on: testing
 
     steps:
       - uses: actions/checkout@v6
