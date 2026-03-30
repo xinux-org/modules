@@ -23,22 +23,22 @@
       url = "github:xinux-org/module-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     xinux-lib = {
-      url = "github:xinux-org/lib";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/lib?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    e-imzo-manager = {
-      url = "github:xinux-org/e-imzo-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
     mac-style-plymouth = {
-      url = "github:xinux-org/xinux-plymouth-theme";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-plymouth-theme?ref=master&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     xinux-tour = {
       url = "github:xinux-org/xinux-tour";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     uz-xkb = {
       url = "github:itsbilolbek/uzbek-linux-keyboard";
       flake = false;
