@@ -13,16 +13,14 @@ with lib;
       # Switch between layouts using Alt+Shift
       options = mkDefault "grp:alt_shift_toggle,lv3:ralt_switch";
 
-      extraLayouts = mkDefault {
-        uz = {
-          description = "Uzbek";
-          languages = [ "uzb" ];
-          symbolsFile = ./uz_compat;
-        };
+      extraLayouts.uz = mkDefault {
+        description = "Uzbek";
+        languages = [ "uzb" ];
+        symbolsFile = ./uz_compat;
       };
     };
   };
-  environment.systemPackages = mkDefault [
+  environment.systemPackages = [
     pkgs.hunspellDicts.uz_UZ
   ];
 
