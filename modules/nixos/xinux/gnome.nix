@@ -122,34 +122,32 @@ in
 
     environment.systemPackages =
       # Whatever minimal mode enabled keep these extensions
-      mkDefault (
-        [
-          pkgs.gnomeExtensions.appindicator
-          pkgs.gnomeExtensions.dash-to-dock
-          pkgs.papirus-icon-theme
+      [
+        pkgs.gnomeExtensions.appindicator
+        pkgs.gnomeExtensions.dash-to-dock
+        pkgs.papirus-icon-theme
 
-          # wallpapers
-          xinux-wallpapers.xinux-blue-light
-          xinux-wallpapers.xinux-blue-dark
-          xinux-wallpapers.xinux-orange
-          xinux-wallpapers.xinux-ant
-          xinux-wallpapers.xinux-grass
-          xinux-wallpapers.xinux-hill
-          xinux-wallpapers.xinux-lake
-          xinux-wallpapers.xinux-mountain
-          xinux-wallpapers.xinux-orange-flower
-          xinux-wallpapers.xinux-pink-flower
-          xinux-wallpapers.xinux-red-flower
-          xinux-wallpapers.xinux-river
-          xinux-wallpapers.xinux-roses
-          xinux-wallpapers.xinux-wheel
-          xinux-wallpapers.xinux-white-flower
-          xinux-wallpapers.xinux-sky
-        ]
-        ++ (lib.optionals (!config.modules.gnome.removeUtils.enable) [
-          pkgs.gnomeExtensions.gsconnect
-          pkgs.gnomeExtensions.clipboard-indicator
-        ])
-      );
+        # wallpapers
+        xinux-wallpapers.xinux-blue-light
+        xinux-wallpapers.xinux-blue-dark
+        xinux-wallpapers.xinux-orange
+        xinux-wallpapers.xinux-ant
+        xinux-wallpapers.xinux-grass
+        xinux-wallpapers.xinux-hill
+        xinux-wallpapers.xinux-lake
+        xinux-wallpapers.xinux-mountain
+        xinux-wallpapers.xinux-orange-flower
+        xinux-wallpapers.xinux-pink-flower
+        xinux-wallpapers.xinux-red-flower
+        xinux-wallpapers.xinux-river
+        xinux-wallpapers.xinux-roses
+        xinux-wallpapers.xinux-wheel
+        xinux-wallpapers.xinux-white-flower
+        xinux-wallpapers.xinux-sky
+      ]
+      ++ (lib.optionals (!config.modules.gnome.removeUtils.enable) [
+        pkgs.gnomeExtensions.gsconnect
+        pkgs.gnomeExtensions.clipboard-indicator
+      ]);
   };
 }
