@@ -1,17 +1,19 @@
 {
   pkgs,
+  lib,
   ...
 }:
+with lib;
 {
   services.xserver = {
-    enable = true;
+    enable = mkDefault true;
 
     # add uzbek keyboard
     xkb = {
       # Switch between layouts using Alt+Shift
-      options = "grp:alt_shift_toggle,lv3:ralt_switch";
+      options = mkDefault "grp:alt_shift_toggle,lv3:ralt_switch";
 
-      extraLayouts = {
+      extraLayouts = mkDefault {
         uz = {
           description = "Uzbek";
           languages = [ "uzb" ];
@@ -20,15 +22,16 @@
       };
     };
   };
-  environment.systemPackages = [
+  environment.systemPackages = mkDefault [
     pkgs.hunspellDicts.uz_UZ
   ];
 
   i18n = {
-    extraLocales = [
-      "en_US.UTF-8/UTF-8"
-      "ru_RU.UTF-8/UTF-8"
-      "uz_UZ.UTF-8/UTF-8"
+    extraLocales = mkDefault [
+      "all"
+    ];
+    supportedLocales = mkDefault [
+      "all"
     ];
   };
 }

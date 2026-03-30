@@ -1,6 +1,5 @@
 {
   lib,
-  config,
   ...
 }:
 with lib;
@@ -9,7 +8,5 @@ with lib;
     ./version.nix
   ];
 
-  config = {
-    xinux.osInfo.enable = mkDefault true;
-  };
+  xinux.osInfo.enable = mkDefault true;
 }

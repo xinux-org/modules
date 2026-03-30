@@ -53,7 +53,7 @@ in
   config = mkMerge [
     (mkIf cfg.nixSoftwareCenter.enable {
       environment.systemPackages = with pkgs; [
-        nix-software-center
+        software-center
       ];
     })
     (mkIf cfg.eimzoIntegraion.enable {
@@ -103,12 +103,11 @@ in
     })
     {
       xinux = {
-        osInfo.enable = mkDefault true;
         gnome.enable = mkDefault true;
       };
 
-      security = mkOverride {
-        sudo-rs.enable = true;
+      security = {
+        sudo-rs.enable = mkForce true;
       };
 
       environment.systemPackages = [
@@ -121,10 +120,6 @@ in
         # Some programs need SUID wrappers, can be configured further or are
         # started in user sessions.
         mtr.enable = mkDefault true;
-        gnupg.agent = {
-          enable = mkDefault true;
-          enableSSHSupport = mkDefault true;
-        };
       };
 
       # Generate nix inputs at etc

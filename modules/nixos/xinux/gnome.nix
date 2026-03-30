@@ -4,6 +4,7 @@
   pkgs,
   ...
 }:
+with lib;
 let
   nixos-background-info = pkgs.stdenv.mkDerivation { name = "nixos-background-info"; };
   xinux-wallpapers = lib.recurseIntoAttrs (pkgs.callPackage ./wallpapers.nix { });
@@ -30,6 +31,10 @@ in
 
         [org.gnome.desktop.interface]
         color-scheme='prefer-dark'
+        icon-theme='Papirus-Dark'
+        show-battery-percentage=true
+        color-scheme='default'
+        monospace-font-name='JetBrainsMono Nerd Font 10'
 
         [org.gnome.shell]
         disable-user-extensions=false
@@ -39,15 +44,7 @@ in
 
         [org.gnome.mutter]
         dynamic-workspaces=true
-
-        [org.gnome.mutter]
         edge-tiling=true
-
-        [org.gnome.desktop.interface]
-        icon-theme='Papirus-Dark'
-
-        [org.gnome.desktop.interface]
-        color-scheme='default'
 
         [org.gnome.desktop.datetime]
         automatic-timezone=true
@@ -58,26 +55,20 @@ in
         [org.gnome.desktop.wm.preferences]
         button-layout='appmenu:minimize,maximize,close'
 
-        [org.gnome.desktop.interface]
-        monospace-font-name='JetBrainsMono Nerd Font 10'
-
+        # Dash to dock for multiple monitors
         [org.gnome.shell.extensions.dash-to-dock]
         multi-monitor=true
-
-        [org.gnome.shell.extensions.dash-to-dock]
         apply-custom-theme=true
-
-        [org.gnome.settings-daemon.plugins.media-keys]
-        custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
-        screensaver=['<Control><Alt>l']
-
-        [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
-        binding='<Shift><Control>t'
-        command='kgx --tab'
-        name='open terminal'
-
-        [org.gnome.shell.extensions.dash-to-dock]
         click-action='minimize'
+
+        [org.gnome.desktop.wm.keybindings]
+        move-to-monitor-left=@as []
+        move-to-monitor-right=@as []
+        move-to-workspace-left=['<Super><Shift>Left', '<Shift><Control><Alt>Left']
+        move-to-workspace-right=['<Super><Shift>Right', '<Shift><Control><Alt>Right']
+
+        [org.gnome.desktop.peripherals.touchpad]
+        click-method='areas'
       '';
       extraGSettingsOverridePackages = [
         pkgs.gsettings-desktop-schemas
@@ -88,10 +79,10 @@ in
     # Setting daemons
     services = {
       # Udev daemon management
-      udev.packages = with pkgs; lib.mkDefault [ gnome-settings-daemon ];
+      udev.packages = with pkgs; mkDefault [ gnome-settings-daemon ];
     };
 
-    programs = {
+    programs = mkDefault {
       gnupg.agent = {
         enable = true;
         enableSSHSupport = true;
@@ -104,7 +95,7 @@ in
 
     fonts.packages =
       with pkgs;
-      lib.mkDefault [
+      mkDefault [
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-color-emoji
@@ -114,15 +105,15 @@ in
         nerd-fonts.jetbrains-mono
       ];
 
-    environment.variables = lib.mkDefault {
+    environment.variables = mkDefault {
       # Disable compositing mode in WebKitGTK
       # https://github.com/NixOS/nixpkgs/issues/32580
       WEBKIT_DISABLE_COMPOSITING_MODE = 1;
     };
 
-    services.xserver.excludePackages = lib.mkDefault [ pkgs.xterm ];
+    services.xserver.excludePackages = mkDefault [ pkgs.xterm ];
 
-    environment.gnome.excludePackages = lib.mkDefault [
+    environment.gnome.excludePackages = mkDefault [
       pkgs.xterm
       nixos-background-info
       pkgs.gnome-backgrounds
@@ -135,7 +126,7 @@ in
         pkgs.gnomeExtensions.gsconnect
         pkgs.gnomeExtensions.clipboard-indicator
       ])
-      ++ [
+      ++ mkDefault [
         pkgs.gnomeExtensions.appindicator
         pkgs.gnomeExtensions.dash-to-dock
         pkgs.papirus-icon-theme

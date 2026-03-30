@@ -1,5 +1,4 @@
 {
-  options,
   config,
   lib,
   pkgs,
@@ -30,7 +29,7 @@ in
       boot.loader.systemd-boot.editor = mkDefault false;
     })
     (mkIf (cfg.bootloader == "grub") {
-      boot = {
+      boot = mkDefault {
         loader = {
           systemd-boot.enable = false;
           efi.canTouchEfiVariables = true;
