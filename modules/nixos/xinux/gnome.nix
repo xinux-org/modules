@@ -122,7 +122,7 @@ in
 
     environment.systemPackages =
       # Whatever minimal mode enabled keep these extensions
-      mkForce [
+      [
         pkgs.gnomeExtensions.gsconnect
         pkgs.gnomeExtensions.clipboard-indicator
         pkgs.gnomeExtensions.appindicator
