@@ -17,11 +17,11 @@ in
   config = lib.mkIf config.xinux.gnome.enable {
     xinux.graphical.enable = true;
     services.desktopManager.gnome = {
-      favoriteAppsOverride = lib.mkDefault ''
+      favoriteAppsOverride = mkDefault ''
         [org.gnome.shell]
         favorite-apps=[ 'firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'org.xinux.NixSoftwareCenter.desktop', 'org.xinux.XinuxModuleManager.desktop', 'uz.xinux.EIMZOManager.desktop' ]
       '';
-      extraGSettingsOverrides = ''
+      extraGSettingsOverrides = mkDefault ''
         [org.gnome.desktop.background]
         picture-uri='file://${xinux-wallpapers.xinux-orange.gnomeFilePath}'
         picture-uri-dark='file://${xinux-wallpapers.xinux-orange.gnomeFilePath}'
@@ -70,7 +70,7 @@ in
         [org.gnome.desktop.peripherals.touchpad]
         click-method='areas'
       '';
-      extraGSettingsOverridePackages = [
+      extraGSettingsOverridePackages = mkDefault [
         pkgs.gsettings-desktop-schemas
         pkgs.gnome-shell
       ];
