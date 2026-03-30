@@ -93,17 +93,15 @@ in
       };
     };
 
-    fonts.packages =
-      with pkgs;
-      mkDefault [
-        noto-fonts
-        noto-fonts-cjk-sans
-        noto-fonts-color-emoji
-        liberation_ttf
-        fira-code
-        fira-code-symbols
-        nerd-fonts.jetbrains-mono
-      ];
+    fonts.packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+      liberation_ttf
+      fira-code
+      fira-code-symbols
+      nerd-fonts.jetbrains-mono
+    ];
 
     environment.variables = mkDefault {
       # Disable compositing mode in WebKitGTK
