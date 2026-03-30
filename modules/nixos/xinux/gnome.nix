@@ -122,7 +122,9 @@ in
 
     environment.systemPackages =
       # Whatever minimal mode enabled keep these extensions
-      [
+      mkDefault [
+        pkgs.gnomeExtensions.gsconnect
+        pkgs.gnomeExtensions.clipboard-indicator
         pkgs.gnomeExtensions.appindicator
         pkgs.gnomeExtensions.dash-to-dock
         pkgs.papirus-icon-theme
@@ -144,10 +146,6 @@ in
         xinux-wallpapers.xinux-wheel
         xinux-wallpapers.xinux-white-flower
         xinux-wallpapers.xinux-sky
-      ]
-      ++ (lib.optionals (!config.modules.gnome.removeUtils.enable) [
-        pkgs.gnomeExtensions.gsconnect
-        pkgs.gnomeExtensions.clipboard-indicator
-      ]);
+      ];
   };
 }
