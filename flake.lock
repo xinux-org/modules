@@ -831,15 +831,17 @@
       "locked": {
         "lastModified": 1773014120,
         "narHash": "sha256-7EeW50+Avym+H6Ha/vSgEXT1IlXpMCq+4iesVB0p1Ss=",
-        "owner": "xinux-org",
-        "repo": "software-center",
+        "ref": "main",
         "rev": "e9a2c3584b82fbcb636098bbb6c40305f9325af6",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
       },
       "original": {
-        "owner": "xinux-org",
-        "repo": "software-center",
-        "type": "github"
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
       }
     },
     "nixos-appstream-data": {
@@ -872,16 +874,17 @@
       "locked": {
         "lastModified": 1774604890,
         "narHash": "sha256-FEuvGWSdsFeGlrJ2fLziJqtmfb9gJknUOOXjy45Td58=",
-        "owner": "xinux-org",
-        "repo": "nixpkgs",
+        "ref": "nixos-unstable",
         "rev": "07f80999d815732724695a39bd22664b03dc8d30",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
       },
       "original": {
-        "owner": "xinux-org",
         "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
       }
     },
     "nixpkgs-lib": {
@@ -1229,15 +1232,17 @@
       "locked": {
         "lastModified": 1773014165,
         "narHash": "sha256-KjOF4wZv2JTGoVZXsCuVTZjoyn18+6Lk/IIM49CoUpE=",
-        "owner": "xinux-org",
-        "repo": "xin",
+        "ref": "main",
         "rev": "1a1ee9ce95db9969b4d26bfebbd856d327c25396",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/xin"
       },
       "original": {
-        "owner": "xinux-org",
-        "repo": "xin",
-        "type": "github"
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/xin"
       }
     },
     "xinux-lib": {

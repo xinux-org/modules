@@ -15,7 +15,6 @@ in
     ./l10n.nix
     ./gnome.nix
     ./debug.nix
-    ./version.nix
     ./hardware.nix
     ./graphical.nix
   ];
@@ -53,35 +52,29 @@ in
   };
   config = mkMerge [
     (mkIf cfg.nixSoftwareCenter.enable {
-      environment.systemPackages = with inputs; [
-        nix-software-center.packages.${pkgs.stdenv.hostPlatform.system}.default
+      environment.systemPackages = with pkgs; [
+        nix-software-center
       ];
     })
     (mkIf cfg.eimzoIntegraion.enable {
-      services.e-imzo.enable = mkForce true;
+      services.e-imzo.enable = mkDefault true;
       environment.systemPackages = with pkgs; [
         e-imzo-manager
       ];
     })
     (mkIf cfg.xinuxModuleManager.enable {
-      environment.systemPackages = with inputs; [
-        xinux-module-manager.packages."${pkgs.stdenv.hostPlatform.system}".xinux-module-manager
+      environment.systemPackages = with pkgs; [
+        xinux-module-manager
       ];
     })
     (mkIf (cfg.language == "uz_UZ.UTF-8") {
-      i18n = {
-        defaultLocale = "uz_UZ.UTF-8";
-      };
+      i18n.defaultLocale = mkDefault "uz_UZ.UTF-8";
     })
     (mkIf (cfg.language == "en_US.UTF-8") {
-      i18n = {
-        defaultLocale = "en_US.UTF-8";
-      };
+      i18n.defaultLocale = mkDefault "en_US.UTF-8";
     })
     (mkIf (cfg.language == "ru_RU.UTF-8") {
-      i18n = {
-        defaultLocale = "ru_RU.UTF-8";
-      };
+      i18n.defaultLocale = mkDefault "ru_RU.UTF-8";
     })
     (mkIf cfg.binaryCompat.enable {
       programs.nix-ld = {
@@ -114,7 +107,7 @@ in
         gnome.enable = mkDefault true;
       };
 
-      security = {
+      security = mkOverride {
         sudo-rs.enable = true;
       };
 
@@ -147,16 +140,16 @@ in
       # Reasonable Defaults
       nix = {
         settings = {
-          experimental-features = [
+          experimental-features = mkDefault [
             "nix-command"
             "flakes"
             "pipe-operators"
           ];
-          substituters = [
+          substituters = mkDefault [
             "https://cache.xinux.uz/"
             "https://cache.nixos.org/"
           ];
-          trusted-public-keys = [
+          trusted-public-keys = mkDefault [
             "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" # nixos
           ];

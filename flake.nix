@@ -2,17 +2,20 @@
   description = "Xinux Modules";
 
   inputs = {
-    nixpkgs.url = "github:xinux-org/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:xinux-org/nixpkgs/nixos-unstable";
+    nixpkgs.url = "git+https://git.oss.uzinfocom.uz/xinux/nixpkgs?ref=nixos-unstable&shallow=1";
 
     # Xinux provided
 
     xin = {
-      url = "github:xinux-org/xin";
+      # url = "github:xinux-org/xin";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/xin?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-software-center = {
-      url = "github:xinux-org/software-center";
+      # url = "github:xinux-org/software-center";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/software-center?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

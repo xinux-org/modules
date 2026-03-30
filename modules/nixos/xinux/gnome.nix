@@ -88,7 +88,7 @@ in
     # Setting daemons
     services = {
       # Udev daemon management
-      udev.packages = with pkgs; [ gnome-settings-daemon ];
+      udev.packages = with pkgs; lib.mkDefault [ gnome-settings-daemon ];
     };
 
     programs = {
@@ -102,25 +102,27 @@ in
       };
     };
 
-    fonts.packages = with pkgs; [
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-color-emoji
-      liberation_ttf
-      fira-code
-      fira-code-symbols
-      nerd-fonts.jetbrains-mono
-    ];
+    fonts.packages =
+      with pkgs;
+      lib.mkDefault [
+        noto-fonts
+        noto-fonts-cjk-sans
+        noto-fonts-color-emoji
+        liberation_ttf
+        fira-code
+        fira-code-symbols
+        nerd-fonts.jetbrains-mono
+      ];
 
-    environment.variables = {
+    environment.variables = lib.mkDefault {
       # Disable compositing mode in WebKitGTK
       # https://github.com/NixOS/nixpkgs/issues/32580
       WEBKIT_DISABLE_COMPOSITING_MODE = 1;
     };
 
-    services.xserver.excludePackages = [ pkgs.xterm ];
+    services.xserver.excludePackages = lib.mkDefault [ pkgs.xterm ];
 
-    environment.gnome.excludePackages = [
+    environment.gnome.excludePackages = lib.mkDefault [
       pkgs.xterm
       nixos-background-info
       pkgs.gnome-backgrounds

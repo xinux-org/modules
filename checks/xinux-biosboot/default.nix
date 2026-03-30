@@ -11,6 +11,7 @@ pkgs.testers.runNixOSTest {
     {
       imports = with inputs.self; [
         nixosModules.biosboot
+        nixosModules.branding
         nixosModules.gnome
         nixosModules.kernel
         nixosModules.metadata
