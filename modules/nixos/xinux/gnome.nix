@@ -82,14 +82,14 @@ in
       udev.packages = with pkgs; mkDefault [ gnome-settings-daemon ];
     };
 
-    programs = mkDefault {
+    programs = {
       gnupg.agent = {
-        enable = true;
-        enableSSHSupport = true;
+        enable = mkDefault true;
+        enableSSHSupport = mkDefault true;
       };
       # Enabling seahorse keyring
       seahorse = {
-        enable = true;
+        enable = mkDefault true;
       };
     };
 
@@ -103,10 +103,10 @@ in
       nerd-fonts.jetbrains-mono
     ];
 
-    environment.variables = mkDefault {
+    environment.variables = {
       # Disable compositing mode in WebKitGTK
       # https://github.com/NixOS/nixpkgs/issues/32580
-      WEBKIT_DISABLE_COMPOSITING_MODE = 1;
+      WEBKIT_DISABLE_COMPOSITING_MODE = mkDefault 1;
     };
 
     services.xserver.excludePackages = mkDefault [ pkgs.xterm ];
