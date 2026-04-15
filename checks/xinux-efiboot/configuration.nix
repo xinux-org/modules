@@ -26,7 +26,7 @@
   };
 
   # Allow unfree packages
-  environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
+  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
