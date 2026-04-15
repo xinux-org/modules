@@ -5,9 +5,8 @@
   pkgs,
   ...
 }:
-with lib;
 let
-  cfg = config.moaaadules.biosboot;
+  cfg = config.modules.biosboot;
 in
 {
   config = {
@@ -29,6 +28,6 @@ in
         };
       };
     };
-    boot.tmp.cleanOnBoot = mkDefault true;
+    boot.tmp.cleanOnBoot = lib.mkDefault true;
   };
 }
