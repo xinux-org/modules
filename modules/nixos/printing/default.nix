@@ -1,11 +1,9 @@
 {
-  config,
   lib,
   ...
 }:
-with lib;
 {
   config = {
-    services.printing.enable = mkDefault true;
+    services.printing.enable = lib.mkDefault true;
   };
 }

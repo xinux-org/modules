@@ -3,17 +3,16 @@
   lib,
   ...
 }:
-with lib;
 {
   services.xserver = {
-    enable = mkDefault true;
+    enable = lib.mkDefault true;
 
     # add uzbek keyboard
     xkb = {
       # Switch between layouts using Alt+Shift
-      options = mkDefault "grp:alt_shift_toggle,lv3:ralt_switch";
+      options = lib.mkDefault "grp:alt_shift_toggle,lv3:ralt_switch";
 
-      extraLayouts.uz = mkDefault {
+      extraLayouts.uz = lib.mkDefault {
         description = "Uzbek";
         languages = [ "uzb" ];
         symbolsFile = ./uz_compat;
@@ -25,10 +24,10 @@ with lib;
   ];
 
   i18n = {
-    extraLocales = mkDefault [
+    extraLocales = lib.mkDefault [
       "all"
     ];
-    supportedLocales = mkDefault [
+    supportedLocales = lib.mkDefault [
       "all"
     ];
   };

@@ -6,7 +6,6 @@
   system,
   ...
 }:
-with lib;
 let
   cfg = config.modules.xinux;
 in
@@ -19,28 +18,28 @@ in
     ./graphical.nix
   ];
 
-  options.modules.xinux = with types; {
-    nixSoftwareCenter.enable = mkOption {
+  options.modules.xinux = with lib.types; {
+    nixSoftwareCenter.enable = lib.mkOption {
       type = bool;
       default = true;
       description = "Enable Nix Software Center, a graphical software center for Nix";
     };
-    xinuxModuleManager.enable = mkOption {
+    xinuxModuleManager.enable = lib.mkOption {
       type = bool;
       default = true;
       description = "Enable Xinux Module Manager, a graphical tool for managing Xinux modules";
     };
-    binaryCompat.enable = mkOption {
+    binaryCompat.enable = lib.mkOption {
       type = bool;
       default = false;
       description = "Enables FHS binary compatibility (may not work in all cases)";
     };
-    eimzoIntegraion.enable = mkOption {
+    eimzoIntegraion.enable = lib.mkOption {
       type = bool;
       default = false;
       description = "Enable services and install software of E-IMZO for easier management of keys";
     };
-    language = mkOption {
+    language = lib.mkOption {
       type = enum [
         "uz_UZ.UTF-8"
         "en_US.UTF-8"
@@ -50,35 +49,35 @@ in
       description = "set language";
     };
   };
-  config = mkMerge [
-    (mkIf cfg.nixSoftwareCenter.enable {
+  config = lib.mkMerge [
+    (lib.mkIf cfg.nixSoftwareCenter.enable {
       environment.systemPackages = with pkgs; [
         software-center
       ];
     })
-    (mkIf cfg.eimzoIntegraion.enable {
-      services.e-imzo.enable = mkDefault true;
+    (lib.mkIf cfg.eimzoIntegraion.enable {
+      services.e-imzo.enable = lib.mkDefault true;
       environment.systemPackages = with pkgs; [
         e-imzo-manager
       ];
     })
-    (mkIf cfg.xinuxModuleManager.enable {
+    (lib.mkIf cfg.xinuxModuleManager.enable {
       environment.systemPackages = with pkgs; [
         xinux-module-manager
       ];
     })
-    (mkIf (cfg.language == "uz_UZ.UTF-8") {
-      i18n.defaultLocale = mkDefault "uz_UZ.UTF-8";
+    (lib.mkIf (cfg.language == "uz_UZ.UTF-8") {
+      i18n.defaultLocale = lib.mkDefault "uz_UZ.UTF-8";
     })
-    (mkIf (cfg.language == "en_US.UTF-8") {
-      i18n.defaultLocale = mkDefault "en_US.UTF-8";
+    (lib.mkIf (cfg.language == "en_US.UTF-8") {
+      i18n.defaultLocale = lib.mkDefault "en_US.UTF-8";
     })
-    (mkIf (cfg.language == "ru_RU.UTF-8") {
-      i18n.defaultLocale = mkDefault "ru_RU.UTF-8";
+    (lib.mkIf (cfg.language == "ru_RU.UTF-8") {
+      i18n.defaultLocale = lib.mkDefault "ru_RU.UTF-8";
     })
-    (mkIf cfg.binaryCompat.enable {
+    (lib.mkIf cfg.binaryCompat.enable {
       programs.nix-ld = {
-        enable = mkDefault true;
+        enable = lib.mkDefault true;
         libraries = with pkgs; [
           acl
           attr
@@ -99,15 +98,15 @@ in
           zstd
         ];
       };
-      services.envfs.enable = mkDefault true;
+      services.envfs.enable = lib.mkDefault true;
     })
     {
       xinux = {
-        gnome.enable = mkDefault true;
+        gnome.enable = lib.mkDefault true;
       };
 
       security = {
-        sudo-rs.enable = mkForce true;
+        sudo-rs.enable = lib.mkForce true;
       };
 
       environment.systemPackages = [
@@ -119,12 +118,12 @@ in
       programs = {
         # Some programs need SUID wrappers, can be configured further or are
         # started in user sessions.
-        mtr.enable = mkDefault true;
+        mtr.enable = lib.mkDefault true;
       };
 
       # Generate nix inputs at etc
       environment.etc = (
-        mapAttrs' (name: value: {
+        lib.mapAttrs' (name: value: {
           name = "nix/inputs/${name}";
           value = {
             source = value.outPath;
@@ -135,21 +134,21 @@ in
       # Reasonable Defaults
       nix = {
         settings = {
-          experimental-features = mkDefault [
+          experimental-features = lib.mkDefault [
             "nix-command"
             "flakes"
             "pipe-operators"
           ];
-          substituters = mkDefault [
+          substituters = lib.mkDefault [
             "https://cache.xinux.uz/"
             "https://cache.nixos.org/"
           ];
-          trusted-public-keys = mkDefault [
+          trusted-public-keys = lib.mkDefault [
             "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" # nixos
           ];
         }
-        // (mapAttrsRecursive (_: mkDefault) {
+        // (lib.mapAttrsRecursive (_: lib.mkDefault) {
           connect-timeout = 5;
           log-lines = 25;
           min-free = 128000000;
@@ -159,7 +158,7 @@ in
           auto-optimise-store = true;
         });
       }
-      // (mapAttrsRecursive (_: mkDefault) {
+      // (lib.mapAttrsRecursive (_: lib.mkDefault) {
         # flake-plus-utils provided options
         # linkInputs = true;
         # generateNixPathFromInputs = true;

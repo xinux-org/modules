@@ -2,11 +2,10 @@
   lib,
   ...
 }:
-with lib;
 {
   imports = [
     ./version.nix
   ];
 
-  xinux.osInfo.enable = mkDefault true;
+  xinux.osInfo.enable = lib.mkDefault true;
 }

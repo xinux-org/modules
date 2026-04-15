@@ -4,20 +4,19 @@
   pkgs,
   ...
 }:
-with lib;
 {
   options.xinux.graphical = {
-    enable = mkEnableOption "Xinux default graphical configurations (not including DE)";
+    enable = lib.mkEnableOption "Xinux default graphical configurations (not including DE)";
   };
 
-  config = mkIf config.xinux.graphical.enable {
+  config = lib.mkIf config.xinux.graphical.enable {
     # Enable fwupd
-    services.fwupd.enable = mkDefault true;
+    services.fwupd.enable = lib.mkDefault true;
 
     # Add opengl/vulkan support
     hardware.graphics = {
-      enable = mkDefault true;
-      enable32Bit = mkDefault (config.hardware.graphics.enable && pkgs.stdenv.hostPlatform.isx86);
+      enable = lib.mkDefault true;
+      enable32Bit = lib.mkDefault (config.hardware.graphics.enable && pkgs.stdenv.hostPlatform.isx86);
     };
   };
 }

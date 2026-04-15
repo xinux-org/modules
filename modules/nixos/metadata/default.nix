@@ -3,7 +3,6 @@
   lib,
   ...
 }:
-with lib;
 {
   config = {
     environment.etc =
@@ -13,7 +12,7 @@ with lib;
         })
         (
           lib.filterAttrs (n: v: lib.hasAttr "module.yml" (builtins.readDir ../${v})) (
-            lib.mapAttrs' (name: value: nameValuePair "xinux-modules/${name}/module.yml" name) (
+            lib.mapAttrs' (name: value: lib.nameValuePair "xinux-modules/${name}/module.yml" name) (
               builtins.readDir ./..
             )
           )

@@ -4,7 +4,6 @@
   pkgs,
   ...
 }:
-with lib;
 let
   nixos-background-info = pkgs.stdenv.mkDerivation { name = "nixos-background-info"; };
   xinux-wallpapers = lib.recurseIntoAttrs (pkgs.callPackage ./wallpapers.nix { });
@@ -17,11 +16,11 @@ in
   config = lib.mkIf config.xinux.gnome.enable {
     xinux.graphical.enable = true;
     services.desktopManager.gnome = {
-      favoriteAppsOverride = mkDefault ''
+      favoriteAppsOverride = lib.mkDefault ''
         [org.gnome.shell]
         favorite-apps=[ 'firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'org.xinux.NixSoftwareCenter.desktop', 'org.xinux.XinuxModuleManager.desktop', 'uz.xinux.EIMZOManager.desktop' ]
       '';
-      extraGSettingsOverrides = mkDefault ''
+      extraGSettingsOverrides = lib.mkDefault ''
         [org.gnome.desktop.background]
         picture-uri='file://${xinux-wallpapers.xinux-orange.gnomeFilePath}'
         picture-uri-dark='file://${xinux-wallpapers.xinux-orange.gnomeFilePath}'
@@ -70,7 +69,7 @@ in
         [org.gnome.desktop.peripherals.touchpad]
         click-method='areas'
       '';
-      extraGSettingsOverridePackages = mkDefault [
+      extraGSettingsOverridePackages = lib.mkDefault [
         pkgs.gsettings-desktop-schemas
         pkgs.gnome-shell
       ];
@@ -79,17 +78,17 @@ in
     # Setting daemons
     services = {
       # Udev daemon management
-      udev.packages = with pkgs; mkDefault [ gnome-settings-daemon ];
+      udev.packages = with pkgs; lib.mkDefault [ gnome-settings-daemon ];
     };
 
     programs = {
       gnupg.agent = {
-        enable = mkDefault true;
-        enableSSHSupport = mkDefault true;
+        enable = lib.mkDefault true;
+        enableSSHSupport = lib.mkDefault true;
       };
       # Enabling seahorse keyring
       seahorse = {
-        enable = mkDefault true;
+        enable = lib.mkDefault true;
       };
     };
 
@@ -135,12 +134,12 @@ in
     environment.variables = {
       # Disable compositing mode in WebKitGTK
       # https://github.com/NixOS/nixpkgs/issues/32580
-      WEBKIT_DISABLE_COMPOSITING_MODE = mkDefault 1;
+      WEBKIT_DISABLE_COMPOSITING_MODE = lib.mkDefault 1;
     };
 
-    services.xserver.excludePackages = mkDefault [ pkgs.xterm ];
+    services.xserver.excludePackages = lib.mkDefault [ pkgs.xterm ];
 
-    environment.gnome.excludePackages = mkDefault [
+    environment.gnome.excludePackages = lib.mkDefault [
       pkgs.xterm
       nixos-background-info
       pkgs.gnome-backgrounds

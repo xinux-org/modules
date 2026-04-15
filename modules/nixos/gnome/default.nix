@@ -5,21 +5,20 @@
   inputs,
   ...
 }:
-with lib;
 let
   cfg = config.modules.gnome;
 in
 {
-  options.modules.gnome = with types; {
-    gsconnect.enable = mkEnableOption "Enable KDE Connect integration";
-    removeUtils.enable = mkOption {
+  options.modules.gnome = with lib.types; {
+    gsconnect.enable = lib.mkEnableOption "Enable KDE Connect integration";
+    removeUtils.enable = lib.mkOption {
       type = bool;
       default = false;
       description = "Remove non-essential GNOME utilities";
     };
   };
 
-  config = mkMerge [
+  config = lib.mkMerge [
     {
       # Enable the GNOME Desktop Environment.
       services = {
@@ -45,7 +44,7 @@ in
         };
       };
 
-      programs.kdeconnect = mkIf cfg.gsconnect.enable {
+      programs.kdeconnect = lib.mkIf cfg.gsconnect.enable {
         package = pkgs.gnomeExtensions.gsconnect;
         enable = true;
       };
@@ -56,7 +55,7 @@ in
         inputs.xinux-tour.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
     }
-    (mkIf cfg.removeUtils.enable {
+    (lib.mkIf cfg.removeUtils.enable {
       modules.xinux.eimzoIntegraion.enable = lib.mkDefault false;
 
       services.gnome.core-utilities.enable = false;
