@@ -4,7 +4,6 @@
   pkgs,
   ...
 }:
-with lib;
 let
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
     export __NV_PRIME_RENDER_OFFLOAD=1
@@ -15,7 +14,24 @@ let
   '';
 in
 {
-  config = mkIf (config.hardware.nvidia.prime.offload.enable && config.xinux.graphical.enable) {
-    environment.systemPackages = [ nvidia-offload ];
+  options.xinux.graphical = {
+    enable = lib.mkEnableOption "Xinux default graphical configurations (not including DE)";
   };
+
+  config = lib.mkMerge [
+    (lib.mkIf (config.hardware.nvidia.prime.offload.enable && config.xinux.graphical.enable) {
+      environment.systemPackages = [ nvidia-offload ];
+    })
+    (lib.mkIf config.xinux.graphical.enable {
+      # Enable fwupd
+      services.fwupd.enable = lib.mkDefault true;
+
+      # Add opengl/vulkan support
+      hardware.graphics = {
+        enable = lib.mkDefault true;
+        enable32Bit = lib.mkDefault (config.hardware.graphics.enable && pkgs.stdenv.hostPlatform.isx86);
+      };
+    })
+  ];
+
 }
