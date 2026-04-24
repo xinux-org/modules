@@ -46,8 +46,7 @@ in
     # if the list includes intel in the list
     (lib.mkIf (builtins.elem "intel" cfg.gpu) {
       # GPU (Intel)
-      graphics = {
-        enable = lib.mkDefault true;
+      hardware.graphics = {
         extraPackages = with pkgs; [
           vpl-gpu-rt
           intel-media-driver

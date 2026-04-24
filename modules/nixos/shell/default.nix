@@ -1,4 +1,5 @@
 {
+  pkgs,
   config,
   lib,
   ...
@@ -25,14 +26,16 @@ in
   config = lib.mkMerge [
     # Defaults
     {
-      # command not found for nix
-      nix-index.enable = true;
+      programs = {
+        # command not found for nix
+        nix-index.enable = true;
 
-      # prettier terminal prompt
-      programs.starship = {
-        enable = true;
-        settings = {
-          battery.disabled = true;
+        # prettier terminal prompt
+        starship = {
+          enable = true;
+          settings = {
+            battery.disabled = true;
+          };
         };
       };
     }
@@ -58,13 +61,12 @@ in
           enableCompletion = true;
 
           # History file
-          histFile = 5000;
           histSize = 5000;
 
           # Autosuggestions
           autosuggestions = {
             enable = true;
-            highlight = "fg=gray";
+            highlightStyle = "fg=gray";
           };
 
           # ZSH Syntax Highlighting
