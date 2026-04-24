@@ -27,6 +27,14 @@ in
     {
       # command not found for nix
       nix-index.enable = true;
+
+      # prettier terminal prompt
+      programs.starship = {
+        enable = true;
+        settings = {
+          battery.disabled = true;
+        };
+      };
     }
 
     # Shell preferences
