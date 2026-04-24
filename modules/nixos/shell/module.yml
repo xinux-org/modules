@@ -1,0 +1,26 @@
+---
+name: Shell
+id: modules.shell
+flake: xinux-modules
+unique_groups:
+  - shell
+description: "Shell with its configurations."
+version: 0.0.1
+icon:
+  type: system
+  path: application-x-executable-symbolic
+
+options:
+  - label: "Shell Type"
+    id: modules.shell.type
+    description: "Choose shell to your liking."
+    type: !enum
+      default: zsh
+      options:
+        zsh: ZSH
+        bash: Bash
+  - label: "Direnv"
+    id: modules.shell.direnv
+    description: "Enable direnv integration for the shell."
+    type: !switch
+      default: false
