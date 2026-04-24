@@ -19,6 +19,7 @@ pkgs.testers.runNixOSTest {
         nixosModules.packagemanagers
         nixosModules.pipewire
         nixosModules.printing
+        nixosModules.shell
         nixosModules.xinux
         ./configuration.nix
       ];
