@@ -25,6 +25,8 @@ in
           "intel"
           "nvidia"
           "amdgpu"
+          "modesetting"
+          "fbdev"
         ]);
       default = [
         "modesetting"
