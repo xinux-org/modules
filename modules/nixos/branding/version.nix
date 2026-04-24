@@ -26,9 +26,9 @@ let
     PRETTY_NAME = "Xinux ${cfg.release} (${mcfg.codeName})";
     LOGO = "nix-xinux-white";
     HOME_URL = "https://xinux.uz";
-    DOCUMENTATION_URL = "";
-    SUPPORT_URL = "";
-    BUG_REPORT_URL = "";
+    DOCUMENTATION_URL = "https://xinux.uz/learn";
+    SUPPORT_URL = "https://github.com/orgs/xinux-org/discussions";
+    BUG_REPORT_URL = "https://github.com/orgs/xinux-org/discussions/new/choose";
   };
   initrdReleaseContents = osReleaseContents // {
     PRETTY_NAME = "${osReleaseContents.PRETTY_NAME} (Initrd)";
