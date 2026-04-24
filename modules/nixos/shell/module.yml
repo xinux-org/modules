@@ -1,0 +1,21 @@
+---
+name: Shell
+id: modules.shell
+flake: xinux-modules
+description: "Shell with its configurations."
+version: 0.0.1
+icon:
+  type: system
+  path: application-x-executable-symbolic
+
+options:
+  - label: "Shell Type"
+    id: modules.pipewire.enable
+    description: "Choose shell to your liking."
+    type: !switch
+      default: true
+  - label: "Jack"
+    id: services.pipewire.jack.enable
+    description: "Enable Jack support."
+    type: !switch
+      default: false
