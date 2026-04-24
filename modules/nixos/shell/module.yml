@@ -2,6 +2,8 @@
 name: Shell
 id: modules.shell
 flake: xinux-modules
+unique_groups:
+  - shell
 description: "Shell with its configurations."
 version: 0.0.1
 icon:
@@ -10,12 +12,15 @@ icon:
 
 options:
   - label: "Shell Type"
-    id: modules.pipewire.enable
+    id: modules.shell.type
     description: "Choose shell to your liking."
-    type: !switch
-      default: true
-  - label: "Jack"
-    id: services.pipewire.jack.enable
-    description: "Enable Jack support."
+    type: !enum
+      default: zsh
+      options:
+        zsh: ZSH
+        bash: Bash
+  - label: "Direnv"
+    id: modules.shell.direnv
+    description: "Enable direnv integration for the shell."
     type: !switch
       default: false
