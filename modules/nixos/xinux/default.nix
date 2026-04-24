@@ -105,7 +105,7 @@ in
       };
 
       security = {
-        sudo-rs.enable = lib.mkForce true;
+        sudo-rs.enable = lib.mkDefault true;
       };
 
       environment.systemPackages = [
