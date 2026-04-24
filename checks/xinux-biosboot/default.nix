@@ -6,6 +6,7 @@
 }:
 pkgs.testers.runNixOSTest {
   name = "Xinux biosboot config test";
+
   nodes.machine =
     { ... }:
     {
@@ -39,6 +40,9 @@ pkgs.testers.runNixOSTest {
 
     specialArgs = { inherit inputs; };
   };
+
+  # disable only when working on testScript
+  skipTypeCheck = true;
 
   testScript = ''
     machine.start()
