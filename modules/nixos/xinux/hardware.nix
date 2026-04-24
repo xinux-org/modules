@@ -25,8 +25,13 @@ in
           "intel"
           "nvidia"
           "amdgpu"
+          "modesetting"
+          "fbdev"
         ]);
-      default = [ ];
+      default = [
+        "modesetting"
+        "fbdev"
+      ];
       description = "Graphical driver to be added to the host system.";
     };
   };
@@ -41,6 +46,8 @@ in
         enable = lib.mkDefault true;
         enable32Bit = lib.mkDefault (config.hardware.graphics.enable && pkgs.stdenv.hostPlatform.isx86);
       };
+
+      services.xserver.videoDrivers = cfg.gpu;
     })
 
     # if the list includes intel in the list
