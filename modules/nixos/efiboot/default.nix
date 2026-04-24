@@ -23,20 +23,20 @@ in
 
   config = lib.mkMerge [
     (lib.mkIf (cfg.bootloader == "systemd-boot") {
-      boot.loader.systemd-boot.enable = lib.mkDefault true;
-      boot.loader.efi.canTouchEfiVariables = lib.mkDefault true;
+      boot.loader.systemd-boot.enable = true;
+      boot.loader.efi.canTouchEfiVariables = true;
       boot.loader.systemd-boot.editor = lib.mkDefault false;
     })
     (lib.mkIf (cfg.bootloader == "grub") {
       boot = {
         loader = {
-          systemd-boot.enable = lib.mkDefault false;
-          efi.canTouchEfiVariables = lib.mkDefault true;
+          systemd-boot.enable = false;
+          efi.canTouchEfiVariables = true;
           grub = {
-            enable = lib.mkDefault true;
-            devices = lib.mkDefault [ "nodev" ];
-            useOSProber = lib.mkDefault true;
-            efiSupport = lib.mkDefault true;
+            enable = true;
+            devices = [ "nodev" ];
+            useOSProber = true;
+            efiSupport = true;
             theme = "${
               (pkgs.fetchFromGitHub {
                 owner = "xinux-org";
@@ -48,7 +48,7 @@ in
           };
         };
         plymouth = {
-          enable = lib.mkDefault true;
+          enable = true;
           theme = "mac-style";
           themePackages = [
             inputs.mac-style-plymouth.packages."${pkgs.stdenv.hostPlatform.system}".default

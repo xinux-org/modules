@@ -65,6 +65,8 @@ in
         xinux-module-manager
       ];
     })
+
+    # Languages
     (lib.mkIf (cfg.language == "uz_UZ.UTF-8") {
       i18n.defaultLocale = lib.mkDefault "uz_UZ.UTF-8";
     })
@@ -74,6 +76,8 @@ in
     (lib.mkIf (cfg.language == "ru_RU.UTF-8") {
       i18n.defaultLocale = lib.mkDefault "ru_RU.UTF-8";
     })
+
+    # FHS Nix Linking
     (lib.mkIf cfg.binaryCompat.enable {
       programs.nix-ld = {
         enable = lib.mkDefault true;
@@ -100,18 +104,21 @@ in
       services.envfs.enable = lib.mkDefault true;
     })
     {
+      # Enable gnome by default
       xinux = {
         gnome.enable = lib.mkDefault true;
       };
 
+      # Default sudo-rs for better security
       security = {
         sudo-rs.enable = lib.mkDefault true;
       };
 
+      # Pre-installed packages
       environment.systemPackages = [
         inputs.xin.packages.${system}.xin
         pkgs.git # For rebuiling with github flakes
-        pkgs.firefox
+        pkgs.firefox # TODO: give user option to choose default browser
       ];
 
       programs = {

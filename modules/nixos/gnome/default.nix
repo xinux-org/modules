@@ -9,10 +9,10 @@ let
   cfg = config.modules.gnome;
 in
 {
-  options.modules.gnome = with lib.types; {
+  options.modules.gnome = {
     gsconnect.enable = lib.mkEnableOption "Enable KDE Connect integration";
     removeUtils.enable = lib.mkOption {
-      type = bool;
+      type = lib.types.bool;
       default = false;
       description = "Remove non-essential GNOME utilities";
     };

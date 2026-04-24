@@ -16,6 +16,16 @@ in
 {
   options.xinux.graphical = {
     enable = lib.mkEnableOption "Xinux default graphical configurations (not including DE)";
+    gpu = lib.mkOption {
+      type =
+        with lib.types;
+        listOf enum [
+          "intel"
+          "nvidia"
+          "amdgpu"
+        ];
+    };
+
   };
 
   config = lib.mkMerge [

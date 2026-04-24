@@ -5,9 +5,12 @@
 }:
 {
   services.xserver = {
-    enable = lib.mkDefault true;
+    # what's that doing in localization?
+    # enable = lib.mkDefault true;
+    # i get it that it's for xkb but we should setup xkb "optionally"
+    # if user is willing to use xkb, not force to use xkb
 
-    # add uzbek keyboard
+    # Uzbek keyboard
     xkb = {
       # Switch between layouts using Alt+Shift
       options = lib.mkDefault "grp:alt_shift_toggle,lv3:ralt_switch";

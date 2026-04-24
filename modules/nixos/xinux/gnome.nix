@@ -20,7 +20,7 @@ in
         [org.gnome.shell]
         favorite-apps=[ 'firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'org.xinux.NixSoftwareCenter.desktop', 'org.xinux.XinuxModuleManager.desktop', 'uz.xinux.EIMZOManager.desktop' ]
       '';
-      extraGSettingsOverrides = lib.mkDefault ''
+      extraGSettingsOverrides = ''
         [org.gnome.desktop.background]
         picture-uri='file://${xinux-wallpapers.xinux-orange.gnomeFilePath}'
         picture-uri-dark='file://${xinux-wallpapers.xinux-orange.gnomeFilePath}'
@@ -69,7 +69,7 @@ in
         [org.gnome.desktop.peripherals.touchpad]
         click-method='areas'
       '';
-      extraGSettingsOverridePackages = lib.mkDefault [
+      extraGSettingsOverridePackages = [
         pkgs.gsettings-desktop-schemas
         pkgs.gnome-shell
       ];
@@ -78,7 +78,7 @@ in
     # Setting daemons
     services = {
       # Udev daemon management
-      udev.packages = with pkgs; lib.mkDefault [ gnome-settings-daemon ];
+      udev.packages = with pkgs; [ gnome-settings-daemon ];
     };
 
     programs = {
@@ -143,9 +143,9 @@ in
       WEBKIT_DISABLE_COMPOSITING_MODE = lib.mkDefault 1;
     };
 
-    services.xserver.excludePackages = lib.mkDefault [ pkgs.xterm ];
+    services.xserver.excludePackages = [ pkgs.xterm ];
 
-    environment.gnome.excludePackages = lib.mkDefault [
+    environment.gnome.excludePackages = [
       pkgs.xterm
       nixos-background-info
       pkgs.gnome-backgrounds
