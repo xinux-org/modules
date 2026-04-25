@@ -703,10 +703,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1776962708,
-        "narHash": "sha256-fNaXk7OKmgHN1Vf3LZNc43WWSksbghQjMORjcpIhISI=",
+        "lastModified": 1777096953,
+        "narHash": "sha256-8/podi8tNi3UVryFyNEX54SgjQODP0Y24Ek1+kSNE48=",
         "ref": "nixos-unstable",
-        "rev": "fbedf07e6269699ad398660f3918cebab1517ac3",
+        "rev": "459e5fe503bda1346eaaf989d8568aed58488f78",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
