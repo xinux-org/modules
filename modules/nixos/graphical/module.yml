@@ -14,11 +14,17 @@ options:
   - label: "Graphic Card"
     id: modules.graphical.gpu
     description: "Select your graphic card vendor."
-    type: !enum
-      default: pkgs.linuxPackages_latest
+    type: !options
+      default: []
       options:
-        pkgs.linuxPackages: "LTS Kernel"
-        pkgs.linuxPackages_latest: "Latest Kernel"
-        pkgs.linuxPackages-libre: "Libre Kernel"
-        pkgs.linuxPackages_hardened: "Hardened Kernel"
-        pkgs.linuxPackages_zen: "Zen Kernel"
+        '"nvidia"': "NVIDIA Graphics"
+        '"amdgpu"': "AMD Graphics"
+
+  - label: "NVIDIA Series"
+    id: modules.graphical.nvidia
+    description: ""
+    if: "includes('modules.graphical.gpu', 'nvidia')"
+    type: !enum
+      default: "latest"
+      options:
+        '"nvidia-2060"': "NVIDIA 2060"

@@ -206,7 +206,7 @@ in
             zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
           '';
 
-          shellAliases = mkIf cfg.rusted-tools {
+          shellAliases = mkIf cfg.rusted-tools rec {
             sl = ls;
             ls = "${getExe pkgs.eza}";
             top = "${getExe pkgs.btop}";
