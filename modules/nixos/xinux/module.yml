@@ -6,7 +6,7 @@ description: "Xinux default options."
 version: 0.0.1
 icon:
   type: system
-  path: distributor-logo-nixos
+  path: preferences-system-symbolic
 
 options:
   - label: "Enable Nix Software Center"
@@ -29,6 +29,15 @@ options:
     description: "Enable services and install software of E-IMZO for easier management of keys."
     type: !switch
       default: false
+  - label: "Browser"
+    id: modules.xinux.browser
+    description: "Pick the default browser of choice for the system."
+    type: !enum
+      default: '"firefox"'
+      options:
+        '"firefox"': "Mozilla Firefox"
+        '"web"': "GNOME Web"
+        '"uz_UZ.UTF-8"': "Uzbek"
   - label: "Change Language"
     id: modules.xinux.language
     description: "Set language for the OS (until settings app gets to be rewritten)."

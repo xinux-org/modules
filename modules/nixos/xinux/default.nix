@@ -38,6 +38,18 @@ in
       default = false;
       description = "Enable services and install software of E-IMZO for easier management of keys";
     };
+    browser = lib.mkOption {
+      type = enum [
+        "firefox"
+        "web"
+        "zen"
+        "chrome"
+        "chromium"
+      ];
+      default = "firefox";
+      example = "web";
+      description = "A browser of choice for the system.";
+    };
     language = lib.mkOption {
       type = enum [
         "uz_UZ.UTF-8"
@@ -75,6 +87,25 @@ in
     })
     (lib.mkIf (cfg.language == "ru_RU.UTF-8") {
       i18n.defaultLocale = lib.mkDefault "ru_RU.UTF-8";
+    })
+
+    # Browsers
+    (lib.mkIf (cfg.browser == "firefox") {
+      environment.systemPackages = [ pkgs.firefox ];
+    })
+    (lib.mkIf (cfg.browser == "web") {
+      environment.systemPackages = [ pkgs.epiphany ];
+    })
+    (lib.mkIf (cfg.browser == "zen") {
+      environment.systemPackages = [
+        inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".twilight
+      ];
+    })
+    (lib.mkIf (cfg.browser == "chrome") {
+      environment.systemPackages = [ pkgs.google-chrome ];
+    })
+    (lib.mkIf (cfg.browser == "chromium") {
+      environment.systemPackages = [ pkgs.chromium ];
     })
 
     # FHS Nix Linking
@@ -118,7 +149,6 @@ in
       environment.systemPackages = [
         inputs.xin.packages.${system}.xin
         pkgs.git # For rebuiling with github flakes
-        pkgs.firefox # TODO: give user option to choose default browser
       ];
 
       programs = {
