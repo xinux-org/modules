@@ -25,7 +25,7 @@ in
     mkMerge [
       (mkIf cfg.steam {
         steam = {
-          enable = config.games.steam;
+          enable = cfg.steam;
 
           extraCompatPackages = with pkgs; [
             proton-ge-bin
@@ -53,7 +53,7 @@ in
       })
 
       (mkIf cfg.aagl {
-        anime-game-launcher.enable = config.games.gayshit;
+        anime-game-launcher.enable = cfg.aagl;
       })
     ];
 }
