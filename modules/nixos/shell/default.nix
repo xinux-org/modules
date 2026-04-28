@@ -165,6 +165,49 @@ in
             "SHARE_HISTORY"
           ];
 
+          shellInit = ''
+            # Key bindings
+            bindkey -e
+            bindkey '^U' backward-kill-line
+            bindkey '^[[2~' overwrite-mode
+
+
+            bindkey '^[[3~' delete-char
+            bindkey '^[[H' beginning-of-line
+            bindkey '^[[1~' beginning-of-line
+            bindkey '^[[F' end-of-line
+            bindkey '^[[4~' end-of-line
+            bindkey '^[[1;5C' forward-word
+            bindkey '^[[1;5D' backward-word
+            bindkey '^[[3;5~' kill-word
+            bindkey '^[[5~' beginning-of-buffer-or-history
+            bindkey '^[[6~' end-of-buffer-or-history
+            bindkey '^[[Z' undo
+            bindkey ' ' magic-space
+
+            # History files
+            HIST_STAMPS=mm/dd/yyyy
+            ZLE_RPROMPT_INDENT=0
+            WORDCHARS=''${WORDCHARS//\/}
+            PROMPT_EOL_MARK=
+            TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
+
+            # Zsh Completions Configs
+            zstyle ':completion:*:*:*:*:*' menu select
+            zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+            zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}"
+            zstyle ':completion:*' auto-description 'specify: %d'
+            zstyle ':completion:*' completer _expand _complete
+            zstyle ':completion:*' format 'Completing %d'
+            zstyle ':completion:*' group-name ' '
+            zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+            zstyle ':completion:*' rehash true
+            zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+            zstyle ':completion:*' use-compctl false
+            zstyle ':completion:*' verbose true
+            zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+          '';
+
           shellAliases = mkIf cfg.rusted-tools {
             sl = ls;
             ls = "${getExe pkgs.eza}";
