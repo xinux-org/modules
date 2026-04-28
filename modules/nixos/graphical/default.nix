@@ -4,8 +4,10 @@
   pkgs,
   ...
 }:
+with lib;
 let
-  cfg = config.xinux.graphical;
+  cfg = config.modules.graphical;
+
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
     export __NV_PRIME_RENDER_OFFLOAD=1
     export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
@@ -15,19 +17,17 @@ let
   '';
 in
 {
-  options.xinux.graphical = {
-    enable = lib.mkEnableOption "Xinux default graphical configurations (not including DE)";
+  options.modules.graphical = with types; {
+    enable = mkEnableOption "Xinux default graphical configurations (not including DE)";
 
-    gpu = lib.mkOption {
-      type =
-        with lib.types;
-        listOf (enum [
-          "intel"
-          "nvidia"
-          "amdgpu"
-          "modesetting"
-          "fbdev"
-        ]);
+    provider = mkOption {
+      type = listOf (enum [
+        "intel"
+        "nvidia"
+        "amdgpu"
+        "modesetting"
+        "fbdev"
+      ]);
       default = [
         "modesetting"
         "fbdev"
@@ -36,8 +36,8 @@ in
     };
   };
 
-  config = lib.mkMerge [
-    (lib.mkIf config.xinux.graphical.enable {
+  config = mkIf cfg.enable (mkMerge [
+    {
       # Enable fwupd
       services.fwupd.enable = lib.mkDefault true;
 
@@ -47,11 +47,11 @@ in
         enable32Bit = lib.mkDefault (config.hardware.graphics.enable && pkgs.stdenv.hostPlatform.isx86);
       };
 
-      services.xserver.videoDrivers = cfg.gpu;
-    })
+      services.xserver.videoDrivers = cfg.provider;
+    }
 
     # if the list includes intel in the list
-    (lib.mkIf (builtins.elem "intel" cfg.gpu) {
+    (lib.mkIf (builtins.elem "intel" cfg.provider) {
       # GPU (Intel)
       hardware.graphics = {
         extraPackages = with pkgs; [
@@ -64,7 +64,7 @@ in
     })
 
     # if the list includes nvidia in the list
-    (lib.mkIf (builtins.elem "nvidia" cfg.gpu) {
+    (lib.mkIf (builtins.elem "nvidia" cfg.provider) {
       boot = {
         kernelModules = [
           "nvidia"
@@ -91,18 +91,17 @@ in
     })
 
     # NVIDIA offload support
-    (lib.mkIf (config.hardware.nvidia.prime.offload.enable && config.xinux.graphical.enable) {
+    (lib.mkIf (config.hardware.nvidia.prime.offload.enable && cfg.enable) {
       environment.systemPackages = [ nvidia-offload ];
     })
 
     # if the list includes amdgpu in the list
-    (lib.mkIf (builtins.elem "amdgpu" cfg.gpu) {
+    (lib.mkIf (builtins.elem "amdgpu" cfg.provider) {
       hardware.amdgpu = {
         initrd.enable = true;
         opencl.enable = true;
         zluda.enable = true;
       };
     })
-  ];
-
+  ]);
 }

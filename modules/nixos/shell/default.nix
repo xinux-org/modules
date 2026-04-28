@@ -65,8 +65,6 @@ in
             vim = vi;
           };
         };
-
-        nix-index.enableBashIntegration = true;
       };
     })
 
@@ -224,7 +222,6 @@ in
         };
 
         direnv.enableZshIntegration = true;
-        nix-index.enableZshIntegration = true;
       };
 
       # All users default shell must be zsh

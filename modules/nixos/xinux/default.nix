@@ -14,7 +14,6 @@ in
     ./l10n.nix
     ./gnome.nix
     ./debug.nix
-    ./hardware.nix
   ];
 
   options.modules.xinux = with lib.types; {
