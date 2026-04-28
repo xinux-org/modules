@@ -1,23 +1,23 @@
 ---
 name: Game Settings
-id: modules.games
+id: modules.gaming
 flake: xinux-modules
 unique_groups:
   - gaming
 description: "Setup extra gaming configurations for the system."
-version: 0.0.1
+version: 0.0.2
 icon:
   type: system
   path: applications-games-symbolic
 
 options:
   - label: "Steam"
-    id: modules.games.steam
+    id: modules.gaming.steam
     description: "Setup steam with its environment."
     type: !switch
       default: false
   - label: "An Anime Game Launcher"
-    id: modules.games.aagl
+    id: modules.gaming.aagl
     description: "Setup anime games launcher for Genshin Impact."
     type: !switch
       default: false
