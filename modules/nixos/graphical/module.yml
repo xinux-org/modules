@@ -12,19 +12,12 @@ icon:
 
 options:
   - label: "Graphic Card"
-    id: modules.graphical.gpu
+    id: modules.graphical.graphical
     description: "Select your graphic card vendor."
-    type: !options
-      default: []
-      options:
-        '"nvidia"': "NVIDIA Graphics"
-        '"amdgpu"': "AMD Graphics"
-
-  - label: "NVIDIA Series"
-    id: modules.graphical.nvidia
-    description: ""
-    if: "includes('modules.graphical.gpu', 'nvidia')"
     type: !enum
-      default: "latest"
+      default: '"default"'
       options:
-        '"nvidia-2060"': "NVIDIA 2060"
+        '"nvidia"': "NVIDIA Graphics Card"
+        '"amdgpu"': "AMD Graphics Card"
+        '"intel"': "Intel internal GPU"
+        '"default"': "Default settings"
