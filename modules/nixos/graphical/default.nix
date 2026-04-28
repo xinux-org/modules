@@ -17,7 +17,9 @@ in
     provider = mkOption {
       type = enum [
         "default"
-
+        "nvidia"
+        "amdgpu"
+        "intel"
       ];
       default = "default";
       description = "The graphics card provider to install driver for.";
