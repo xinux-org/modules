@@ -6,7 +6,7 @@ description: "Xinux default options."
 version: 0.0.1
 icon:
   type: system
-  path: weather-xinux-symbolic
+  path: distributor-logo-nixos
 
 options:
   - label: "Enable Nix Software Center"

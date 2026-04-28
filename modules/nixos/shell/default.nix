@@ -21,6 +21,8 @@ in
     };
 
     direnv = mkEnableOption "direnv support";
+
+    rusted-tools = mkEnableOption "rust replacement of coreutils";
   };
 
   config = lib.mkMerge [
@@ -46,6 +48,22 @@ in
         bash = {
           completion.enable = true;
           vteIntegration = true;
+
+          shellAliases = mkIf cfg.rusted-tools rec {
+            sl = ls;
+            ls = "${getExe pkgs.eza}";
+            top = "${getExe pkgs.btop}";
+            cat = "${getExe pkgs.bat}";
+            ps = "${getExe pkgs.procs}";
+            grep = "${getExe pkgs.ripgrep}";
+            search = "${getExe pkgs.ripgrep}";
+            look = "${getExe pkgs.fd}";
+            find = "${getExe pkgs.fd}";
+            ping = "${getExe pkgs.gping}";
+            time = "${getExe pkgs.hyperfine}";
+            vi = "${lib.getExe pkgs.helix}";
+            vim = vi;
+          };
         };
 
         nix-index.enableBashIntegration = true;
@@ -146,6 +164,20 @@ in
             "PROMPT_SUBST"
             "SHARE_HISTORY"
           ];
+
+          shellAliases = mkIf cfg.rusted-tools {
+            sl = ls;
+            ls = "${getExe pkgs.eza}";
+            top = "${getExe pkgs.btop}";
+            cat = "${getExe pkgs.bat}";
+            ps = "${getExe pkgs.procs}";
+            grep = "${getExe pkgs.ripgrep}";
+            search = "${getExe pkgs.ripgrep}";
+            look = "${getExe pkgs.fd}";
+            find = "${getExe pkgs.fd}";
+            ping = "${getExe pkgs.gping}";
+            time = "${getExe pkgs.hyperfine}";
+          };
         };
 
         direnv.enableZshIntegration = true;

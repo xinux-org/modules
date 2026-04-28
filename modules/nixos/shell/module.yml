@@ -5,10 +5,10 @@ flake: xinux-modules
 unique_groups:
   - shell
 description: "Shell with its configurations."
-version: 0.0.1
+version: 0.0.2
 icon:
   type: system
-  path: application-x-executable-symbolic
+  path: terminal
 
 options:
   - label: "Shell Type"
@@ -22,5 +22,10 @@ options:
   - label: "Direnv"
     id: modules.shell.direnv
     description: "Enable direnv integration for the shell."
+    type: !switch
+      default: false
+  - label: "Rusted Tool"
+    id: modules.shell.direnv
+    description: "Replace core-utils with rust rewrite of improved versions."
     type: !switch
       default: false
