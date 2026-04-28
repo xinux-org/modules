@@ -34,10 +34,10 @@ in
           package = pkgs.steam.override {
             extraPkgs =
               pkgs': with pkgs'; [
-                libXcursor
-                libXi
-                libXinerama
-                libXScrnSaver
+                # libXcursor
+                # libXi
+                # libXinerama
+                # libXScrnSaver
                 libpng
                 libpulseaudio
                 libvorbis
