@@ -12,7 +12,7 @@ icon:
 
 options:
   - label: "Graphic Card"
-    id: modules.graphical.graphical
+    id: modules.graphical.provider
     description: "Select your graphic card vendor."
     type: !enum
       default: '"default"'
