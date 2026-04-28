@@ -150,6 +150,7 @@ in
       nixos-background-info
       pkgs.gnome-backgrounds
       pkgs.gnome-tour
+      pkgs.epiphany
     ];
 
     environment.systemPackages =
