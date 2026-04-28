@@ -24,7 +24,7 @@ in
     with types;
     mkMerge [
       (mkIf cfg.steam {
-        steam = {
+        programs.steam = {
           enable = cfg.steam;
 
           extraCompatPackages = with pkgs; [
@@ -53,7 +53,7 @@ in
       })
 
       (mkIf cfg.aagl {
-        anime-game-launcher.enable = cfg.aagl;
+        programs.anime-game-launcher.enable = cfg.aagl;
       })
     ];
 }
