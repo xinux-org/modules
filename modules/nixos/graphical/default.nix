@@ -51,7 +51,7 @@ in
       ++ (optionals config.hardware.cpu.intel.updateMicrocode [ "intel" ]);
     })
 
-    (lib.mkIf (builtins.elem "amdgpu" cfg.provider) {
+    (lib.mkIf (cfg.provider == "amdgpu") {
       # can be combined with intel
       modules.gpu.vendor = [
         "amdgpu"
