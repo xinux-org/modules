@@ -27,9 +27,9 @@ in
         programs.steam = {
           enable = cfg.steam;
 
-          extraCompatPackages = with pkgs; [
-            proton-ge-bin
-          ];
+          # extraCompatPackages = with pkgs; [
+          #   proton-ge-bin
+          # ];
 
           package = pkgs.steam.override {
             extraPkgs =
@@ -38,14 +38,14 @@ in
                 # libXi
                 # libXinerama
                 # libXScrnSaver
-                libpng
-                libpulseaudio
-                libvorbis
+                # libpng
+                # libpulseaudio
+                # libvorbis
                 stdenv.cc.cc.lib # Provides libstdc++.so.6
-                libkrb5
-                keyutils
-                bumblebee
-                primus
+                # libkrb5
+                # keyutils
+                # bumblebee
+                # primus
                 # Add other libraries as needed
               ];
           };
