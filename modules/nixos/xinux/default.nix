@@ -62,18 +62,18 @@ in
   config = lib.mkMerge [
     (lib.mkIf cfg.nixSoftwareCenter.enable {
       environment.systemPackages = with pkgs; [
-        software-center
+        inputs.nix-software-center.packages.${pkgs.stdenv.hostPlatform.system}.nix-software-center
       ];
     })
     (lib.mkIf cfg.eimzoIntegraion.enable {
       services.e-imzo.enable = lib.mkDefault true;
       environment.systemPackages = with pkgs; [
-        e-imzo-manager
+        inputs.e-imzo-manager.packages.${pkgs.stdenv.hostPlatform.system}.e-imzo-manager
       ];
     })
     (lib.mkIf cfg.xinuxModuleManager.enable {
       environment.systemPackages = with pkgs; [
-        xinux-module-manager
+        inputs.xinux-module-manager.packages.${pkgs.stdenv.hostPlatform.system}.xinux-module-manager
       ];
     })
 
