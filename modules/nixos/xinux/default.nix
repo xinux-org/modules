@@ -61,18 +61,18 @@ in
   };
   config = lib.mkMerge [
     (lib.mkIf cfg.nixSoftwareCenter.enable {
-      environment.systemPackages = with pkgs; [
-        inputs.nix-software-center.packages.${pkgs.stdenv.hostPlatform.system}.nix-software-center
+      environment.systemPackages = [
+        inputs.nix-software-center.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
     })
     (lib.mkIf cfg.eimzoIntegraion.enable {
       services.e-imzo.enable = lib.mkDefault true;
-      environment.systemPackages = with pkgs; [
+      environment.systemPackages = [
         inputs.e-imzo-manager.packages.${pkgs.stdenv.hostPlatform.system}.e-imzo-manager
       ];
     })
     (lib.mkIf cfg.xinuxModuleManager.enable {
-      environment.systemPackages = with pkgs; [
+      environment.systemPackages = [
         inputs.xinux-module-manager.packages.${pkgs.stdenv.hostPlatform.system}.xinux-module-manager
       ];
     })
@@ -146,7 +146,7 @@ in
 
       # Pre-installed packages
       environment.systemPackages = [
-        inputs.xin.packages.${system}.xin
+        inputs.xin.packages.${pkgs.stdenv.hostPlatform.system}.xin
         pkgs.git # For rebuiling with github flakes
       ];
 

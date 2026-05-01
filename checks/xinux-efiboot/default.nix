@@ -14,6 +14,7 @@ pkgs.testers.runNixOSTest {
         nixosModules.efiboot
         nixosModules.branding
         nixosModules.gnome
+        nixosModules.graphical
         nixosModules.kernel
         nixosModules.metadata
         nixosModules.networking
