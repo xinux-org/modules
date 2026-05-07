@@ -10,21 +10,30 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    xinux-settings = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/settings?ref=main&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-software-center = {
       url = "git+https://git.oss.uzinfocom.uz/xinux/software-center?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     xinux-module-manager = {
       url = "github:xinux-org/module-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     e-imzo-manager = {
       url = "git+https://git.oss.uzinfocom.uz/xinux/e-imzo-manager?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    xinux-tour = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-tour?ref=main&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    bleur = {
+      url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     xinux-lib = {
       url = "git+https://git.oss.uzinfocom.uz/xinux/lib?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,12 +43,6 @@
       url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-plymouth-theme?ref=master&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    xinux-tour = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-tour?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     uz-xkb = {
       url = "github:itsbilolbek/uzbek-linux-keyboard";
       flake = false;

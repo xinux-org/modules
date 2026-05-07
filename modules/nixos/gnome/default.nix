@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  inputs,
   ...
 }:
 let
@@ -52,7 +51,7 @@ in
       environment.systemPackages = with pkgs; [
         gnome-console
         gnome-extension-manager
-        inputs.xinux-tour.packages.${pkgs.stdenv.hostPlatform.system}.default
+        pkgs.xinux-tour
       ];
     }
     (lib.mkIf cfg.removeUtils.enable {

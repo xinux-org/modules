@@ -61,8 +61,8 @@ in
   };
   config = lib.mkMerge [
     (lib.mkIf cfg.nixSoftwareCenter.enable {
-      environment.systemPackages = [
-        inputs.nix-software-center.packages.${pkgs.stdenv.hostPlatform.system}.default
+      environment.systemPackages = with pkgs; [
+        nix-software-center
       ];
     })
     (lib.mkIf cfg.eimzoIntegraion.enable {
@@ -148,6 +148,8 @@ in
       environment.systemPackages = [
         inputs.xin.packages.${pkgs.stdenv.hostPlatform.system}.xin
         pkgs.git # For rebuiling with github flakes
+        pkgs.xinux-settings
+        pkgs.bleur
       ];
 
       programs = {
