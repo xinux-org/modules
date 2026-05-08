@@ -206,6 +206,10 @@ in
         registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
         nixPath = [ "/etc/nix/inputs" ];
       });
+
+      nixpkgs.overlays = [
+        inputs.cachyos-kernel.overlays.default
+      ];
     }
   ];
 }
