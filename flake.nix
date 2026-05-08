@@ -69,7 +69,7 @@
     inputs.xinux-lib.mkFlake {
       # For mkFlake parsing
       inherit inputs;
-      supportedSystems = [ "x86_64-linux" ];
+      supportedSystems = [ "x86_64-linux" "aarch64-linux"];
 
       # Nixpkgs configs
       channels-config = {
