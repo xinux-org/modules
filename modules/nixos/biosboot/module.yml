@@ -3,7 +3,7 @@ name: Boot
 id: modules.biosboot
 flake: xinux-modules
 unique_groups:
-- bootloader
+  - bootloader
 description: "BIOS Boot module."
 version: 0.0.1
 icon:
@@ -11,13 +11,13 @@ icon:
   path: utilities-terminal-symbolic
 
 options:
-- label: "Grub Device"
-  id: boot.loader.grub.device
-  description: "Enable Grub."
-  type: !text
-    default: ""
-- label: "Clean /tmp directory"
-  id: boot.tmp.cleanOnBoot
-  description: "Clean the /tmp directory before booting."
-  type: !switch
-    default: true
+  - label: "Grub Device"
+    id: boot.loader.grub.device
+    description: "Enable Grub."
+    type: !text
+      default: ""
+  - label: "Clean /tmp directory"
+    id: boot.tmp.cleanOnBoot
+    description: "Clean the /tmp directory before booting."
+    type: !switch
+      default: true

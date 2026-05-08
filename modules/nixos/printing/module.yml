@@ -9,8 +9,8 @@ icon:
   path: document-print-symbolic
 
 options:
-- label: "Enable"
-  id: services.printing.enable
-  description: "Enable the CUPS printing system."
-  type: !switch
-    default: true
+  - label: "Enable"
+    id: services.printing.enable
+    description: "Enable the CUPS printing system."
+    type: !switch
+      default: true

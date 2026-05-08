@@ -9,13 +9,13 @@ icon:
   path: org.gnome.Settings-sound-symbolic
 
 options:
-- label: "Enable"
-  id: modules.pipewire.enable
-  description: "Enable Pipewire."
-  type: !switch
-    default: true
-- label: "Jack"
-  id: services.pipewire.jack.enable
-  description: "Enable Jack support."
-  type: !switch
-    default: false
+  - label: "Enable"
+    id: modules.pipewire.enable
+    description: "Enable Pipewire."
+    type: !switch
+      default: true
+  - label: "Jack"
+    id: services.pipewire.jack.enable
+    description: "Enable Jack support."
+    type: !switch
+      default: false

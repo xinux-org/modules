@@ -9,13 +9,13 @@ icon:
   path: package-x-generic-symbolic
 
 options:
-- label: "Flatpak"
-  id: services.flatpak.enable
-  description: "Enable Flatpak support."
-  type: !switch
-    default: false
-- label: "AppImage"
-  id: modules.packagemanagers.appimage.enable
-  description: "Enable AppImage support by installing the \"appimage-run\" package. For AppImages to work, you must run them with the \"appimage-run\" command."
-  type: !switch
-    default: false
+  - label: "Flatpak"
+    id: services.flatpak.enable
+    description: "Enable Flatpak support."
+    type: !switch
+      default: false
+  - label: "AppImage"
+    id: modules.packagemanagers.appimage.enable
+    description: 'Enable AppImage support by installing the "appimage-run" package. For AppImages to work, you must run them with the "appimage-run" command.'
+    type: !switch
+      default: false

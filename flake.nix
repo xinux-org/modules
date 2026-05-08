@@ -2,6 +2,7 @@
   description = "Xinux Modules";
 
   inputs = {
+    # Nixpkgs
     nixpkgs.url = "git+https://git.oss.uzinfocom.uz/xinux/nixpkgs?ref=nixos-unstable&shallow=1";
 
     # Xinux
@@ -9,7 +10,6 @@
       url = "git+https://git.oss.uzinfocom.uz/xinux/xin?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     xinux-settings = {
       url = "git+https://git.oss.uzinfocom.uz/xinux/settings?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,15 +30,21 @@
       url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-tour?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    bleur = {
-      url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     xinux-lib = {
       url = "git+https://git.oss.uzinfocom.uz/xinux/lib?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Uzinfocom
+    bleur = {
+      url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Kernels
+    cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+
+    # Custom software
     mac-style-plymouth = {
       url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-plymouth-theme?ref=master&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,12 +53,10 @@
       url = "github:itsbilolbek/uzbek-linux-keyboard";
       flake = false;
     };
-
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
