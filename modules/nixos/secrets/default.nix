@@ -1,5 +1,6 @@
-{...}: {
-  options = {};
+{ ... }:
+{
+  options = { };
 
-  config = {};
+  config = { };
 }

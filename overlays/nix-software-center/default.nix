@@ -7,5 +7,6 @@
 }:
 
 final: prev: {
-  nix-software-center = inputs.nix-software-center.packages.${prev.stdenv.hostPlatform.system}.default;
+  nix-software-center =
+    inputs.nix-software-center.packages.${prev.stdenv.hostPlatform.system}.default;
 }
