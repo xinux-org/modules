@@ -90,7 +90,24 @@ in
 
     # Browsers
     (lib.mkIf (cfg.browser == "firefox") {
-      environment.systemPackages = [ pkgs.firefox ];
+      programs.firefox = {
+        enable = true;
+        preferences = {
+          "spellchecker.dictionary_path" = let
+            dictionary = pkgs.symlinkJoin {
+              name = "firefox-hunspell-dicts";
+              paths = with pkgs.hunspellDicts; [
+                en-us-large
+                ru-ru
+                uz-uz
+              ];
+            };
+          in "${dictionary}/share/hunspell";
+
+          # https://kb.mozillazine.org/Layout.spellcheckDefault
+          "layout.spellcheckDefault" = 2;
+        };
+      };
     })
     (lib.mkIf (cfg.browser == "web") {
       environment.systemPackages = [ pkgs.epiphany ];
