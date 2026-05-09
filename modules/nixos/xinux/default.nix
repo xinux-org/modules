@@ -103,6 +103,9 @@ in
               ];
             };
           in "${dictionary}/share/hunspell";
+
+          # https://kb.mozillazine.org/Layout.spellcheckDefault
+          "layout.spellcheckDefault" = 2;
         };
       };
     })
