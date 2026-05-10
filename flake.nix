@@ -42,7 +42,7 @@
     };
 
     # Kernels
-    cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    cachyos-kernel.url = "git+https://git.oss.uzinfocom.uz/mirrors/nix-cachyos-kernel?ref=master&shallow=1";
 
     # Custom software
     mac-style-plymouth = {
@@ -69,7 +69,10 @@
     inputs.xinux-lib.mkFlake {
       # For mkFlake parsing
       inherit inputs;
-      supportedSystems = [ "x86_64-linux" "aarch64-linux"];
+      supportedSystems = [
+        "x86_64-linux"
+        "aarch64-linux"
+      ];
 
       # Nixpkgs configs
       channels-config = {
