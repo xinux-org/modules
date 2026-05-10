@@ -19,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     xinux-module-manager = {
-      url = "github:xinux-org/module-manager";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/module-manager?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     e-imzo-manager = {
