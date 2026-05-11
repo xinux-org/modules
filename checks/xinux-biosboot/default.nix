@@ -15,13 +15,14 @@ pkgs.testers.runNixOSTest {
         nixosModules.branding
         nixosModules.gnome
         nixosModules.graphical
+        nixosModules.shell
+        nixosModules.gaming
         nixosModules.kernel
-        nixosModules.metadata
         nixosModules.networking
         nixosModules.packagemanagers
         nixosModules.pipewire
         nixosModules.printing
-        nixosModules.shell
+        nixosModules.metadata
         nixosModules.xinux
         ./configuration.nix
       ];
