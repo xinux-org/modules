@@ -2,49 +2,50 @@
   description = "Xinux Modules";
 
   inputs = {
-    nixpkgs.url = "github:xinux-org/nixpkgs/nixos-25.11";
+    nixpkgs.url = "git+https://git.oss.uzinfocom.uz/xinux/nixpkgs?ref=nixos-25.11&shallow=1";
 
-    # Xinux provided
-    xinux-lib = {
-      url = "github:xinux-org/lib/release-25.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    # Xinux
     xin = {
-      url = "github:xinux-org/xin/release-25.11";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/xin?ref=release-25.11&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     nix-software-center = {
-      url = "github:xinux-org/software-center/release-25.11";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/software-center?ref=release-25.11&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     xinux-module-manager = {
-      url = "github:xinux-org/module-manager/release-25.11";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/module-manager?ref=release-25.11&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nixos-conf-editor = {
-      url = "github:xinux-org/conf-editor/release-25.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     e-imzo-manager = {
-      url = "github:xinux-org/e-imzo-manager/release-25.11";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/e-imzo-manager?ref=release-25.11&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    mac-style-plymouth = {
-      url = "github:xinux-org/xinux-plymouth-theme";
+    nixos-conf-editor = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/conf-editor?ref=release-25.11&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     xinux-tour = {
-      url = "github:xinux-org/xinux-tour";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-tour?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    xinux-lib = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/lib?ref=release-25.11&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # Custom software
+    mac-style-plymouth = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-plymouth-theme?ref=master&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    uz-xkb = {
+      url = "github:itsbilolbek/uzbek-linux-keyboard";
+      flake = false;
     };
   };
 
-  outputs = inputs:
+  outputs =
+    inputs:
     inputs.xinux-lib.mkFlake {
       inherit inputs;
       channels-config.allowUnfree = true;

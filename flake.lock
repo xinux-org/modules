@@ -41,16 +41,17 @@
       "locked": {
         "lastModified": 1766563081,
         "narHash": "sha256-toVGb7FB19Oar4G/zZaa/wC5/3hMUVUYgmAEvF0LpI4=",
-        "owner": "xinux-org",
-        "repo": "e-imzo-manager",
+        "ref": "release-25.11",
         "rev": "ae14f6cc3b5eb647c785025aa44d67a2ff362525",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/e-imzo-manager"
       },
       "original": {
-        "owner": "xinux-org",
         "ref": "release-25.11",
-        "repo": "e-imzo-manager",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/e-imzo-manager"
       }
     },
     "flake-compat": {
@@ -437,15 +438,17 @@
       "locked": {
         "lastModified": 1763734980,
         "narHash": "sha256-7p2OYlhPiHXNYHcBvBkvz9cxyku1C0uTe6p0Wtiwl1k=",
-        "owner": "xinux-org",
-        "repo": "xinux-plymouth-theme",
+        "ref": "master",
         "rev": "6c0b648e35ba6394c8aff1421be296e331c3e8d4",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/xinux-plymouth-theme"
       },
       "original": {
-        "owner": "xinux-org",
-        "repo": "xinux-plymouth-theme",
-        "type": "github"
+        "ref": "master",
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/xinux-plymouth-theme"
       }
     },
     "nix-software-center": {
@@ -460,16 +463,17 @@
       "locked": {
         "lastModified": 1766487082,
         "narHash": "sha256-A0vQBPUTTfhjiYnQy4e47mCjWqYhJk6ZC+rxTUSYpCs=",
-        "owner": "xinux-org",
-        "repo": "software-center",
+        "ref": "release-25.11",
         "rev": "7795fbcd20d10bce41d9b749adc4ea123b344fd5",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
       },
       "original": {
-        "owner": "xinux-org",
         "ref": "release-25.11",
-        "repo": "software-center",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
       }
     },
     "nixos-appstream-data": {
@@ -509,32 +513,34 @@
       "locked": {
         "lastModified": 1764756330,
         "narHash": "sha256-8SDzWem3pzNxud4O8uwq0XeQXSn/oFv2vXc4J3IjNEY=",
-        "owner": "xinux-org",
-        "repo": "conf-editor",
+        "ref": "release-25.11",
         "rev": "343fa60d358622beab83b42f351ed233c68bfdf3",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/conf-editor"
       },
       "original": {
-        "owner": "xinux-org",
         "ref": "release-25.11",
-        "repo": "conf-editor",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/conf-editor"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1769900590,
-        "narHash": "sha256-I7Lmgj3owOTBGuauy9FL6qdpeK2umDoe07lM4V+PnyA=",
-        "owner": "xinux-org",
-        "repo": "nixpkgs",
-        "rev": "41e216c0ca66c83b12ab7a98cc326b5db01db646",
-        "type": "github"
+        "lastModified": 1778003029,
+        "narHash": "sha256-q/nkKLDtHIyLjZpKhWk3cSK5IYsFqtMd6UtXF3ddjgA=",
+        "ref": "nixos-25.11",
+        "rev": "0c88e1f2bdb93d5999019e99cb0e61e1fe2af4c5",
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
       },
       "original": {
-        "owner": "xinux-org",
         "ref": "nixos-25.11",
-        "repo": "nixpkgs",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
       }
     },
     "root": {
@@ -544,6 +550,7 @@
         "nix-software-center": "nix-software-center",
         "nixos-conf-editor": "nixos-conf-editor",
         "nixpkgs": "nixpkgs",
+        "uz-xkb": "uz-xkb",
         "xin": "xin",
         "xinux-lib": "xinux-lib_4",
         "xinux-module-manager": "xinux-module-manager",
@@ -685,6 +692,22 @@
         "type": "github"
       }
     },
+    "uz-xkb": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1769262454,
+        "narHash": "sha256-lHUuWiwt4CjBWm9y56fRGtdGVDzNz2370bUBYSl+Y8g=",
+        "owner": "itsbilolbek",
+        "repo": "uzbek-linux-keyboard",
+        "rev": "7acf9b4f605ccc9a9148f73f997f49f351407f3b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "itsbilolbek",
+        "repo": "uzbek-linux-keyboard",
+        "type": "github"
+      }
+    },
     "xin": {
       "inputs": {
         "libxinux": "libxinux",
@@ -696,16 +719,17 @@
       "locked": {
         "lastModified": 1764400696,
         "narHash": "sha256-RP/4570qE4yVOUoLxjpPJ1FkrpxI/iy4+FGCduT+9vQ=",
-        "owner": "xinux-org",
-        "repo": "xin",
+        "ref": "release-25.11",
         "rev": "e449667900c141f1c709f62681ab14f65da0657a",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/xin"
       },
       "original": {
-        "owner": "xinux-org",
         "ref": "release-25.11",
-        "repo": "xin",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/xin"
       }
     },
     "xinux-lib": {
@@ -792,16 +816,17 @@
       "locked": {
         "lastModified": 1766578317,
         "narHash": "sha256-BuAqXGl6T1UD7hw2Ks3/iyq6eWUwXW/5d8T2rZKcpWQ=",
-        "owner": "xinux-org",
-        "repo": "lib",
+        "ref": "release-25.11",
         "rev": "84c881cb466b41032f1713c962cb16ae5ec13316",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/lib"
       },
       "original": {
-        "owner": "xinux-org",
         "ref": "release-25.11",
-        "repo": "lib",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/lib"
       }
     },
     "xinux-lib_5": {
@@ -838,16 +863,17 @@
       "locked": {
         "lastModified": 1764403053,
         "narHash": "sha256-IB9mLNrAa+HIytt6VKrfkbGzlkHhRzXA9pwjxJuqQjg=",
-        "owner": "xinux-org",
-        "repo": "module-manager",
+        "ref": "release-25.11",
         "rev": "97202aceda71948f2781ab5c63a31fea666809bc",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/module-manager"
       },
       "original": {
-        "owner": "xinux-org",
         "ref": "release-25.11",
-        "repo": "module-manager",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/module-manager"
       }
     },
     "xinux-tour": {
@@ -860,15 +886,17 @@
       "locked": {
         "lastModified": 1764772891,
         "narHash": "sha256-3BDE4UghbOKkC/RD44PkyJnz/tnjqPzSZqZnGASXftI=",
-        "owner": "xinux-org",
-        "repo": "xinux-tour",
+        "ref": "main",
         "rev": "8e19cf6eb823b3a166ad6401a7af469a010863fa",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/xinux-tour"
       },
       "original": {
-        "owner": "xinux-org",
-        "repo": "xinux-tour",
-        "type": "github"
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/xinux-tour"
       }
     }
   },
