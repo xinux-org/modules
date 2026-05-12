@@ -1,0 +1,27 @@
+---
+name: Developer
+id: modules.developer
+flake: xinux-modules
+unique_groups:
+  - development
+description: "Developer related configurations."
+version: 0.0.1
+icon:
+  type: system
+  path: utilities-terminal-symbolic
+
+options:
+  - label: "Containers"
+    id: modules.developer.containers
+    description: "Enable containerization support for the system."
+    type: !switch
+      default: false
+
+  - label: "Container Provider"
+    id: modules.developer.provider
+    description: "Backend to empower the containers."
+    type: !enum
+      default: '"docker"'
+      options:
+        '"podman"': "Podman"
+        '"docker"': "Docker"
