@@ -232,6 +232,10 @@ in
         shells = with pkgs; [ zsh ];
         pathsToLink = [ "/share/zsh" ];
       };
+      programs.zoxide = {
+        enable = true;
+        enableZshIntegration = true;
+      };
     })
 
     # Direnv
