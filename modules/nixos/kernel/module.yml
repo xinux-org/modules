@@ -22,4 +22,5 @@ options:
         pkgs.linuxPackages-libre: "Libre Kernel"
         pkgs.linuxPackages_hardened: "Hardened Kernel"
         pkgs.linuxPackages_zen: "Zen Kernel"
-        pkgs.cachyosKernels.linuxPackages-cachyos-latest: "CachyOS  Kernel"
+        # TODO: uncommend once we have slave server
+        # pkgs.cachyosKernels.linuxPackages-cachyos-latest: "CachyOS  Kernel"
