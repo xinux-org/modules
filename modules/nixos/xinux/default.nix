@@ -13,7 +13,6 @@ in
   imports = [
     ./l10n.nix
     ./gnome.nix
-    ./debug.nix
   ];
 
   options.modules.xinux = with lib.types; {
