@@ -17,7 +17,7 @@ options:
     type: !enum
       default: zsh
       options:
-        zsh: ZSH
+        zsh: Zsh
         bash: Bash
   - label: "Direnv"
     id: modules.shell.direnv
