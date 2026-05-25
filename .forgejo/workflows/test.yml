@@ -1,0 +1,32 @@
+name: Test CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test-flake:
+    name: "Test flake options"
+    runs-on: native
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v6
+
+      - name: Check up flake configuration
+        run: nix flake check --system x86_64-linux --show-trace
+
+  # update-merge:
+  #   name: "Merge Update PRs"
+  #   needs: [test-flake]
+  #   runs-on: testing
+  #   if: ${{ github.event.pull_request.user.login == 'xinuxmgrbot' && github.event_name == 'pull_request'}}
+
+  #   steps:
+  #     - name: Enable auto-merge for Update PRs
+  #       run: gh pr merge --auto --merge "$PR_URL"
+  #       env:
+  #         PR_URL: ${{github.event.pull_request.html_url}}
+  #         GITHUB_TOKEN: ${{ secrets.PAT }}
