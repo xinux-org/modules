@@ -13,18 +13,6 @@ pkgs.testers.runNixOSTest {
       imports = with inputs.self; [
         nixosModules.efiboot
         nixosModules.meta
-        # nixosModules.branding
-        # nixosModules.gnome
-        # nixosModules.graphical
-        # nixosModules.shell
-        # nixosModules.gaming
-        # nixosModules.kernel
-        # nixosModules.networking
-        # nixosModules.packagemanagers
-        # nixosModules.pipewire
-        # nixosModules.printing
-        # nixosModules.xinux
-        # nixosModules.metadata
         ./configuration.nix
       ];
 

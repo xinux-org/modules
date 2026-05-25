@@ -29,3 +29,13 @@ options:
     description: "Replace core-utils with rust rewrite of improved versions."
     type: !switch
       default: false
+  - label: "Colors"
+    id: modules.shell.colors
+    description: "Add more colors to shell (P.S too much colors)."
+    type: !switch
+      default: false
+  - label: "Starship"
+    id: modules.shell.starship
+    description: "Add custom shell prompt via starship."
+    type: !switch
+      default: false

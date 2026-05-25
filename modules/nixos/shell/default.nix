@@ -23,6 +23,10 @@ in
     direnv = mkEnableOption "direnv support";
 
     rusted-tools = mkEnableOption "rust replacement of coreutils";
+
+    colors = mkEnableOption "colors on shell (P.S too colorful).";
+
+    starship = mkEnableOption "starship custom shell prompt.";
   };
 
   config = lib.mkMerge [
@@ -33,7 +37,7 @@ in
         nix-index.enable = true;
 
         # prettier terminal prompt
-        starship = {
+        starship = lib.mkIf cfg.starship {
           enable = true;
           settings = {
             battery.disabled = true;
@@ -82,7 +86,7 @@ in
           # Autosuggestions
           autosuggestions = {
             enable = true;
-            highlightStyle = "fg=gray";
+            highlightStyle = lib.optionalString cfg.colors "fg=gray";
           };
 
           # ZSH Syntax Highlighting
@@ -96,7 +100,7 @@ in
             patterns = {
               "rm -rf *" = "fg=white,bold,bg=red";
             };
-            styles = {
+            styles = lib.mkIf cfg.colors {
               default = "none";
               unknown-token = "fg=gray,underline";
               reserved-word = "fg=cyan,bold";
