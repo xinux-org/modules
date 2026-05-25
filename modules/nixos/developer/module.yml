@@ -25,3 +25,9 @@ options:
       options:
         '"podman"': "Podman"
         '"docker"': "Docker"
+
+  - label: "Templates"
+    id: modules.developer.templates
+    description: "Pre-install template manager software/buddy."
+    type: !switch
+      default: false

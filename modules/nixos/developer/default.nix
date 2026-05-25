@@ -26,6 +26,13 @@ in
       example = "podman";
       description = "Backend to empower the containers.";
     };
+
+    templates = lib.mkOption {
+      type = bool;
+      default = false;
+      example = true;
+      description = "Pre-install template manager software/buddy.";
+    };
   };
 
   config = lib.mkIf cfg.containers (
@@ -69,6 +76,13 @@ in
           builtins.attrValues config.users.users
           |> builtins.filter (attr: attr.isNormalUser)
           |> map (u: u.name);
+      })
+
+      # If user chose podman as option
+      (lib.mkIf cfg.templates {
+        environment.systemPackages = [
+          pkgs.bleur
+        ];
       })
     ]
   );
