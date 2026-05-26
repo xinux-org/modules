@@ -156,13 +156,19 @@ in
     environment.systemPackages =
       # Whatever minimal mode enabled keep these extensions
       [
+        # Additional Gnome apps
+        pkgs.gnome-photos
+
+        # Gnome extentions
         pkgs.gnomeExtensions.gsconnect
         pkgs.gnomeExtensions.clipboard-indicator
         pkgs.gnomeExtensions.appindicator
         pkgs.gnomeExtensions.dash-to-dock
+
+        # Application Icons
         pkgs.papirus-icon-theme
 
-        # wallpapers
+        # Wallpapers
         xinux-wallpapers.xinux-blue-light
         xinux-wallpapers.xinux-blue-dark
         xinux-wallpapers.xinux-orange
