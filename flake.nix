@@ -50,7 +50,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     uz-xkb = {
-      url = "github:itsbilolbek/uzbek-linux-keyboard";
+      url = "git+https://git.oss.uzinfocom.uz/mirrors/uzbek-linux-keyboard?shallow=1";
       flake = false;
     };
     zen-browser = {

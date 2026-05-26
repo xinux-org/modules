@@ -27,8 +27,8 @@ let
     LOGO = "nix-xinux-white";
     HOME_URL = "https://xinux.uz";
     DOCUMENTATION_URL = "https://xinux.uz/learn";
-    SUPPORT_URL = "https://github.com/orgs/xinux-org/discussions";
-    BUG_REPORT_URL = "https://github.com/orgs/xinux-org/discussions/new/choose";
+    SUPPORT_URL = "https://matrix.to/#/#xinux:uchar.uz";
+    BUG_REPORT_URL = "https://matrix.to/#/#xinux:uchar.uz";
   };
   initrdReleaseContents = osReleaseContents // {
     PRETTY_NAME = "${osReleaseContents.PRETTY_NAME} (Initrd)";
