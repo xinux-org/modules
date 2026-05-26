@@ -156,9 +156,6 @@ in
     environment.systemPackages =
       # Whatever minimal mode enabled keep these extensions
       [
-        # Additional Gnome apps
-        pkgs.gnome-photos
-
         # Gnome extentions
         pkgs.gnomeExtensions.gsconnect
         pkgs.gnomeExtensions.clipboard-indicator

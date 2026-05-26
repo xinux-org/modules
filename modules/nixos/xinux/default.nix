@@ -166,7 +166,6 @@ in
       environment.systemPackages = [
         inputs.xin.packages.${pkgs.stdenv.hostPlatform.system}.xin
         pkgs.git # For rebuiling with github flakes
-        pkgs.xinux-settings
       ];
 
       programs = {
