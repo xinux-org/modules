@@ -94,6 +94,15 @@
       alias.shells.default = "modules";
 
       # Hydra jobs for building caches
-      hydraJobs = inputs.self.packages.x86_64-linux;
+      hydraJobs = {
+        inherit (inputs.self.pkgs.x86_64-linux.nixpkgs)
+          bleur
+          e-imzo-manager
+          nix-software-center
+          xinux-module-manager
+          xinux-settings
+          xinux-tour
+          ;
+      };
     };
 }
