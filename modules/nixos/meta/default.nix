@@ -1,19 +1,17 @@
 { inputs, ... }:
-{
-  imports = with inputs.self.nixosModules; [
-    branding
-    container
-    # developer
-    gnome
-    graphical
-    shell
-    gaming
-    kernel
-    networking
-    packagemanagers
-    pipewire
-    printing
-    xinux
-    metadata
+let
+  exclusion = [
+    "meta"
+    "efiboot"
+    "biosboot"
   ];
+
+  modules =
+    builtins.readDir ../.
+    |> builtins.attrNames
+    |> builtins.filter (m: !(builtins.elem m exclusion))
+    |> map (m: inputs.self.nixosModules.${m});
+in
+{
+  imports = modules;
 }
