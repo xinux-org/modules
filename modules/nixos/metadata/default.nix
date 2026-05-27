@@ -3,6 +3,14 @@
   lib,
   ...
 }:
+let
+  # Things to be removed from passing list
+  exclusion = [
+    # Remove boot options as they are appended on user side
+    "efiboot"
+    "biosboot"
+  ];
+in
 {
   config = {
     environment.etc = lib.mkMerge [
@@ -18,9 +26,7 @@
           |> lib.mapAttrs' (name: value: lib.nameValuePair "xinux-modules/${name}/module.yml" name)
           |> lib.filterAttrs (n: v: lib.hasAttr "module.yml" (builtins.readDir ../${v}))
           |> builtins.attrValues
-          # Remove boot options as they are appended on user side
-          |> builtins.filter (m: m != "efiboot")
-          |> builtins.filter (m: m != "biosboot")
+          |> builtins.filter (m: !(builtins.elem m exclusion))
           # Convert to parsable module list
           |> map (n: "xinux-modules.nixosModules.${n}")
           |> builtins.toJSON;
