@@ -1,24 +1,24 @@
 ---
-name: Developer
-id: modules.developer
+name: Containers
+id: modules.container
 flake: xinux-modules
 unique_groups:
   - development
-description: "Developer related configurations."
+description: "Container specific configurations."
 version: 0.0.1
 icon:
   type: system
-  path: terminal-symbolic
+  path: image-adjust-highlights-symbolic # terminal-symbolic
 
 options:
   - label: "Containers"
-    id: modules.developer.containers
+    id: modules.container.enable
     description: "Enable containerization support for the system."
     type: !switch
       default: false
 
   - label: "Container Provider"
-    id: modules.developer.provider
+    id: modules.container.provider
     description: "Backend to empower the containers."
     type: !enum
       default: '"docker"'
@@ -26,8 +26,8 @@ options:
         '"podman"': "Podman"
         '"docker"': "Docker"
 
-  - label: "Templates"
-    id: modules.developer.templates
-    description: "Pre-install template manager software/buddy."
-    type: !switch
-      default: false
+  # - label: "Templates"
+  #   id: modules.developer.templates
+  #   description: "Pre-install template manager software/buddy."
+  #   type: !switch
+  #     default: false

@@ -6,11 +6,11 @@
   ...
 }:
 let
-  cfg = config.modules.developer;
+  cfg = config.modules.container;
 in
 {
-  options.modules.developer = with lib.types; {
-    containers = lib.mkOption {
+  options.modules.container = with lib.types; {
+    enable = lib.mkOption {
       type = bool;
       default = false;
       example = true;
@@ -27,15 +27,15 @@ in
       description = "Backend to empower the containers.";
     };
 
-    templates = lib.mkOption {
-      type = bool;
-      default = false;
-      example = true;
-      description = "Pre-install template manager software/buddy.";
-    };
+    # templates = lib.mkOption {
+    #   type = bool;
+    #   default = false;
+    #   example = true;
+    #   description = "Pre-install template manager software/buddy.";
+    # };
   };
 
-  config = lib.mkIf cfg.containers (
+  config = lib.mkIf cfg.enable (
     lib.mkMerge [
       # Setup basic containerization settings
       {
@@ -79,11 +79,11 @@ in
       })
 
       # If user chose podman as option
-      (lib.mkIf cfg.templates {
-        environment.systemPackages = [
-          pkgs.bleur
-        ];
-      })
+      # (lib.mkIf cfg.templates {
+      #   environment.systemPackages = [
+      #     pkgs.bleur
+      #   ];
+      # })
     ]
   );
 }
