@@ -103,11 +103,11 @@
     },
     "crane": {
       "locked": {
-        "lastModified": 1778106249,
-        "narHash": "sha256-cM/AuKy5tMhwOOQIbha8ZRRMHVfNf7cv2aljIw+qoCg=",
+        "lastModified": 1779130139,
+        "narHash": "sha256-BLrtr42azquO7MdGFU5a7KiMl3YpFlTeIXqy1fT5GlQ=",
         "owner": "ipetkov",
         "repo": "crane",
-        "rev": "6d015ea29630b7ad2402841386da2cb617a470a7",
+        "rev": "edb38893982a3338972bb4a2ec7ce7c29ba10fd9",
         "type": "github"
       },
       "original": {
@@ -1141,10 +1141,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1779541019,
-        "narHash": "sha256-8O9GO7l+S8Kc99YauCpy+fGwF5G99Bmp6h/SQnNdsRg=",
+        "lastModified": 1779882217,
+        "narHash": "sha256-hvXI+khiNPrXxhnK0K5W+RlIotIVEn+O6Y0XEUlsLl4=",
         "ref": "main",
-        "rev": "9909428b9e076bdc244470ceb5f2196a0a86ef56",
+        "rev": "0679cf7fc662f0e2130d1b2630e107fde299891b",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
@@ -1923,11 +1923,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779781734,
-        "narHash": "sha256-c2FZ7S/rhnCHcwPkc82GOxlCw88HKYBaJkLtMgi72p8=",
+        "lastModified": 1779858952,
+        "narHash": "sha256-3GwipanR5N8jvEe6CyQXvO0dWUHD77udH+gL8vYz91o=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "ef7c137fea3d0d0624864db7aa1f068eed79b0fb",
+        "rev": "3f714494e7514108056d3317c9148b9b7ff08022",
         "type": "github"
       },
       "original": {
