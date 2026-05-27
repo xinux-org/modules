@@ -8,7 +8,7 @@ description: "Developer related configurations."
 version: 0.0.1
 icon:
   type: system
-  path: code-symbolic
+  path: terminal-symbolic
 
 options:
   - label: "Containers"
