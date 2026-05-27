@@ -1141,10 +1141,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1779882217,
-        "narHash": "sha256-hvXI+khiNPrXxhnK0K5W+RlIotIVEn+O6Y0XEUlsLl4=",
+        "lastModified": 1779890601,
+        "narHash": "sha256-jmA1pdtbLEgwYscUBBwLnU6BtGeQMYCeG2WA/TrlKrY=",
         "ref": "main",
-        "rev": "0679cf7fc662f0e2130d1b2630e107fde299891b",
+        "rev": "0c70c7570b3664e65801a32ede21a352a0ee25a7",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
@@ -1168,16 +1168,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1712858390,
-        "narHash": "sha256-XE7gr+zU3N4SHPAhsgk8cVAFp1iBg+Lxxp3y4dUF1vE=",
-        "owner": "korfuri",
+        "lastModified": 1766634783,
+        "narHash": "sha256-aCJoX3Vz0R9L108stkWJ9q7t22wfOqFy0N/TDn+i4v8=",
+        "owner": "batonac",
         "repo": "nixos-appstream-data",
-        "rev": "0465d42a4433faa63b7a5eb0b8d397937c9fc13a",
+        "rev": "c76aa114a9d95f2b0f172b7a16656c196a791b56",
         "type": "github"
       },
       "original": {
-        "owner": "korfuri",
-        "ref": "flake",
+        "owner": "batonac",
         "repo": "nixos-appstream-data",
         "type": "github"
       }
@@ -1854,10 +1853,10 @@
         "xinux-lib": "xinux-lib_5"
       },
       "locked": {
-        "lastModified": 1779829613,
-        "narHash": "sha256-sFTF23HwE9X10IfyUPzeMEV3jpzY2BxeBBZ4sippVNo=",
+        "lastModified": 1779893159,
+        "narHash": "sha256-rAMw5dFn358dbk00i4JFVN/zXi4ivV61jYxaKUC3ejU=",
         "ref": "main",
-        "rev": "f55c87996fa66ddfd7eb0c704fa4f2705796aa56",
+        "rev": "682dd5ea8fb0e4b237962cff201e1b6f6ceba40f",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/module-manager"
