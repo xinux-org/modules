@@ -2,7 +2,8 @@
 {
   imports = with inputs.self.nixosModules; [
     branding
-    developer
+    container
+    # developer
     gnome
     graphical
     shell
