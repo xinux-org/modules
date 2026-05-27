@@ -1141,10 +1141,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1779890601,
-        "narHash": "sha256-jmA1pdtbLEgwYscUBBwLnU6BtGeQMYCeG2WA/TrlKrY=",
+        "lastModified": 1779893830,
+        "narHash": "sha256-UI3tKal++e9QgiOP2H4594IsFwwph5cWGpKhtrF90hk=",
         "ref": "main",
-        "rev": "0c70c7570b3664e65801a32ede21a352a0ee25a7",
+        "rev": "58d79ea50b4a1a1e4d5639c61dbec819ac407c3b",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
@@ -1170,14 +1170,14 @@
       "locked": {
         "lastModified": 1766634783,
         "narHash": "sha256-aCJoX3Vz0R9L108stkWJ9q7t22wfOqFy0N/TDn+i4v8=",
-        "owner": "batonac",
-        "repo": "nixos-appstream-data",
+        "owner": "bahrom04-lab",
+        "repo": "nixos-appstream-data-fork",
         "rev": "c76aa114a9d95f2b0f172b7a16656c196a791b56",
         "type": "github"
       },
       "original": {
-        "owner": "batonac",
-        "repo": "nixos-appstream-data",
+        "owner": "bahrom04-lab",
+        "repo": "nixos-appstream-data-fork",
         "type": "github"
       }
     },
