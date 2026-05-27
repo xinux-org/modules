@@ -8,7 +8,7 @@ description: "Container specific configurations."
 version: 0.0.1
 icon:
   type: system
-  path: image-adjust-highlights-symbolic # terminal-symbolic
+  path: com.github.taiko2k.avvie-symbolic
 
 options:
   - label: "Containers"
