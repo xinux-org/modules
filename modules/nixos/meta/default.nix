@@ -5,9 +5,9 @@ let
     "efiboot"
     "biosboot"
   ];
-  availableModules = builtins.attrNames inputs.self.nixosModules;
   modules =
-    builtins.filter (m: !(builtins.elem m exclusion)) availableModules
+    builtins.attrNames inputs.self.nixosModules
+    |> builtins.filter (m: !(builtins.elem m exclusion))
     |> map (m: inputs.self.nixosModules.${m});
 in
 {
