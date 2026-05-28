@@ -58,11 +58,11 @@
       flake = false;
     };
     zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
+      url = "git+https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
+      url = "git+https://git.oss.uzinfocom.uz/mirrors/aagl-gtk-on-nix?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
