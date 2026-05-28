@@ -11,15 +11,16 @@
       "locked": {
         "lastModified": 1779903856,
         "narHash": "sha256-uRShMtD6xW3ZKZbCQ6sDzKWEnbBXUg3IGfOARYogKhg=",
-        "owner": "ezKEa",
-        "repo": "aagl-gtk-on-nix",
+        "ref": "refs/heads/main",
         "rev": "50671fc7f29d686f63ef34b603320d44ad7f2d29",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/mirrors/aagl-gtk-on-nix"
       },
       "original": {
-        "owner": "ezKEa",
-        "repo": "aagl-gtk-on-nix",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/mirrors/aagl-gtk-on-nix"
       }
     },
     "bleur": {
@@ -1982,15 +1983,16 @@
       "locked": {
         "lastModified": 1779955179,
         "narHash": "sha256-cHrbJ8pZrsFWUTJVk7AxWiEg5eiZptPQxtT0YXMIENo=",
-        "owner": "0xc000022070",
-        "repo": "zen-browser-flake",
+        "ref": "refs/heads/main",
         "rev": "c341e3f6516fb1286d25b99d34b111f93028ae87",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake"
       },
       "original": {
-        "owner": "0xc000022070",
-        "repo": "zen-browser-flake",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake"
       }
     }
   },
