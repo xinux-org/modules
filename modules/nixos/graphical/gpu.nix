@@ -18,7 +18,12 @@ let
 in
 {
   options.modules.gpu = with types; {
-    enable = mkEnableOption "Xinux default graphical configurations (not including DE)";
+    enable = mkOption {
+      type = lib.types.bool;
+      default = true;
+      example = false;
+      description = "Xinux default graphical configurations (not including DE)";
+    };
 
     vendor = mkOption {
       type = listOf (enum [

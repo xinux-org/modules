@@ -9,10 +9,18 @@ let
   cfg = config.modules.graphical;
 in
 {
-  imports = [ ./gpu.nix ];
+  imports = [
+    ./gpu.nix
+    ./desktop.nix
+  ];
 
   options.modules.graphical = with types; {
-    enable = mkEnableOption "Xinux default graphical configurations (not including DE)";
+    enable = mkOption {
+      type = lib.types.bool;
+      default = true;
+      example = false;
+      description = "Xinux default graphical configurations (not including DE)";
+    };
 
     provider = mkOption {
       type = enum [
@@ -27,10 +35,6 @@ in
   };
 
   config = mkIf cfg.enable (mkMerge [
-    {
-      modules.gpu.enable = true;
-    }
-
     (lib.mkIf (cfg.provider == "default") {
       modules.gpu.vendor = [
         "modesetting"

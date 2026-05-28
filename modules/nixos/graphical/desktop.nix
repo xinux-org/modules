@@ -5,16 +5,20 @@
   ...
 }:
 let
+  cfg = config.modules.desktop;
   nixos-background-info = pkgs.stdenv.mkDerivation { name = "nixos-background-info"; };
-  xinux-wallpapers = lib.recurseIntoAttrs (pkgs.callPackage ./wallpapers.nix { });
 in
 {
-  options.xinux.gnome = {
-    enable = lib.mkEnableOption "Xinux GNOME configuration";
+  options.modules.desktop = {
+    enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      example = false;
+      description = "Xinux GNOME configuration";
+    };
   };
 
-  config = lib.mkIf config.xinux.gnome.enable {
-    modules.graphical.enable = true;
+  config = lib.mkIf cfg.enable {
     services.desktopManager.gnome = {
       favoriteAppsOverride = lib.mkDefault ''
         [org.gnome.shell]
@@ -22,11 +26,11 @@ in
       '';
       extraGSettingsOverrides = ''
         [org.gnome.desktop.background]
-        picture-uri='file://${xinux-wallpapers.xinux-orange.gnomeFilePath}'
-        picture-uri-dark='file://${xinux-wallpapers.xinux-orange.gnomeFilePath}'
+        picture-uri='file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}'
+        picture-uri-dark='file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}'
 
         [org.gnome.desktop.screensaver]
-        picture-uri='file://${xinux-wallpapers.xinux-orange.gnomeFilePath}'
+        picture-uri='file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}'
 
         [org.gnome.desktop.interface]
         color-scheme='prefer-dark'
@@ -154,34 +158,35 @@ in
     ];
 
     environment.systemPackages =
+      with pkgs;
       # Whatever minimal mode enabled keep these extensions
       [
         # Gnome extentions
-        pkgs.gnomeExtensions.gsconnect
-        pkgs.gnomeExtensions.clipboard-indicator
-        pkgs.gnomeExtensions.appindicator
-        pkgs.gnomeExtensions.dash-to-dock
+        gnomeExtensions.gsconnect
+        gnomeExtensions.clipboard-indicator
+        gnomeExtensions.appindicator
+        gnomeExtensions.dash-to-dock
 
         # Application Icons
-        pkgs.papirus-icon-theme
+        papirus-icon-theme
 
         # Wallpapers
-        xinux-wallpapers.xinux-blue-light
-        xinux-wallpapers.xinux-blue-dark
-        xinux-wallpapers.xinux-orange
-        xinux-wallpapers.xinux-ant
-        xinux-wallpapers.xinux-grass
-        xinux-wallpapers.xinux-hill
-        xinux-wallpapers.xinux-lake
-        xinux-wallpapers.xinux-mountain
-        xinux-wallpapers.xinux-orange-flower
-        xinux-wallpapers.xinux-pink-flower
-        xinux-wallpapers.xinux-red-flower
-        xinux-wallpapers.xinux-river
-        xinux-wallpapers.xinux-roses
-        xinux-wallpapers.xinux-wheel
-        xinux-wallpapers.xinux-white-flower
-        xinux-wallpapers.xinux-sky
+        xinuxWallpapers.xinux-blue-light
+        xinuxWallpapers.xinux-blue-dark
+        xinuxWallpapers.xinux-orange
+        xinuxWallpapers.xinux-ant
+        xinuxWallpapers.xinux-grass
+        xinuxWallpapers.xinux-hill
+        xinuxWallpapers.xinux-lake
+        xinuxWallpapers.xinux-mountain
+        xinuxWallpapers.xinux-orange-flower
+        xinuxWallpapers.xinux-pink-flower
+        xinuxWallpapers.xinux-red-flower
+        xinuxWallpapers.xinux-river
+        xinuxWallpapers.xinux-roses
+        xinuxWallpapers.xinux-wheel
+        xinuxWallpapers.xinux-white-flower
+        xinuxWallpapers.xinux-sky
       ];
   };
 }

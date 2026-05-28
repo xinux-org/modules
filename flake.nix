@@ -34,6 +34,10 @@
       url = "git+https://git.oss.uzinfocom.uz/xinux/lib?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    xinux-wallpaper = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/wallpaper?ref=main&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Uzinfocom
     bleur = {

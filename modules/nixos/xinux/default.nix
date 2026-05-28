@@ -12,7 +12,6 @@ in
 {
   imports = [
     ./l10n.nix
-    ./gnome.nix
   ];
 
   options.modules.xinux = with lib.types; {
@@ -152,11 +151,6 @@ in
       services.envfs.enable = lib.mkDefault true;
     })
     {
-      # Enable gnome by default
-      xinux = {
-        gnome.enable = lib.mkDefault true;
-      };
-
       # Default sudo-rs for better security
       security = {
         sudo-rs.enable = lib.mkDefault true;
