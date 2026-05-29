@@ -1958,10 +1958,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1779992586,
-        "narHash": "sha256-g3M+YJBhR3Q8Zuvp6qD31+bk+8N8C4JsC3yODskY2Rw=",
+        "lastModified": 1780014143,
+        "narHash": "sha256-hlZLTM0CMu+g6KFcg6QCEH03DzYgRteBs9NjD6rCPic=",
         "ref": "main",
-        "rev": "d1ae0e46bae1c653dd1a7afe40b976bb92d45fc7",
+        "rev": "dbd2f1d20003378bd74ae6f2d1f4fb80dfbfd34c",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/wallpaper"

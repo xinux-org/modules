@@ -220,6 +220,7 @@ in
 
       nixpkgs.overlays = [
         inputs.cachyos-kernel.overlays.default
+        inputs.xinux-wallpaper.overlays.default
       ];
     }
   ];
