@@ -1889,10 +1889,10 @@
         "xinux-lib": "xinux-lib_5"
       },
       "locked": {
-        "lastModified": 1780025071,
-        "narHash": "sha256-JMKeu2S37/1i+1pJy7i4AFmLOid+a8w5K4/ayQevJxY=",
+        "lastModified": 1780055448,
+        "narHash": "sha256-MHaxhd8A6k+yVC9nFxBwOQNGFv5GmWNFBX1TaopBXOc=",
         "ref": "main",
-        "rev": "cd0be93625d475b6585b18c73c2f28d740a4631e",
+        "rev": "a279e410a38c2fcfff2a7182197270a4536503c0",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/module-manager"
@@ -1935,10 +1935,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1764772891,
-        "narHash": "sha256-3BDE4UghbOKkC/RD44PkyJnz/tnjqPzSZqZnGASXftI=",
+        "lastModified": 1780054532,
+        "narHash": "sha256-qsU43YTpDDuKwUZU8QtbcAYbdcPVWYJJC5vSpBCsgI4=",
         "ref": "main",
-        "rev": "8e19cf6eb823b3a166ad6401a7af469a010863fa",
+        "rev": "f023b9e9c987adbcedc9747a93c9a78a66c18b81",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/xinux-tour"
