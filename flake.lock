@@ -1889,10 +1889,10 @@
         "xinux-lib": "xinux-lib_5"
       },
       "locked": {
-        "lastModified": 1780059533,
-        "narHash": "sha256-zjRRsnON71hMKVmqFC5KiTaVu+wUjRWutStT1vGfmek=",
+        "lastModified": 1780064503,
+        "narHash": "sha256-w0yXB9MyMPI6j67hgY9foyCE6VGAA8U9jY3EFTH2rqI=",
         "ref": "main",
-        "rev": "1cf5a5a979a378a36bd33dc046e64527be63a74d",
+        "rev": "634180ed4d48c40f1bb17ac82b036baf49f09a90",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/module-manager"
@@ -1958,10 +1958,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1780014444,
-        "narHash": "sha256-5yo/XghzILKH7ofCAmgmiKykLDRtktvLEc2UDZBThDU=",
+        "lastModified": 1780065281,
+        "narHash": "sha256-JYImCg2/ZVpw9B3isULoM8lo/udC53mlgUIe0UnT5O0=",
         "ref": "main",
-        "rev": "ccf7e31fdfc460797e862ec0dd5ab73aa909ae5f",
+        "rev": "cb50afdb8991d9d6364ed5be672feb23b6af2c09",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/wallpaper"
