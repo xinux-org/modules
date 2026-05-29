@@ -1889,10 +1889,10 @@
         "xinux-lib": "xinux-lib_5"
       },
       "locked": {
-        "lastModified": 1780055448,
-        "narHash": "sha256-MHaxhd8A6k+yVC9nFxBwOQNGFv5GmWNFBX1TaopBXOc=",
+        "lastModified": 1780059533,
+        "narHash": "sha256-zjRRsnON71hMKVmqFC5KiTaVu+wUjRWutStT1vGfmek=",
         "ref": "main",
-        "rev": "a279e410a38c2fcfff2a7182197270a4536503c0",
+        "rev": "1cf5a5a979a378a36bd33dc046e64527be63a74d",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/module-manager"
