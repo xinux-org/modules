@@ -35,6 +35,11 @@ in
       default = false;
       description = "Enable services and install software of E-IMZO for easier management of keys";
     };
+    libreofficePack.enable = lib.mkOption {
+      type = bool;
+      default = true;
+      description = "Install LibreOffice document office suite";
+    };
     browser = lib.mkOption {
       type = enum [
         "firefox"
@@ -72,6 +77,11 @@ in
     (lib.mkIf cfg.xinuxModuleManager.enable {
       environment.systemPackages = [
         inputs.xinux-module-manager.packages.${pkgs.stdenv.hostPlatform.system}.xinux-module-manager
+      ];
+    })
+    (lib.mkIf cfg.libreofficePack.enable {
+      environment.systemPackages = with pkgs; [
+        libreoffice
       ];
     })
 

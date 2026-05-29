@@ -29,6 +29,11 @@ options:
     description: "Enable services and install software of E-IMZO for easier management of keys."
     type: !switch
       default: false
+  - label: "Install LibreOffice document office suite"
+    id: modules.xinux.libreofficePack.enable
+    description: "LibreOffice is an open source office suite that includes Writer, Calc, Impress, Draw, Base, Math"
+    type: !switch
+      default: true
   - label: "Browser"
     id: modules.xinux.browser
     description: "Pick the default browser of choice for the system."
