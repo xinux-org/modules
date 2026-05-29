@@ -171,22 +171,16 @@ in
         papirus-icon-theme
 
         # Wallpapers
-        xinuxWallpapers.xinux-blue-light
-        xinuxWallpapers.xinux-blue-dark
-        xinuxWallpapers.xinux-orange
         xinuxWallpapers.xinux-ant
-        xinuxWallpapers.xinux-grass
+        xinuxWallpapers.xinux-blue-dark
+        xinuxWallpapers.xinux-blue-light
         xinuxWallpapers.xinux-hill
         xinuxWallpapers.xinux-lake
-        xinuxWallpapers.xinux-mountain
-        xinuxWallpapers.xinux-orange-flower
-        xinuxWallpapers.xinux-pink-flower
-        xinuxWallpapers.xinux-red-flower
+        xinuxWallpapers.xinux-orange
         xinuxWallpapers.xinux-river
-        xinuxWallpapers.xinux-roses
-        xinuxWallpapers.xinux-wheel
-        xinuxWallpapers.xinux-white-flower
         xinuxWallpapers.xinux-sky
+        xinuxWallpapers.xinux-wheel
+        xinuxWallpapers.xinux-grass
       ];
   };
 }
