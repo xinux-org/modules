@@ -20,7 +20,7 @@ in
   options.modules.gpu = with types; {
     enable = mkOption {
       type = lib.types.bool;
-      default = true;
+      default = config.modules.graphical.enable;
       example = false;
       description = "Xinux default graphical configurations (not including DE)";
     };

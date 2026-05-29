@@ -12,7 +12,7 @@ in
   options.modules.desktop = {
     enable = lib.mkOption {
       type = lib.types.bool;
-      default = true;
+      default = config.modules.graphical.enable;
       example = false;
       description = "Xinux GNOME configuration";
     };
