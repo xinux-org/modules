@@ -180,7 +180,6 @@ in
         xinuxWallpapers.xinux-river
         xinuxWallpapers.xinux-sky
         xinuxWallpapers.xinux-wheel
-        xinuxWallpapers.xinux-grass
       ];
   };
 }
