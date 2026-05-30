@@ -26,7 +26,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     xinux-tour = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-tour?ref=main&shallow=1";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-tour?ref=release-25.11&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     xinux-lib = {
