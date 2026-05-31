@@ -70,13 +70,13 @@ in
     })
     (lib.mkIf cfg.eimzoIntegraion.enable {
       services.e-imzo.enable = lib.mkDefault true;
-      environment.systemPackages = [
-        inputs.e-imzo-manager.packages.${pkgs.stdenv.hostPlatform.system}.e-imzo-manager
+      environment.systemPackages = with pkgs; [
+        e-imzo-manager
       ];
     })
     (lib.mkIf cfg.xinuxModuleManager.enable {
-      environment.systemPackages = [
-        inputs.xinux-module-manager.packages.${pkgs.stdenv.hostPlatform.system}.xinux-module-manager
+      environment.systemPackages = with pkgs; [
+        xinux-module-manager
       ];
     })
     (lib.mkIf cfg.libreofficePack.enable {
