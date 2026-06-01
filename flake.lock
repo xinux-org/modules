@@ -1981,10 +1981,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1780290245,
-        "narHash": "sha256-ieUjA1L43BstXZCyd8zZ3uc89nRevujVvlL34t2E0pk=",
+        "lastModified": 1780309250,
+        "narHash": "sha256-XE9QhtahY3C3/6DA0f7CsJ+RWDR4Y0OEucRFeTUpWFo=",
         "ref": "refs/heads/main",
-        "rev": "d4a18a1897aa2c84ad5774c3dedc377c30565366",
+        "rev": "9c1e768c5cdf4be1db2989d14856022cfedb2fa1",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake"
