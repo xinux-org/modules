@@ -138,6 +138,8 @@ in
         oswald
         rubik
         freefont_ttf
+        mononoki
+        iosevka
       ];
     };
 
