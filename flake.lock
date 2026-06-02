@@ -1912,10 +1912,10 @@
         "xinux-lib": "xinux-lib_6"
       },
       "locked": {
-        "lastModified": 1779615845,
-        "narHash": "sha256-4vBgctM9ZTa3pHrehShE5jrXGD2aOQVrHtsi6msIUoU=",
+        "lastModified": 1780403815,
+        "narHash": "sha256-ty9Mj/z4M+6JANL04NIExa9yZMKkzrBJ6b/yl1jtdRE=",
         "ref": "main",
-        "rev": "e1bb674bcbec9cdd547d13c4b9e203f739805c46",
+        "rev": "7bc2276e4440679fd0f685da92c7ad637942c308",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/settings"
