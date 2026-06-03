@@ -33,6 +33,6 @@ options:
       default: false
   - label: "New Settings"
     id: modules.gnome.new-settings.enable
-    description: "Replace GNOME's native settings application with Xinux'es."
+    description: "Replace GNOME's native Settings with Xinux'es experimental Settings."
     type: !switch
       default: false
