@@ -66,6 +66,9 @@ in
       environment.systemPackages = [
         pkgs.xinux-settings
       ];
+      environment.gnome.excludePackages = [
+        pkgs.gnome-control-center
+      ];
     })
   ];
 }
