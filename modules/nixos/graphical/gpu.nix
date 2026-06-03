@@ -88,6 +88,7 @@ in
           modesetting.enable = true;
           powerManagement.enable = true;
           nvidiaSettings = false;
+          open = true;
           package = config.boot.kernelPackages.nvidiaPackages.latest;
         };
       };
