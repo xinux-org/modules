@@ -10,13 +10,13 @@ in
 {
   options.modules.gnome = {
     gsconnect.enable = lib.mkEnableOption "Enable KDE Connect integration";
-    removeUtils.enable = lib.mkOption {
+    remove-utils.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
       description = "Remove non-essential GNOME utilities";
     };
+    new-settings.enable = lib.mkEnableOption "the new Settings application replacement.";
   };
-
   config = lib.mkMerge [
     {
       # Enable the GNOME Desktop Environment.
@@ -60,6 +60,11 @@ in
 
       environment.gnome.excludePackages = with pkgs; [
         gnome-tour
+      ];
+    })
+    (lib.mkIf cfg.new-settings.enable {
+      environment.systemPackages = [
+        pkgs.xinux-settings
       ];
     })
   ];
