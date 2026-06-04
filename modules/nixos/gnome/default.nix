@@ -53,7 +53,7 @@ in
         pkgs.xinux-tour
       ];
     }
-    (lib.mkIf cfg.removeUtils.enable {
+    (lib.mkIf cfg.remove-utils.enable {
       modules.xinux.eimzoIntegraion.enable = lib.mkDefault false;
 
       services.gnome.core-utilities.enable = false;
