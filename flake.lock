@@ -2107,10 +2107,10 @@
         "xinux-lib": "xinux-lib_7"
       },
       "locked": {
-        "lastModified": 1780496040,
-        "narHash": "sha256-qD/kfpXNBjPU3bIyoQWagYreTWKFNWcBUdPjUpYolXI=",
+        "lastModified": 1780742809,
+        "narHash": "sha256-GCUdur202+gZ+wI7T3TXSdE4YAjAGum0SvuYO3yTtcU=",
         "ref": "main",
-        "rev": "47ebab2e5227bacb907d5f74f5e081d083e40175",
+        "rev": "647cce8cb2b75d6c35a6b98e04adbba59f492910",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/settings"
