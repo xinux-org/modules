@@ -11,6 +11,24 @@ let
 in
 {
   imports = [
+    (
+      with lib;
+      lib.doRename rec {
+        from = [
+          "modules"
+          "xinux"
+          "language"
+        ];
+        to = [
+          "i18n"
+          "defaultLocale"
+        ];
+        visible = false;
+        warn = true;
+        use = warnIf (oldestSupportedReleaseIsAtLeast 2511) "Obsolete option `${showOption from}' is used. It was replaced to `${showOption to}'.";
+      }
+    )
+
     ./l10n.nix
   ];
 
@@ -52,15 +70,6 @@ in
       example = "web";
       description = "A browser of choice for the system.";
     };
-    language = lib.mkOption {
-      type = enum [
-        "uz_UZ.UTF-8"
-        "en_US.UTF-8"
-        "ru_RU.UTF-8"
-      ];
-      default = "uz_UZ.UTF-8";
-      description = "set language";
-    };
   };
   config = lib.mkMerge [
     (lib.mkIf cfg.nixSoftwareCenter.enable {
@@ -83,17 +92,6 @@ in
       environment.systemPackages = with pkgs; [
         libreoffice
       ];
-    })
-
-    # Languages
-    (lib.mkIf (cfg.language == "uz_UZ.UTF-8") {
-      i18n.defaultLocale = lib.mkDefault "uz_UZ.UTF-8";
-    })
-    (lib.mkIf (cfg.language == "en_US.UTF-8") {
-      i18n.defaultLocale = lib.mkDefault "en_US.UTF-8";
-    })
-    (lib.mkIf (cfg.language == "ru_RU.UTF-8") {
-      i18n.defaultLocale = lib.mkDefault "ru_RU.UTF-8";
     })
 
     # Browsers
