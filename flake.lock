@@ -1278,10 +1278,10 @@
         "xinux-lib": "xinux-lib_2"
       },
       "locked": {
-        "lastModified": 1780821215,
-        "narHash": "sha256-hWY2LdIyl5xzC9GtzWHlnEgbF1WSvtEW1IOvOfMxBCs=",
+        "lastModified": 1780988872,
+        "narHash": "sha256-qUHfxQ8ElUqA0hXikceROixaEtD03VvtUYLXcLkdV0g=",
         "ref": "main",
-        "rev": "b972ef4c521ddea6be19cfc898ca098cb8b4cd2e",
+        "rev": "fc4905c9ea4bc0f2ef2f935e19ba4bd2e70b694f",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
