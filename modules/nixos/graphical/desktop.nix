@@ -164,7 +164,6 @@ in
       # Whatever minimal mode enabled keep these extensions
       [
         # Gnome extentions
-        gnomeExtensions.gsconnect
         gnomeExtensions.clipboard-indicator
         gnomeExtensions.appindicator
         gnomeExtensions.dash-to-dock
@@ -182,6 +181,7 @@ in
         xinuxWallpapers.xinux-river
         xinuxWallpapers.xinux-sky
         xinuxWallpapers.xinux-wheel
-      ];
+      ]
+      ++ lib.optional config.modules.gnome.gsconnect.enable gnomeExtensions.gsconnect;
   };
 }
