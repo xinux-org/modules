@@ -195,7 +195,7 @@ in
             "pipe-operators"
           ];
           substituters = lib.mkDefault [
-            "https://cache.xinux.uz/"
+            "https://cache.xinux.uz/?priority=10"
             "https://cache.nixos.org/"
           ];
           trusted-public-keys = lib.mkDefault [
