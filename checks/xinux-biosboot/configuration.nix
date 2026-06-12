@@ -6,7 +6,7 @@
   networking.hostName = "xinux";
 
   # Select internationalisation properties.
-  modules.xinux.language = "uz_UZ.UTF-8";
+  i18n.defaultLocale = "uz_UZ.UTF-8";
 
   # Set the keyboard layout.
   services.xserver.xkb = {
