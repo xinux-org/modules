@@ -110,10 +110,10 @@
         "xinux-lib": "xinux-lib"
       },
       "locked": {
-        "lastModified": 1779625504,
-        "narHash": "sha256-V7z3E0ya4SGfhklojbfzw4fncWI67kR+cTFgIOAljZM=",
+        "lastModified": 1781450139,
+        "narHash": "sha256-M72Cyflmr30f2mKMOj04MZx+Q+PJFSOCYK6YBNqyQIs=",
         "ref": "main",
-        "rev": "0f8463440b244534c3aec790563d3685b921f86a",
+        "rev": "b42b4fa7f6bffd8d9c3bcdfe7f67cd2cf84379e7",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/e-imzo-manager"
