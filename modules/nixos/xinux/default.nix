@@ -202,6 +202,11 @@ in
             "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" # nixos
           ];
+
+          trusted-users =
+            builtins.attrValues config.users.users
+            |> builtins.filter (attr: attr.isNormalUser)
+            |> map (u: u.name);
         }
         // (lib.mapAttrsRecursive (_: lib.mkDefault) {
           connect-timeout = 5;
