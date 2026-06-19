@@ -19,60 +19,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    services.desktopManager.gnome = {
-      favoriteAppsOverride = lib.mkDefault ''
-        [org.gnome.shell]
-        favorite-apps=[ 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'org.xinux.NixSoftwareCenter.desktop', 'org.xinux.XinuxModuleManager.desktop', 'uz.xinux.EIMZOManager.desktop' ]
-      '';
-      extraGSettingsOverrides = ''
-        [org.gnome.desktop.background]
-        picture-uri='file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}'
-        picture-uri-dark='file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}'
-
-        [org.gnome.desktop.screensaver]
-        picture-uri='file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}'
-
-        [org.gnome.desktop.interface]
-        color-scheme='prefer-dark'
-        icon-theme='Papirus-Dark'
-        show-battery-percentage=true
-        color-scheme='default'
-        monospace-font-name='JetBrainsMono Nerd Font 10'
-
-        [org.gnome.shell]
-        disable-user-extensions=false
-
-        [org.gnome.shell]
-        enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'light-style@gnome-shell-extensions.gcampax.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'clipboard-indicator@tudmotu.com']
-
-        [org.gnome.mutter]
-        dynamic-workspaces=true
-        edge-tiling=true
-
-        [org.gnome.desktop.datetime]
-        automatic-timezone=true
-
-        [org.gnome.tweaks]
-        show-extensions-notice=false
-
-        [org.gnome.desktop.wm.preferences]
-        button-layout='appmenu:minimize,maximize,close'
-
-        # Dash to dock for multiple monitors
-        [org.gnome.shell.extensions.dash-to-dock]
-        multi-monitor=true
-        apply-custom-theme=true
-        click-action='minimize'
-
-        [org.gnome.desktop.wm.keybindings]
-        move-to-monitor-left=@as []
-        move-to-monitor-right=@as []
-        move-to-workspace-left=['<Super><Shift>Left', '<Shift><Control><Alt>Left']
-        move-to-workspace-right=['<Super><Shift>Right', '<Shift><Control><Alt>Right']
-
-        [org.gnome.desktop.peripherals.touchpad]
-        click-method='areas'
-      '';
+    services.desktopManager.gnome = { 
       extraGSettingsOverridePackages = [
         pkgs.gsettings-desktop-schemas
         pkgs.gnome-shell
@@ -93,6 +40,61 @@ in
       # Enabling seahorse keyring
       seahorse = {
         enable = lib.mkDefault true;
+      };
+      dconf = {
+        enable = true;
+        profiles.user.databases = [
+          {
+            settings = {
+              "org/gnome/desktop/background" = {
+                picture-uri = "file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}";
+                picture-uri-dark = "file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}";
+              };
+              "org/gnome/desktop/screensaver" = {
+                picture-uri = "file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}";
+              };
+              "org/gnome/desktop/interface" = {
+                icon-theme = "Papirus-Dark";
+                show-battery-percentage = true;
+                color-scheme = "prefer-dark";
+                monospace-font-name = "JetBrainsMono Nerd Font 10";
+              };
+              "org/gnome/shell" = {
+                # disable-user-extensions = false;
+                enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "dash-to-dock@micxgx.gmail.com" "appindicatorsupport@rgcjonas.gmail.com" "light-style@gnome-shell-extensions.gcampax.github.com" "system-monitor@gnome-shell-extensions.gcampax.github.com" "clipboard-indicator@tudmotu.com" ];
+                favorite-apps = [ "org.gnome.Geary.desktop" "org.gnome.Calendar.desktop" "org.gnome.Nautilus.desktop" "org.xinux.NixSoftwareCenter.desktop" "org.xinux.XinuxModuleManager.desktop" "uz.xinux.EIMZOManager.desktop" ];
+              };
+              "org/gnome/mutter" = {
+                dynamic-workspaces = true;
+                edge-tiling = true;
+              };
+              "org/gnome/desktop/datetime" = {
+                automatic-timezone = true;
+              };
+              "org/gnome/tweaks" = {
+                show-extensions-notice = false;
+              };
+              "org/gnome/desktop/wm/preferences" = {
+                button-layout = "appmenu:minimize,maximize,close";
+              };
+              # Dash to dock for multiple monitors
+              "org/gnome/shell/extensions/dash-to-dock" = {
+                multi-monitor = true;
+                apply-custom-theme = true;
+                click-action = "minimize";
+              };
+              "org/gnome/desktop/wm/keybindings" = {
+                move-to-monitor-left = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+                move-to-monitor-right = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+                move-to-workspace-left = ["<Super><Shift>Left" "<Shift><Control><Alt>Left"];
+                move-to-workspace-right = ["<Super><Shift>Right" "<Shift><Control><Alt>Right"];
+              };
+              "org/gnome/desktop/peripherals/touchpad" = {
+                click-method = "areas";
+              }; 
+            };
+          }
+        ];
       };
     };
 
