@@ -50,6 +50,7 @@ in
       environment.systemPackages = with pkgs; [
         gnome-console
         gnome-extension-manager
+        gnome-shell-extensions
         pkgs.xinux-tour
       ];
     }

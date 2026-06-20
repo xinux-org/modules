@@ -19,7 +19,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    services.desktopManager.gnome = { 
+    services.desktopManager.gnome = {
       extraGSettingsOverridePackages = [
         pkgs.gsettings-desktop-schemas
         pkgs.gnome-shell
@@ -61,7 +61,7 @@ in
               };
               "org/gnome/shell" = {
                 # disable-user-extensions = false;
-                enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "dash-to-dock@micxgx.gmail.com" "appindicatorsupport@rgcjonas.gmail.com" "light-style@gnome-shell-extensions.gcampax.github.com" "system-monitor@gnome-shell-extensions.gcampax.github.com" "clipboard-indicator@tudmotu.com" ];
+                enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "dash-to-dock@micxgx.gmail.com" "appindicatorsupport@rgcjonas.gmail.com""clipboard-indicator@tudmotu.com" "gtk4-ding@smedius.gitlab.com" "drive-menu@gnome-shell-extensions.gcampax.github.com" ];
                 favorite-apps = [ "org.gnome.Geary.desktop" "org.gnome.Calendar.desktop" "org.gnome.Nautilus.desktop" "org.xinux.NixSoftwareCenter.desktop" "org.xinux.XinuxModuleManager.desktop" "uz.xinux.EIMZOManager.desktop" ];
               };
               "org/gnome/mutter" = {
@@ -91,7 +91,7 @@ in
               };
               "org/gnome/desktop/peripherals/touchpad" = {
                 click-method = "areas";
-              }; 
+              };
             };
           }
         ];
@@ -169,6 +169,7 @@ in
         gnomeExtensions.clipboard-indicator
         gnomeExtensions.appindicator
         gnomeExtensions.dash-to-dock
+        gnomeExtensions.gtk4-desktop-icons-ng-ding
 
         # Application Icons
         papirus-icon-theme
