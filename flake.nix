@@ -5,66 +5,53 @@
     # Nixpkgs
     nixpkgs.url = "git+https://git.oss.uzinfocom.uz/xinux/nixpkgs?ref=nixos-unstable&shallow=1";
 
-    # Xinux
-    xin = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/xin?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    xinux-settings = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/settings?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-software-center = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/software-center?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    xinux-module-manager = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/module-manager?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    e-imzo-manager = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/e-imzo-manager?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    xinux-tour = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-tour?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # Xinux Package Manager
+    xin.url = "git+https://git.oss.uzinfocom.uz/xinux/xin?ref=main&shallow=1";
+
+    # New Xinux Settings app
+    xinux-settings.url = "git+https://git.oss.uzinfocom.uz/xinux/settings?ref=main&shallow=1";
+
+    # Software Center
+    nix-software-center.url = "git+https://git.oss.uzinfocom.uz/xinux/software-center?ref=main&shallow=1";
+
+    # Module Manager
+    xinux-module-manager.url = "git+https://git.oss.uzinfocom.uz/xinux/module-manager?ref=main&shallow=1";
+
+    # E-IMZO Manager
+    e-imzo-manager.url = "git+https://git.oss.uzinfocom.uz/xinux/e-imzo-manager?ref=main&shallow=1";
+
+    # Xinux Tour app
+    xinux-tour.url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-tour?ref=main&shallow=1";
+
+    # Nix Library
     xinux-lib = {
       url = "git+https://git.oss.uzinfocom.uz/xinux/lib?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    xinux-wallpaper = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/wallpaper?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
-    # Uzinfocom
-    bleur = {
-      url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # Wallpapers
+    xinux-wallpaper.url = "git+https://git.oss.uzinfocom.uz/xinux/wallpaper?ref=main&shallow=1";
+
+    # Template Buddy
+    bleur.url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
 
     # Kernels
     cachyos-kernel.url = "git+https://git.oss.uzinfocom.uz/mirrors/nix-cachyos-kernel?ref=master&shallow=1";
 
     # Custom software
-    mac-style-plymouth = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-plymouth-theme?ref=master&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    mac-style-plymouth.url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-plymouth-theme?ref=master&shallow=1";
+
+    # Uzbek Keyboard Layout
     uz-xkb = {
       url = "git+https://git.oss.uzinfocom.uz/mirrors/uzbek-linux-keyboard?shallow=1";
       flake = false;
     };
-    zen-browser = {
-      url = "git+https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake?shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    aagl = {
-      url = "git+https://git.oss.uzinfocom.uz/mirrors/aagl-gtk-on-nix?shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
+    # Zen Browser
+    zen-browser.url = "git+https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake?shallow=1";
+
+    # An Anime Game Launcher
+    aagl.url = "git+https://git.oss.uzinfocom.uz/mirrors/aagl-gtk-on-nix?shallow=1";
   };
 
   outputs =

@@ -17,10 +17,47 @@ options:
     type: !enum
       default: pkgs.linuxPackages_latest
       options:
+        # Vanilla Nixpkgs derived flavors
         pkgs.linuxPackages: "LTS Kernel"
         pkgs.linuxPackages_latest: "Latest Kernel"
         pkgs.linuxPackages-libre: "Libre Kernel"
         pkgs.linuxPackages_hardened: "Hardened Kernel"
         pkgs.linuxPackages_zen: "Zen Kernel"
-        # TODO: uncommend once we have slave server
-        # pkgs.cachyosKernels.linuxPackages-cachyos-latest: "CachyOS  Kernel"
+        # Latest Targets
+        pkgs.cachyosKernels.linuxPackages-cachyos-latest: "CachyOS Latest"
+        pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v2: "CachyOS Latest V2"
+        pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3: "CachyOS Latest V3"
+        pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v4: "CachyOS Latest V4"
+        # Latest ZEN Targets
+        pkgs.cachyosKernels.linuxPackages-cachyos-latest-zen4: "CachyOS Latest ZEN4"
+        # Latest LTO Targets
+        pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto: "CachyOS Latest LTO"
+        pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-x86_64-v2: "CachyOS Latest LTO V2"
+        pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-x86_64-v3: "CachyOS Latest LTO V3"
+        pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-x86_64-v4: "CachyOS Latest LTO V4"
+        # Bore Targets
+        pkgs.cachyosKernels.linuxPackages-cachyos-bore: "CachyOS Bore"
+        pkgs.cachyosKernels.linuxPackages-cachyos-bore-x86_64-v2: "CachyOS Bore V2"
+        pkgs.cachyosKernels.linuxPackages-cachyos-bore-x86_64-v3: "CachyOS Bore V3"
+        pkgs.cachyosKernels.linuxPackages-cachyos-bore-x86_64-v4: "CachyOS Bore V4"
+        # Bore Zen Targets
+        pkgs.cachyosKernels.linuxPackages-cachyos-bore-zen4: "CachyOS Bore ZEN4"
+        # Bore LTO Targets
+        pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto: "CachyOS Bore LTO"
+        pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto-x86_64-v2: "CachyOS Bore LTO V2"
+        pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto-x86_64-v3: "CachyOS Bore LTO V3"
+        pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto-x86_64-v4: "CachyOS Bore LTO V4"
+        pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto-zen4: "CachyOS Bore LTO ZEN4"
+        # LTS Targets
+        pkgs.cachyosKernels.linuxPackages-cachyos-lts: "CachyOS LTS"
+        pkgs.cachyosKernels.linuxPackages-cachyos-lts-x86_64-v2: "CachyOS LTS V2"
+        pkgs.cachyosKernels.linuxPackages-cachyos-lts-x86_64-v3: "CachyOS LTS V3"
+        pkgs.cachyosKernels.linuxPackages-cachyos-lts-x86_64-v4: "CachyOS LTS V4"
+        # LTS Zen Targets
+        pkgs.cachyosKernels.linuxPackages-cachyos-lts-zen4: "CachyOS LTS ZEN4"
+        # LTS LTO Targets
+        pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto: "CachyOS LTS LTO"
+        pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto-x86_64-v2: "CachyOS LTS LTO V2"
+        pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto-x86_64-v3: "CachyOS LTS LTO V3"
+        pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto-x86_64-v4: "CachyOS LTS LTO V4"
+        pkgs.cachyosKernels.linuxPackages-cachyos-lts-lto-zen4: "CachyOS LTS LTO ZEN4"
