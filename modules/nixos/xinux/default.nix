@@ -194,13 +194,11 @@ in
             "flakes"
             "pipe-operators"
           ];
-          substituters = lib.mkDefault [
+          substituters = [
             "https://cache.xinux.uz/?priority=10"
-            "https://cache.nixos.org/"
           ];
-          trusted-public-keys = lib.mkDefault [
-            "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
-            "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" # nixos
+          trusted-public-keys = [
+            "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
           ];
 
           trusted-users =
