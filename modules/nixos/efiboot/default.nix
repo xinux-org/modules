@@ -62,6 +62,14 @@ in
       fileSystems.${efiSysMountPoint}.options = lib.mkIf (
         config.fileSystems.${efiSysMountPoint}.fsType == "vfat"
       ) [ "umask=0077" ];
+
+      # Silence boot messages
+      boot.consoleLogLevel = 0;
+      boot.kernelParams = [
+        "quiet"
+        "udev.log_level=0"
+      ];
+      boot.initrd.verbose = false;
     }
   ];
 }

@@ -28,5 +28,14 @@ in
       };
     };
     boot.tmp.cleanOnBoot = lib.mkDefault true;
+
+    # Silence boot messages
+    boot.consoleLogLevel = 0;
+    boot.kernelParams = [
+      "quiet"
+      "udev.log_level=0"
+    ];
+    boot.initrd.verbose = false;
+
   };
 }
