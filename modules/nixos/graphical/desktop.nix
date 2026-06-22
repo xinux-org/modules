@@ -19,7 +19,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    services.desktopManager.gnome = { 
+    services.desktopManager.gnome = {
       extraGSettingsOverridePackages = [
         pkgs.gsettings-desktop-schemas
         pkgs.gnome-shell
@@ -61,8 +61,22 @@ in
               };
               "org/gnome/shell" = {
                 # disable-user-extensions = false;
-                enabled-extensions = [ "user-theme@gnome-shell-extensions.gcampax.github.com" "dash-to-dock@micxgx.gmail.com" "appindicatorsupport@rgcjonas.gmail.com" "light-style@gnome-shell-extensions.gcampax.github.com" "system-monitor@gnome-shell-extensions.gcampax.github.com" "clipboard-indicator@tudmotu.com" ];
-                favorite-apps = [ "org.gnome.Geary.desktop" "org.gnome.Calendar.desktop" "org.gnome.Nautilus.desktop" "org.xinux.NixSoftwareCenter.desktop" "org.xinux.XinuxModuleManager.desktop" "uz.xinux.EIMZOManager.desktop" ];
+                enabled-extensions = [
+                  "user-theme@gnome-shell-extensions.gcampax.github.com"
+                  "dash-to-dock@micxgx.gmail.com"
+                  "appindicatorsupport@rgcjonas.gmail.com"
+                  "light-style@gnome-shell-extensions.gcampax.github.com"
+                  "system-monitor@gnome-shell-extensions.gcampax.github.com"
+                  "clipboard-indicator@tudmotu.com"
+                ];
+                favorite-apps = [
+                  "org.gnome.Geary.desktop"
+                  "org.gnome.Calendar.desktop"
+                  "org.gnome.Nautilus.desktop"
+                  "org.xinux.NixSoftwareCenter.desktop"
+                  "org.xinux.XinuxModuleManager.desktop"
+                  "uz.xinux.EIMZOManager.desktop"
+                ];
               };
               "org/gnome/mutter" = {
                 dynamic-workspaces = true;
@@ -86,12 +100,18 @@ in
               "org/gnome/desktop/wm/keybindings" = {
                 move-to-monitor-left = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
                 move-to-monitor-right = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
-                move-to-workspace-left = ["<Super><Shift>Left" "<Shift><Control><Alt>Left"];
-                move-to-workspace-right = ["<Super><Shift>Right" "<Shift><Control><Alt>Right"];
+                move-to-workspace-left = [
+                  "<Super><Shift>Left"
+                  "<Shift><Control><Alt>Left"
+                ];
+                move-to-workspace-right = [
+                  "<Super><Shift>Right"
+                  "<Shift><Control><Alt>Right"
+                ];
               };
               "org/gnome/desktop/peripherals/touchpad" = {
                 click-method = "areas";
-              }; 
+              };
             };
           }
         ];
