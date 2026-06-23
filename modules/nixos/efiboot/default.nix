@@ -64,7 +64,7 @@ in
       ) [ "umask=0077" ];
 
       # Silence boot messages
-      boot.consoleLogLevel = 0;
+      boot.consoleLogLevel = lib.mkDefault 0;
       boot.kernelParams = [
         "quiet"
         "udev.log_level=0"
