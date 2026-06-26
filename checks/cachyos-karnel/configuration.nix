@@ -3,23 +3,16 @@
   ...
 }:
 {
-  networking.hostName = "xinux";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "uz_UZ.UTF-8";
-
+  # CachyOS karnel test. This is more popular karnel option
   boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
 
-  # Set the keyboard layout.
-  services.xserver.xkb = {
-    layout = "uz";
-    variant = "latin";
-  };
+  networking.hostName = "xinux";
+  i18n.defaultLocale = "uz_UZ.UTF-8";
   console.useXkbConfig = true;
 
-  users.users."aaaaa" = {
+  users.users."cachy" = {
     isNormalUser = true;
-    description = "a";
+    description = "cachy kernel test";
     extraGroups = [
       "wheel"
       "networkmanager"
@@ -35,11 +28,4 @@
   ];
 
   system.stateVersion = "26.05";
-
-  # programs.nix-data = {
-  #   enable = true;
-  #   systemconfig = "/etc/nixos/systems/x86_64-linux/xinux/default.nix";
-  #   flake = "/etc/nixos/flake.nix";
-  #   flakearg = "xinux";
-  # };
 }
