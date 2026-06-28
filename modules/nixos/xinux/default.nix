@@ -194,10 +194,10 @@ in
             "flakes"
             "pipe-operators"
           ];
-          substituters = [
+          substituters = lib.mkBefore [
             "https://cache.xinux.uz/?priority=10"
           ];
-          trusted-public-keys = [
+          trusted-public-keys = lib.mkBefore [
             "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
           ];
 
