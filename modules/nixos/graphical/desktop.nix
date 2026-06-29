@@ -124,7 +124,7 @@ in
         font-awesome_4
         hack-font
         noto-fonts
-        cantarell-fonts
+        # cantarell-fonts
         powerline-fonts
         roboto
         roboto-slab
