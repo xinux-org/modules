@@ -3,7 +3,8 @@ name: Containers
 id: modules.container
 flake: xinux-modules
 unique_groups:
-  - development
+  - container
+  - virtualization
 description: "Container specific configurations."
 version: 0.0.1
 icon:

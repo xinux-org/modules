@@ -1,0 +1,24 @@
+---
+name: Developer
+id: modules.developer
+flake: xinux-modules
+unique_groups:
+  - development
+description: "Developer oriented features."
+version: 0.0.1
+icon:
+  type: system
+  path: com.github.taiko2k.avvie-symbolic
+
+options:
+  - label: "Android Development"
+    id: modules.developer.android.enable
+    description: "Set up pre-configured android development toolchain."
+    type: !switch
+      default: false
+
+  - label: "Templates"
+    id: modules.developer.templates
+    description: "Pre-install template manager software/buddy."
+    type: !switch
+      default: false
