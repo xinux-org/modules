@@ -70,6 +70,11 @@ in
       example = "web";
       description = "A browser of choice for the system.";
     };
+    packageManager.enable = lib.mkOption {
+      type = bool;
+      default = false;
+      description = "Install Xinux'es command-line package manager";
+    };
   };
   config = lib.mkMerge [
     (lib.mkIf cfg.nixSoftwareCenter.enable {
@@ -158,6 +163,11 @@ in
       };
       services.envfs.enable = lib.mkDefault true;
     })
+    (lib.mkIf cfg.packageManager.enable {
+      environment.systemPackages = with pkgs; [
+        inputs.xin.packages.${pkgs.stdenv.hostPlatform.system}.xin
+      ];
+    })
     {
       # Default sudo-rs for better security
       security = {
@@ -166,7 +176,6 @@ in
 
       # Pre-installed packages
       environment.systemPackages = [
-        inputs.xin.packages.${pkgs.stdenv.hostPlatform.system}.xin
         pkgs.git # For rebuiling with github flakes
       ];
 

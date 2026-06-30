@@ -54,3 +54,8 @@ options:
         '"ru_RU.UTF-8"': "Russian"
         '"en_US.UTF-8"': "English"
         '"uz_UZ.UTF-8"': "Uzbek"
+  - label: "Install Xinux'es command-line package manager"
+    id: modules.xinux.packageManager.enable
+    description: "Package manager written specifically for Xinux operating system."
+    type: !switch
+      default: false
