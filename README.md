@@ -54,28 +54,28 @@ Add options into configuration.nix manually
 ```nix
 {inputs, ...} {
 imports = [
-  inputs.self.nix-data.nixosModules.nix-data
-  inputs.self.xinux-modules.nixosModules.efiboot # or biosboot
-  inputs.self.xinux-modules.nixosModules.branding
-  inputs.self.xinux-modules.nixosModules.gnome
-  inputs.self.xinux-modules.nixosModules.developer
-  inputs.self.xinux-modules.nixosModules.kernel
-  inputs.self.xinux-modules.nixosModules.graphical
-  inputs.self.xinux-modules.nixosModules.shell
-  inputs.self.xinux-modules.nixosModules.gaming
-  inputs.self.xinux-modules.nixosModules.networking
-  inputs.self.xinux-modules.nixosModules.packagemanagers
-  inputs.self.xinux-modules.nixosModules.pipewire
-  inputs.self.xinux-modules.nixosModules.printing
-  inputs.self.xinux-modules.nixosModules.metadata
-  inputs.self.xinux-modules.nixosModules.xinux
+  inputs.nix-data.nixosModules.nix-data
+  inputs.xinux-modules.nixosModules.efiboot # or biosboot
+  inputs.xinux-modules.nixosModules.branding
+  inputs.xinux-modules.nixosModules.gnome
+  inputs.xinux-modules.nixosModules.developer
+  inputs.xinux-modules.nixosModules.kernel
+  inputs.xinux-modules.nixosModules.graphical
+  inputs.xinux-modules.nixosModules.shell
+  inputs.xinux-modules.nixosModules.gaming
+  inputs.xinux-modules.nixosModules.networking
+  inputs.xinux-modules.nixosModules.packagemanagers
+  inputs.xinux-modules.nixosModules.pipewire
+  inputs.xinux-modules.nixosModules.printing
+  inputs.xinux-modules.nixosModules.metadata
+  inputs.xinux-modules.nixosModules.xinux
 ];
   # Documentation: https://snowfall.org/reference/lib/
   programs.nix-data = {
     enable = true;
     systemconfig = "/etc/nixos/systems/@ARCH@/@HOSTNAME@/default.nix";
     flake = "/etc/nixos/flake.nix";
-    flakearg = "@HOSTNAME@";
+    hostname = "@HOSTNAME@";
   };
   # the rest of your config
 }
