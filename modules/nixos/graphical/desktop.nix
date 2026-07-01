@@ -65,8 +65,6 @@ in
                   "user-theme@gnome-shell-extensions.gcampax.github.com"
                   "dash-to-dock@micxgx.gmail.com"
                   "appindicatorsupport@rgcjonas.gmail.com"
-                  "light-style@gnome-shell-extensions.gcampax.github.com"
-                  "system-monitor@gnome-shell-extensions.gcampax.github.com"
                   "clipboard-indicator@tudmotu.com"
                 ];
                 favorite-apps = [
