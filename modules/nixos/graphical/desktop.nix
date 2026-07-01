@@ -47,11 +47,11 @@ in
           {
             settings = {
               "org/gnome/desktop/background" = {
-                picture-uri = "file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}";
-                picture-uri-dark = "file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}";
+                picture-uri = "file://${pkgs.xinuxWallpapers.mahalla-dark.gnomeFilePath}";
+                picture-uri-dark = "file://${pkgs.xinuxWallpapers.mahalla-dark.gnomeFilePath}";
               };
               "org/gnome/desktop/screensaver" = {
-                picture-uri = "file://${pkgs.xinuxWallpapers.xinux-orange.gnomeFilePath}";
+                picture-uri = "file://${pkgs.xinuxWallpapers.mahalla-dark.gnomeFilePath}";
               };
               "org/gnome/desktop/interface" = {
                 icon-theme = "Papirus-Dark";
@@ -201,6 +201,10 @@ in
         xinuxWallpapers.xinux-river
         xinuxWallpapers.xinux-sky
         xinuxWallpapers.xinux-wheel
+        xinuxWallpapers.kite-dark
+        xinuxWallpapers.kite-light
+        xinuxWallpapers.mahalla-dark
+        xinuxWallpapers.mahalla-light
       ]
       ++ lib.optional config.modules.gnome.gsconnect.enable gnomeExtensions.gsconnect;
   };

@@ -2504,10 +2504,10 @@
         "nixpkgs": "nixpkgs_13"
       },
       "locked": {
-        "lastModified": 1780065281,
-        "narHash": "sha256-JYImCg2/ZVpw9B3isULoM8lo/udC53mlgUIe0UnT5O0=",
+        "lastModified": 1782904921,
+        "narHash": "sha256-R3647vSUU5umtr1UpHjGX9UnW2iCq8+1dt4qLpnH1ME=",
         "ref": "main",
-        "rev": "cb50afdb8991d9d6364ed5be672feb23b6af2c09",
+        "rev": "9ab1fd8173cde1328f4a078d7ccf81ec08abd8f5",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/wallpaper"
