@@ -52,6 +52,9 @@
 
     # An Anime Game Launcher
     aagl.url = "git+https://git.oss.uzinfocom.uz/mirrors/aagl-gtk-on-nix?shallow=1";
+
+    # Bug reporter for Xinux
+    relago.url = "git+https://git.oss.uzinfocom.uz/xinux/relago?ref=rc-26-05";
   };
 
   outputs =
@@ -83,6 +86,10 @@
 
       # Default shell environment
       alias.shells.default = "modules";
+
+      systems.modules.nixos = with inputs; [
+        relago.nixosModules.relago
+      ];
 
       # Hydra jobs for building caches
       hydraJobs = {

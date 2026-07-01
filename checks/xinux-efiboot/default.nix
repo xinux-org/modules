@@ -10,11 +10,14 @@ pkgs.testers.runNixOSTest {
   nodes.machine =
     { ... }:
     {
-      imports = with inputs.self; [
-        nixosModules.efiboot
-        nixosModules.meta
-        ./configuration.nix
-      ];
+      imports =
+        with inputs.self;
+        [
+          nixosModules.efiboot
+          nixosModules.meta
+          ./configuration.nix
+        ]
+        ++ [ inputs.relago.nixosModules.relago ];
 
       # virtually test nixosConfiguration.
       # I think we do not need this

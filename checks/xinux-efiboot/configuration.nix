@@ -3,9 +3,11 @@
   ...
 }:
 {
-  networking.hostName = "xinux";
+  imports = [
+    ./modules.nix
+  ];
 
-  # Select internationalisation properties.
+  networking.hostName = "xinux";
   i18n.defaultLocale = "uz_UZ.UTF-8";
 
   # Set the keyboard layout.

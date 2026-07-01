@@ -53,6 +53,11 @@ in
       default = false;
       description = "Enable services and install software of E-IMZO for easier management of keys";
     };
+    relago.enable = lib.mkOption {
+      type = bool;
+      default = true;
+      description = "Enable relago — bug reporter for Xinux";
+    };
     libreofficePack.enable = lib.mkOption {
       type = bool;
       default = true;
@@ -87,6 +92,12 @@ in
       environment.systemPackages = with pkgs; [
         e-imzo-manager
       ];
+    })
+    (lib.mkIf cfg.relago.enable {
+      services.relago = {
+        enable = lib.mkDefault true;
+        nix-config = lib.mkDefault "/etc/nixos/";
+      };
     })
     (lib.mkIf cfg.xinuxModuleManager.enable {
       environment.systemPackages = with pkgs; [
