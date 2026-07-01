@@ -9,11 +9,14 @@ pkgs.testers.runNixOSTest {
   nodes.machine =
     { ... }:
     {
-      imports = with inputs.self; [
-        nixosModules.efiboot
-        nixosModules.meta
-        ./configuration.nix
-      ];
+      imports =
+        with inputs.self;
+        [
+          nixosModules.efiboot
+          nixosModules.meta
+          ./configuration.nix
+        ]
+        ++ [ inputs.relago.nixosModules.relago ];
     };
 
   node = {

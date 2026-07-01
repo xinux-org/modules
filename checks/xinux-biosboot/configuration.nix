@@ -3,9 +3,11 @@
   ...
 }:
 {
-  networking.hostName = "xinux";
+  imports = [
+    ./modules.nix
+  ];
 
-  # Select internationalisation properties.
+  networking.hostName = "xinux";
   i18n.defaultLocale = "uz_UZ.UTF-8";
 
   # Set the keyboard layout.
@@ -33,7 +35,6 @@
   ];
 
   system.stateVersion = "26.05";
-
   # programs.nix-data = {
   #   enable = true;
   #   systemconfig = "/etc/nixos/systems/x86_64-linux/xinux/default.nix";
