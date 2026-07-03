@@ -2406,10 +2406,10 @@
         "nixpkgs": "nixpkgs_13"
       },
       "locked": {
-        "lastModified": 1783033669,
-        "narHash": "sha256-9FuBZ4xiu0z/3s2+GKH98WV5Pu5z1gDNdhSXu5leQYE=",
+        "lastModified": 1783063269,
+        "narHash": "sha256-XVOopPVgoWPlhuJajUYNTK/M9j/L/llD6vdH5JE9EKs=",
         "ref": "refs/heads/main",
-        "rev": "0cd53b6953919cb6858db24fd7dc95714dcab2e7",
+        "rev": "b86380c97016a1c79f535f286a34c0f5b4270a1b",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake"
