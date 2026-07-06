@@ -14,8 +14,9 @@ in
         systemd-boot.enable = false;
         grub = {
           enable = true;
-          #splashImage = ./background.png;
+          devices = [ "nodev" ];
           useOSProber = true;
+          efiSupport = true;
           theme = "${
             (pkgs.fetchFromGitHub {
               owner = "xinux-org";
