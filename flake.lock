@@ -1799,16 +1799,16 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1782884712,
-        "narHash": "sha256-xl/TejvKINGT7TroaER8xVGQQiXyBwSNlD52INQus4M=",
-        "ref": "rc-26-05",
-        "rev": "0fb9396134d3421301f86444518fe3781cdeee26",
-        "revCount": 58,
+        "lastModified": 1783434018,
+        "narHash": "sha256-8VKbiPJkW/BH7KryLOGWk8n4L35bu3MLFC2uERaV57A=",
+        "ref": "release-26.05",
+        "rev": "37787e03e51f2a4ad1ccb92e91301e60138ee095",
+        "revCount": 54,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/relago"
       },
       "original": {
-        "ref": "rc-26-05",
+        "ref": "release-26.05",
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/relago"
       }
