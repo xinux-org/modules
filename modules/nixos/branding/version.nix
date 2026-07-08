@@ -40,7 +40,7 @@ in
     enable = lib.mkEnableOption "Xinux Main System";
     codeName = lib.mkOption {
       type = lib.types.str;
-      default = "Mahalla";
+      default = "Susambil";
       description = "Codename for the current release";
     };
   };
