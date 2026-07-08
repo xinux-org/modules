@@ -16,7 +16,7 @@ pkgs.testers.runNixOSTest {
           nixosModules.meta
           ./configuration.nix
         ]
-        ++ [ inputs.relago.nixosModules.relago ];
+        ++ [ ];
     };
 
   node = {

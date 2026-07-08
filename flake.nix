@@ -87,9 +87,7 @@
       # Default shell environment
       alias.shells.default = "modules";
 
-      systems.modules.nixos = with inputs; [
-        relago.nixosModules.relago
-      ];
+      systems.modules.nixos = with inputs; [ ];
 
       # Hydra jobs for building caches
       hydraJobs = {
