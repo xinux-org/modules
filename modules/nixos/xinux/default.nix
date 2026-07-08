@@ -30,6 +30,7 @@ in
     )
 
     ./l10n.nix
+    inputs.relago.nixosModules.relago
   ];
 
   options.modules.xinux = with lib.types; {

@@ -17,7 +17,7 @@ pkgs.testers.runNixOSTest {
           nixosModules.meta
           ./configuration.nix
         ]
-        ++ [ inputs.relago.nixosModules.relago ];
+        ++ [ ];
 
       # virtually test nixosConfiguration.
       # I think we do not need this
