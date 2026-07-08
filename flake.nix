@@ -54,7 +54,7 @@
     aagl.url = "git+https://git.oss.uzinfocom.uz/mirrors/aagl-gtk-on-nix?shallow=1";
 
     # Bug reporter for Xinux
-    relago.url = "git+https://git.oss.uzinfocom.uz/xinux/relago?ref=release-26.05";
+    relago.url = "git+https://git.oss.uzinfocom.uz/xinux/relago?ref=main";
   };
 
   outputs =

@@ -1817,14 +1817,14 @@
       "locked": {
         "lastModified": 1783434018,
         "narHash": "sha256-8VKbiPJkW/BH7KryLOGWk8n4L35bu3MLFC2uERaV57A=",
-        "ref": "release-26.05",
+        "ref": "main",
         "rev": "37787e03e51f2a4ad1ccb92e91301e60138ee095",
         "revCount": 54,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/relago"
       },
       "original": {
-        "ref": "release-26.05",
+        "ref": "main",
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/relago"
       }
