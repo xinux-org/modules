@@ -42,7 +42,6 @@ in
         |> lib.mkMerge;
 
       # ADB debugging rulesets
-      programs.adb.enable = true;
       services.udev.packages = [
         pkgs.android-udev-rules
       ];
@@ -51,6 +50,7 @@ in
       environment.systemPackages = [
         # Android Studio
         pkgs.android-studio
+        pkgs.android-tools
 
         # Patched gradlew
         # TODO(@orzklv): maybe this should be in project shell.nix?
