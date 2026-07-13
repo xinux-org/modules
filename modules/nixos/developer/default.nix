@@ -7,6 +7,11 @@
 }:
 let
   cfg = config.modules.developer;
+
+  users =
+    builtins.attrValues config.users.users
+    |> builtins.filter (attr: attr.isNormalUser)
+    |> map (u: u.name);
 in
 {
   options.modules.developer = with lib.types; {
@@ -29,19 +34,13 @@ in
     # Setup android toolchain
     (lib.mkIf cfg.android.enable {
       # Add all users to adb and kvm
-      users.users =
-        builtins.attrValues config.users.users
-        |> builtins.filter (attr: attr.isNormalUser)
-        |> map (u: u.name)
-        |> map (u: {
-          ${u}.extraGroups = [
-            "kvm"
-            "adbusers"
-          ];
-        })
-        |> lib.mkMerge;
+      users.groups = {
+        "kvm".members = users;
+        "adbusers".members = users;
+      };
 
       # ADB debugging rulesets
+      programs.adb.enable = true;
       services.udev.packages = [
         pkgs.android-udev-rules
       ];
@@ -50,7 +49,6 @@ in
       environment.systemPackages = [
         # Android Studio
         pkgs.android-studio
-        pkgs.android-tools
 
         # Patched gradlew
         # TODO(@orzklv): maybe this should be in project shell.nix?
@@ -69,7 +67,7 @@ in
       # Accept Android studio license
       nixpkgs.config = {
         allowUnfree = lib.mkDefault true;
-        android_sdk.accept_license = lib.mkForce true;
+        android_sdk.accept_license = lib.mkDefault true;
       };
     })
 
