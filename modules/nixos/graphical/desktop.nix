@@ -110,6 +110,14 @@ in
               "org/gnome/desktop/peripherals/touchpad" = {
                 click-method = "areas";
               };
+                "net/nokyan/Resources" = with lib; {
+                  refresh-speed = "Fast";
+                  show-graph-grid = gvariant.mkBoolean true;
+                  sidebar-meter-type = "ProgressBar";
+                  sidebar-details = gvariant.mkBoolean true;
+                  sidebar-description = gvariant.mkBoolean true;
+                  network-bits = gvariant.mkBoolean true;
+              };
             };
           }
         ];
@@ -177,6 +185,7 @@ in
       pkgs.gnome-backgrounds
       pkgs.gnome-tour
       pkgs.epiphany
+      pkgs.gnome-system-monitor
     ];
 
     environment.systemPackages =
@@ -205,6 +214,8 @@ in
         xinuxWallpapers.kite-light
         xinuxWallpapers.mahalla-dark
         xinuxWallpapers.mahalla-light
+
+        resources
       ]
       ++ lib.optional config.modules.gnome.gsconnect.enable gnomeExtensions.gsconnect;
   };
