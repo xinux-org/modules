@@ -74,6 +74,8 @@
         allowUnfree = true;
         # Allow NVIDIA's prop. software
         nvidia.acceptLicense = true;
+        # Allow Android Studio license
+        android_sdk.accept_license = true;
       };
 
       # Source code

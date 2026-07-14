@@ -63,12 +63,6 @@ in
           runScript = "bash";
         }).env
       ];
-
-      # Accept Android studio license
-      nixpkgs.config = {
-        allowUnfree = lib.mkDefault true;
-        android_sdk.accept_license = lib.mkForce true;
-      };
     })
 
     # If user chose podman as option
