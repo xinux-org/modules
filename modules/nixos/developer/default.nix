@@ -39,11 +39,6 @@ in
         "adbusers".members = users;
       };
 
-      # ADB debugging rulesets
-      services.udev.packages = [
-        pkgs.android-udev-rules
-      ];
-
       # Install android studio
       environment.systemPackages = [
         # Android Studio
