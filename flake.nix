@@ -72,6 +72,12 @@
       channels-config = {
         # Allow unfree software
         allowUnfree = true;
+        # Allow unsupported packages
+        allowUnsupportedSystem = true;
+        # Allow all predications of unfree
+        allowUnfreePredicate = _: true;
+        # Allow broken packages
+        allowBroken = true;
         # Allow NVIDIA's prop. software
         nvidia.acceptLicense = true;
       };
