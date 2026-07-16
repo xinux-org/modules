@@ -67,6 +67,7 @@ in
     browser = lib.mkOption {
       type = enum [
         "firefox"
+        "helium"
         "web"
         "zen"
         "chrome"
@@ -147,6 +148,11 @@ in
     })
     (lib.mkIf (cfg.browser == "chromium") {
       environment.systemPackages = [ pkgs.chromium ];
+    })
+    (lib.mkIf (cfg.browser == "helium") {
+      environment.systemPackages = [
+        inputs.helium.packages."${pkgs.stdenv.hostPlatform.system}".default
+      ];
     })
 
     # FHS Nix Linking
