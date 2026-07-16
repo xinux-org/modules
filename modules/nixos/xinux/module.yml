@@ -50,6 +50,7 @@ options:
         '"zen"': "Zen Browser"
         '"chrome"': "Google Chrome"
         '"chromium"': "Chromium"
+        '"helium"': "Helium"
   - label: "Change Language"
     id: modules.xinux.language
     description: "Set language for the OS (until settings app gets to be rewritten)."
