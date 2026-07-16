@@ -3,36 +3,31 @@ name: Fonts
 id: modules.fonts
 flake: xinux-modules
 unique_groups:
-  - desktop-environment
-description: "GNOME Desktop module."
+  - fonts
+description: "Fonts for the system."
 version: 0.1.0
 icon:
   type: system
   path: start-here-symbolic
 
 options:
-  - label: "Games"
-    id: services.gnome.games.enable
-    description: "Enable GNOME games."
+  - label: "Windows Fonts"
+    id: modules.fonts.windows-fonts
+    description: "Install Windows fonts into the system."
+    type: !switch
+      default: true
+  - label: "Nerd Fonts"
+    id: modules.fonts.nerd-fonts
+    description: "Install whole Nerd Fonts collection."
     type: !switch
       default: false
-  - label: "GSConnect"
-    id: modules.gnome.gsconnect.enable
-    description: "Enable KDE Connect integration."
+  - label: "Apple Fonts"
+    id: modules.fonts.apple-fonts
+    description: "Install Apple made New York and San Francisco fonts."
     type: !switch
       default: false
-  - label: "Remove Utilities"
-    id: modules.gnome.remove-utils.enable
-    description: "Disable non-essential GNOME application."
-    type: !switch
-      default: false
-  - label: "Developer Tools"
-    id: services.gnome.core-developer-tools.enable
-    description: "Enable GNOME core developer tools."
-    type: !switch
-      default: false
-  - label: "New Settings"
-    id: modules.gnome.new-settings.enable
-    description: "Replace GNOME's native Settings with Xinux'es experimental Settings."
+  - label: "Designers' Choice"
+    id: modules.fonts.designer-picked
+    description: "Install collection of fonts handpicked by Designers."
     type: !switch
       default: false
