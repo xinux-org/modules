@@ -51,7 +51,7 @@
     zen-browser.url = "git+https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake?shallow=1";
 
     # Helium Browser
-    helium.url = "github:schembriaiden/helium-browser-nix-flake";
+    helium.url = "git+https://git.oss.uzinfocom.uz/mirrors/helium-browser-nix-flake?shallow=1";
 
     # An Anime Game Launcher
     aagl.url = "git+https://git.oss.uzinfocom.uz/mirrors/aagl-gtk-on-nix?shallow=1";
