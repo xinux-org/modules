@@ -1,0 +1,38 @@
+---
+name: Fonts
+id: modules.fonts
+flake: xinux-modules
+unique_groups:
+  - desktop-environment
+description: "GNOME Desktop module."
+version: 0.1.0
+icon:
+  type: system
+  path: start-here-symbolic
+
+options:
+  - label: "Games"
+    id: services.gnome.games.enable
+    description: "Enable GNOME games."
+    type: !switch
+      default: false
+  - label: "GSConnect"
+    id: modules.gnome.gsconnect.enable
+    description: "Enable KDE Connect integration."
+    type: !switch
+      default: false
+  - label: "Remove Utilities"
+    id: modules.gnome.remove-utils.enable
+    description: "Disable non-essential GNOME application."
+    type: !switch
+      default: false
+  - label: "Developer Tools"
+    id: services.gnome.core-developer-tools.enable
+    description: "Enable GNOME core developer tools."
+    type: !switch
+      default: false
+  - label: "New Settings"
+    id: modules.gnome.new-settings.enable
+    description: "Replace GNOME's native Settings with Xinux'es experimental Settings."
+    type: !switch
+      default: false

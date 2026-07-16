@@ -47,6 +47,9 @@
       flake = false;
     };
 
+    # Apple fonts
+    apple-fonts.url = "github:Lyndeno/apple-fonts.nix"; # TODO: mirror the flake
+
     # Zen Browser
     zen-browser.url = "git+https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake?shallow=1";
 
