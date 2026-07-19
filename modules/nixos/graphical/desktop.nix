@@ -107,16 +107,26 @@ in
                   "<Shift><Control><Alt>Right"
                 ];
               };
+              "org/gnome/settings-daemon/plugins/media-keys" = {
+                custom-keybindings = [
+                  "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+                ];
+              };
+              "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+                name = "open-terminal";
+                binding = "<Shift><Control>t";
+                command = "kgx";
+              };
               "org/gnome/desktop/peripherals/touchpad" = {
                 click-method = "areas";
               };
-                "net/nokyan/Resources" = with lib; {
-                  refresh-speed = "Fast";
-                  show-graph-grid = gvariant.mkBoolean true;
-                  sidebar-meter-type = "ProgressBar";
-                  sidebar-details = gvariant.mkBoolean true;
-                  sidebar-description = gvariant.mkBoolean true;
-                  network-bits = gvariant.mkBoolean true;
+              "net/nokyan/Resources" = with lib; {
+                refresh-speed = "Fast";
+                show-graph-grid = gvariant.mkBoolean true;
+                sidebar-meter-type = "ProgressBar";
+                sidebar-details = gvariant.mkBoolean true;
+                sidebar-description = gvariant.mkBoolean true;
+                network-bits = gvariant.mkBoolean true;
               };
             };
           }
