@@ -44,19 +44,6 @@ in
         # Android Studio
         pkgs.android-studio
         pkgs.android-tools
-
-        # Patched gradlew
-        # TODO(@orzklv): maybe this should be in project shell.nix?
-        (pkgs.buildFHSEnv {
-          name = "android-sdk-env";
-          targetPkgs =
-            pkgs:
-            (with pkgs; [
-              androidenv.androidPkgs.androidsdk
-              glibc
-            ]);
-          runScript = "bash";
-        }).env
       ];
     })
 
