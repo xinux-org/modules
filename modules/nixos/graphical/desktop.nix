@@ -106,17 +106,34 @@ in
                   "<Super><Shift>Right"
                   "<Shift><Control><Alt>Right"
                 ];
+                show-desktop = "<Super>d";
+              };
+              "org/gnome/settings-daemon/plugins/media-keys" = {
+                custom-keybindings = [
+                  "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+                  "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+                ];
+              };
+              "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+                name = "open-terminal";
+                binding = "<Ctrl><Alt>t";
+                command = "kgx";
+              };
+              "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+                name = "open-nautilus";
+                binding = "<Super>e";
+                command = "nautilus";
               };
               "org/gnome/desktop/peripherals/touchpad" = {
                 click-method = "areas";
               };
-                "net/nokyan/Resources" = with lib; {
-                  refresh-speed = "Fast";
-                  show-graph-grid = gvariant.mkBoolean true;
-                  sidebar-meter-type = "ProgressBar";
-                  sidebar-details = gvariant.mkBoolean true;
-                  sidebar-description = gvariant.mkBoolean true;
-                  network-bits = gvariant.mkBoolean true;
+              "net/nokyan/Resources" = with lib; {
+                refresh-speed = "Fast";
+                show-graph-grid = gvariant.mkBoolean true;
+                sidebar-meter-type = "ProgressBar";
+                sidebar-details = gvariant.mkBoolean true;
+                sidebar-description = gvariant.mkBoolean true;
+                network-bits = gvariant.mkBoolean true;
               };
             };
           }
