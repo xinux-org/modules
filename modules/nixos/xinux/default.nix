@@ -222,7 +222,7 @@ in
             "pipe-operators"
           ];
           substituters = lib.mkBefore [
-            "https://cache.xinux.uz?priority=100"
+            "https://cache.xinux.uz"
             # "https://cache.xinux.uz/?priority=10"
           ];
           trusted-public-keys = lib.mkBefore [
