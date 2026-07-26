@@ -216,7 +216,7 @@ in
       # Reasonable Defaults
       nix = {
         settings = {
-          experimental-features = lib.mkDefault [
+          experimental-features = [
             "nix-command"
             "flakes"
             "pipe-operators"
