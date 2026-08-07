@@ -192,6 +192,8 @@ in
       # Disable compositing mode in WebKitGTK
       # https://github.com/NixOS/nixpkgs/issues/32580
       WEBKIT_DISABLE_COMPOSITING_MODE = lib.mkDefault 1;
+      # https://wiki.nixos.org/wiki/GStreamer#nautilus:_%22Your_GStreamer_installation_is_missing_a_plug-in.%22
+      GST_PLUGIN_PATH = "/run/current-system/sw/lib/gstreamer-1.0/";
     };
 
     services.xserver.excludePackages = [ pkgs.xterm ];
@@ -213,7 +215,6 @@ in
         gnomeExtensions.clipboard-indicator
         gnomeExtensions.appindicator
         gnomeExtensions.dash-to-dock
-
         # Application Icons
         papirus-icon-theme
 
@@ -233,6 +234,12 @@ in
         xinuxWallpapers.mahalla-light
 
         resources
+        gst_all_1.gstreamer
+        gst_all_1.gst-plugins-base
+        gst_all_1.gst-plugins-good
+        gst_all_1.gst-plugins-bad
+        gst_all_1.gst-plugins-ugly
+        gst_all_1.gst-libav
       ]
       ++ lib.optional config.modules.gnome.gsconnect.enable gnomeExtensions.gsconnect;
   };
