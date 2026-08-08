@@ -1255,10 +1255,10 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1786018481,
-        "narHash": "sha256-EXAFX1ynjvC6LaWysOXDTg5UqotJ+OW84poGe4mKrKw=",
+        "lastModified": 1786189473,
+        "narHash": "sha256-u/skii6Jku+j2GO3GWBXNBMlymTEdqsyldDJ7/KTmOQ=",
         "ref": "refs/heads/main",
-        "rev": "abd8c2de2a67db7371388edfc5f6c080012d6adf",
+        "rev": "6e4b85772d5ecce65f86dd5d4ae299864e2fc108",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/helium-browser-nix-flake"
