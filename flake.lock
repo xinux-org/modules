@@ -1363,10 +1363,10 @@
         "xinux-lib": "xinux-lib_2"
       },
       "locked": {
-        "lastModified": 1786531837,
-        "narHash": "sha256-AyRaPiSr2X5Yc5KFnDgZxFa9IqRsBbO+yb5rIJBoOFA=",
+        "lastModified": 1786538925,
+        "narHash": "sha256-ArwGvZUWIPy60TDabC6HKCzAfCUmcIIOXAgP6f7D2Sg=",
         "ref": "main",
-        "rev": "23ef94f08ad8c05150d914f3f046f5214dd1b749",
+        "rev": "31bdaa89334aa1503f8ff5f5b1dd343bf3208b44",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
@@ -2515,10 +2515,10 @@
         "xinux-lib": "xinux-lib_7"
       },
       "locked": {
-        "lastModified": 1785573599,
-        "narHash": "sha256-ftP0ECc9q3DiRSB2DhQBAFlJTnt7Aucws+t68JRHTfg=",
+        "lastModified": 1786536489,
+        "narHash": "sha256-5ryW8/8eMR25WlQiCMXvPqEPnaSC3t7Gm/XgWOpfDGU=",
         "ref": "main",
-        "rev": "a02428ab2c445529d237e782f4c059c70a3e28b3",
+        "rev": "dcff881f6ba42c4c0c91ebe6cc6a73f8b9fde770",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/settings"
