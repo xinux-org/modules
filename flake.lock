@@ -49,10 +49,10 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1786386522,
-        "narHash": "sha256-8xiLrj7xFSIm5Co0uYHyfXA+oj9dwKFJdvJxa3Yk35w=",
+        "lastModified": 1786473048,
+        "narHash": "sha256-QoH+hZKwP9/kEJrl02zJDq8821XGSvYY3MIQgkDVDk8=",
         "ref": "master",
-        "rev": "65196606beb43b2054c6484f6ca5d776b7a4bd90",
+        "rev": "0a8acbc03e3b4eaa05d478d675a8dc4362f03fea",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/nix-cachyos-kernel"
@@ -1363,10 +1363,10 @@
         "xinux-lib": "xinux-lib_2"
       },
       "locked": {
-        "lastModified": 1784642337,
-        "narHash": "sha256-vW+KvCTIQ0HAmUFOZdycq32SSit+wWgZWYda9KhdtNM=",
+        "lastModified": 1786518845,
+        "narHash": "sha256-6Z9Vrn6Wh2+qBuetdbIjM3fKBKTPyv9i8RqlA/je/xI=",
         "ref": "main",
-        "rev": "98ba2a6c33c5fa19249ad18b4a8bce63065872db",
+        "rev": "12efc29b131e0755352a825cf7b03d208be4457a",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
@@ -1714,11 +1714,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1786367403,
-        "narHash": "sha256-WYCVT8rG/mYsm8vVf8FczKKWaPoRpFmdbk+FTaezWjA=",
+        "lastModified": 1786463514,
+        "narHash": "sha256-lDVA1kYvHuXlcwnBss5Ws70qskNSIwaDLhI9+MIEyiM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1f239f2b0587bc4fb15d9cb7077b2c2b2ac6fb83",
+        "rev": "5c406c24ab27a146b8321f419a5536e3cf6842a0",
         "type": "github"
       },
       "original": {
