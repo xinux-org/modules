@@ -1363,10 +1363,10 @@
         "xinux-lib": "xinux-lib_2"
       },
       "locked": {
-        "lastModified": 1786967647,
-        "narHash": "sha256-8HMouJWdp+lERaA3xxLwaMoCSz4Yfaz7twTygHkSgss=",
+        "lastModified": 1786969553,
+        "narHash": "sha256-J1qYBE2IHctGzhb6y/OWy/fGMW1cTYJQweLLfcJ+j3s=",
         "ref": "main",
-        "rev": "ef8fef9d097b4f42317d51f871285ee87d901bc1",
+        "rev": "1d9febbb5d3081863decd74ede442f8188516491",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
@@ -1834,11 +1834,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1783434018,
-        "narHash": "sha256-8VKbiPJkW/BH7KryLOGWk8n4L35bu3MLFC2uERaV57A=",
+        "lastModified": 1786969343,
+        "narHash": "sha256-NdIMcWpQH35hsQydRZWoHViHFWjn5rrkQzGAxx79dDs=",
         "ref": "main",
-        "rev": "37787e03e51f2a4ad1ccb92e91301e60138ee095",
-        "revCount": 54,
+        "rev": "ba36caaebce8f1e0c5892f913c2ddedc58059538",
+        "revCount": 55,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/relago"
       },
