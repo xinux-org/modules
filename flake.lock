@@ -1726,10 +1726,10 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1786711500,
-        "narHash": "sha256-QvnceIGTBeDvDd9oCn+GvdsnkquliuwbVgpiRH68qaQ=",
+        "lastModified": 1786943417,
+        "narHash": "sha256-b4qgjdFtlz5TAZ1Hi7DFJeqX3sjaDUnrwr9OO+O1rM0=",
         "ref": "nixos-26.05",
-        "rev": "02e08985a27c65ffd33d434eeb2e660a2e4dc84d",
+        "rev": "0dd31db7e6dbf9ce05697c4545f6fe01accec994",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
@@ -2428,10 +2428,10 @@
         "xinux-lib": "xinux-lib_7"
       },
       "locked": {
-        "lastModified": 1786536489,
-        "narHash": "sha256-5ryW8/8eMR25WlQiCMXvPqEPnaSC3t7Gm/XgWOpfDGU=",
+        "lastModified": 1786976624,
+        "narHash": "sha256-4u486YN+wai6sLlbvSUlosubt8/xphzSudvedzbSwrw=",
         "ref": "main",
-        "rev": "dcff881f6ba42c4c0c91ebe6cc6a73f8b9fde770",
+        "rev": "74b07772306cb65c3ad2db48b2303279859b3dea",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/settings"
