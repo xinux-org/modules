@@ -7,10 +7,10 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1785936455,
-        "narHash": "sha256-pXD5pfIwI6j17cpvHh9vjzY+635cCiAldN9bDjXKJ8Y=",
+        "lastModified": 1787517695,
+        "narHash": "sha256-Z119G3qLJx22frNHO3/seMs7fCCvxe9NJJRfN4Jadew=",
         "ref": "refs/heads/main",
-        "rev": "ce55463be1feee6a9a6a6d35d313b8b728c1d8c9",
+        "rev": "4bb57072d963aa47f14894383a5560cf290e296a",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/aagl-gtk-on-nix"
