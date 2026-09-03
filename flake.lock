@@ -1943,18 +1943,19 @@
     },
     "nixpkgs_21": {
       "locked": {
-        "lastModified": 1779560665,
-        "narHash": "sha256-tpyBcxPpcQb8ukyNF7DoCwfSY3VPsxHoYwj00Cayv5o=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-        "type": "github"
+        "lastModified": 1788179007,
+        "narHash": "sha256-hn1oU2rue2SYK8dAr8+WNZWtbsz1S2W5mnHlSEuh3bo=",
+        "ref": "nixos-unstable",
+        "rev": "34ab99075ac4f7e40cf037eef32cb1c360bb85e9",
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
       },
       "original": {
-        "owner": "nixos",
         "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
       }
     },
     "nixpkgs_22": {
@@ -2892,10 +2893,10 @@
         "nixpkgs": "nixpkgs_21"
       },
       "locked": {
-        "lastModified": 1782904921,
-        "narHash": "sha256-R3647vSUU5umtr1UpHjGX9UnW2iCq8+1dt4qLpnH1ME=",
+        "lastModified": 1788354205,
+        "narHash": "sha256-c1NPUVg47Av3DRUHnK/CjI/nBhe4r/UfdvJ9uaekfYg=",
         "ref": "main",
-        "rev": "9ab1fd8173cde1328f4a078d7ccf81ec08abd8f5",
+        "rev": "2db1ceca8d659a627a3db7a2d5894f64be8b30c7",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/wallpaper"
