@@ -2096,11 +2096,11 @@
         "treefmt-nix": "treefmt-nix_5"
       },
       "locked": {
-        "lastModified": 1787115850,
-        "narHash": "sha256-v6uQ1NcOkrqzM81rH+CyzgXGEg8cs4gdwpPT/nWqTAc=",
+        "lastModified": 1789131641,
+        "narHash": "sha256-khxnqWgv8WMFupn45GKRw/Z405QeHMYfB2LyBK51xwg=",
         "ref": "main",
-        "rev": "f1aea636fcce520501c79e9ca087bc43ab3e3319",
-        "revCount": 57,
+        "rev": "17f2da5261188854f69388f6caa2ba3a3ea93cf1",
+        "revCount": 58,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/relago"
       },
