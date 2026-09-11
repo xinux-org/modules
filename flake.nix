@@ -8,7 +8,12 @@
      url = "github:numtide/flake-utils";
      inputs.systems.follows = "systems";
     };
-    
+
+    flake-parts = {
+      url = "git+https://git.oss.uzinfocom.uz/mirrors/flake-parts?ref=main&shallow=1";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+
     # Nixpkgs
     nixpkgs.url = "git+https://git.oss.uzinfocom.uz/xinux/nixpkgs?ref=nixos-unstable&shallow=1";
 
@@ -83,6 +88,7 @@
       url = "git+https://git.oss.uzinfocom.uz/xinux/lib?ref=main&shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
         flake-utils-plus.inputs.flake-utils.follows = "flake-utils";
         git-hooks.inputs.flake-compat.follows = "xinux-lib/flake-compat";
       };
@@ -101,7 +107,7 @@
       url = "git+https://git.oss.uzinfocom.uz/xinux/wallpaper?ref=main&shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "xinux-lib/flake-parts";
+        flake-parts.follows = "flake-parts";
       };
     };
 
@@ -110,7 +116,7 @@
       url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "xinux-lib/flake-parts";
+        flake-parts.follows = "flake-parts";
       };
     };
 
@@ -119,7 +125,7 @@
       url = "git+https://git.oss.uzinfocom.uz/mirrors/nix-cachyos-kernel?ref=master&shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "xinux-lib/flake-parts";
+        flake-parts.follows = "flake-parts";
         flake-compat.follows = "xinux-lib/flake-compat";
       };
     };
@@ -170,8 +176,8 @@
       url = "git+https://git.oss.uzinfocom.uz/xinux/relago?ref=main";
       inputs = {
         nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
         flake-utils.follows = "flake-utils";
-        flake-parts.follows = "xinux-lib/flake-parts";
         git-hooks-nix.follows = "xinux-lib/git-hooks";
         treefmt-nix.follows = "xinux-lib/treefmt-nix";
       };
