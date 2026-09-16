@@ -476,9 +476,6 @@
         "flake-parts": [
           "flake-parts"
         ],
-        "flake-utils": [
-          "flake-utils"
-        ],
         "git-hooks-nix": [
           "xinux-lib",
           "git-hooks"
@@ -492,11 +489,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789131641,
-        "narHash": "sha256-khxnqWgv8WMFupn45GKRw/Z405QeHMYfB2LyBK51xwg=",
+        "lastModified": 1789561983,
+        "narHash": "sha256-RpOw1NGkLsIjJ9/7tDEGG3X4+9+3oZBhQFQXKdgI3wo=",
         "ref": "main",
-        "rev": "17f2da5261188854f69388f6caa2ba3a3ea93cf1",
-        "revCount": 58,
+        "rev": "70c9400d50f7181adc747a7a8452ea501526d7c8",
+        "revCount": 59,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/relago"
       },
