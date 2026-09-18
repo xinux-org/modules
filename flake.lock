@@ -265,10 +265,10 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1789618854,
-        "narHash": "sha256-eVpBdgvsxGcjZMnJp48PapONQIpaKKLsKXhvLckLhhY=",
+        "lastModified": 1789704256,
+        "narHash": "sha256-tE6De3xC3SCkrFIshBojhQZrs9MEhamKzES5VWUbTEk=",
         "ref": "refs/heads/main",
-        "rev": "6cdfb2435c09430b6d4875d2018c9cf21b13d2f8",
+        "rev": "3e2ae244e94de0309b2c33c36a137722b87386e5",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/helium-browser-nix-flake"
@@ -397,10 +397,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1789628572,
-        "narHash": "sha256-skN2Y0wnVmpPilKuz700+QMFf9ref1UOf8B4LzVmloQ=",
+        "lastModified": 1789651878,
+        "narHash": "sha256-cUyOqoliqdQpCbvMzUYsUaTyvJ7decYmfYOfOn+pO54=",
         "ref": "main",
-        "rev": "0d16b16dcc2c4a982c8c1c9491d1ca4955f71f80",
+        "rev": "54f81ae80c755ba601d7de9aaa5d88c8c9f7e299",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
