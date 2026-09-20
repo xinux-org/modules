@@ -20,6 +20,8 @@
         "2a10:50c0::ad1:ff"
         "2a10:50c0::ad2:ff"
       ];
+      # https://discourse.nixos.org/t/confusing-systemd-networking-config-warning/44886/2
+      useDHCP = lib.mkDefault false;
     };
     # Workaround for https://github.com/NixOS/nixpkgs/issues/180175
     systemd.services.NetworkManager-wait-online = {
