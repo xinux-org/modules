@@ -397,10 +397,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1790239735,
-        "narHash": "sha256-9yOTviD3gXeUQIRfOKIOxG+o8gvaL020iYEJkL5hVS0=",
+        "lastModified": 1790668828,
+        "narHash": "sha256-Wo2IwCRkGu4jL2cXiZ3YkWosiEzJ9WLUVPCJaY74Q38=",
         "ref": "main",
-        "rev": "8a4d937053b690cc1f67dc5fbfca0ebecdc50ec3",
+        "rev": "75252fa09be511cf805cd4db9237d765f6fb697a",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
@@ -795,10 +795,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1790568199,
-        "narHash": "sha256-h3AHjsOZr9iBEkNfK+Zh7/DoN5iMRpJd/6h/5NxCz9I=",
+        "lastModified": 1790640826,
+        "narHash": "sha256-bxciMkBWQ+G9EPwRzZkJ/L+cVgCKbgoHfHAVSlXkj7s=",
         "ref": "refs/heads/main",
-        "rev": "e50ed94ebf28bae95397e482dbb1c020f50c20c1",
+        "rev": "50e132ab7f46b99cc750a1f04d6857280d61a84e",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake"
