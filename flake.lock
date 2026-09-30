@@ -397,10 +397,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1790668828,
-        "narHash": "sha256-Wo2IwCRkGu4jL2cXiZ3YkWosiEzJ9WLUVPCJaY74Q38=",
+        "lastModified": 1790757428,
+        "narHash": "sha256-qcPzvxdzGJkXM8/5JzMquSvOOx/6Sh/7wBKeTNgw9YU=",
         "ref": "main",
-        "rev": "75252fa09be511cf805cd4db9237d765f6fb697a",
+        "rev": "101345840e5908546c4d84f43aedede124692664",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
@@ -489,11 +489,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790751738,
-        "narHash": "sha256-EKFuT/feXoiwJ5Asztcese6JaURBXEnW//7qFjxIGfM=",
+        "lastModified": 1789561983,
+        "narHash": "sha256-RpOw1NGkLsIjJ9/7tDEGG3X4+9+3oZBhQFQXKdgI3wo=",
         "ref": "main",
-        "rev": "bd3cd89f09e6625a7d602023339a396acc72a66a",
-        "revCount": 60,
+        "rev": "70c9400d50f7181adc747a7a8452ea501526d7c8",
+        "revCount": 59,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/relago"
       },
@@ -795,10 +795,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1790640826,
-        "narHash": "sha256-bxciMkBWQ+G9EPwRzZkJ/L+cVgCKbgoHfHAVSlXkj7s=",
+        "lastModified": 1790742031,
+        "narHash": "sha256-zno5kJyjkflDauJgy9NHyoHfhAr0S2kCCMEwaHJ0a6A=",
         "ref": "refs/heads/main",
-        "rev": "50e132ab7f46b99cc750a1f04d6857280d61a84e",
+        "rev": "90424e159acc21e53ea76780a3ad9cb5acef7cba",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake"
