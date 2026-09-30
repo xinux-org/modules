@@ -722,10 +722,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1790170602,
-        "narHash": "sha256-jYtXsD0wFcmY6Z8Es5CvK970LgHw3sqmbaqi6RSZ9Oo=",
+        "lastModified": 1790770114,
+        "narHash": "sha256-uwosabdF8MqtWzta2c3H2UFcMPrLfG04bbxjso473wg=",
         "ref": "main",
-        "rev": "6af361faf630f36527efb50b435c5af5eb90d917",
+        "rev": "04d5efd6e95cd15d760ae7e45cd5eb4c97a5f199",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/settings"
