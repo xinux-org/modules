@@ -48,7 +48,7 @@
     };
 
     # Apple fonts
-    apple-fonts.url = "github:Lyndeno/apple-fonts.nix"; # TODO: mirror the flake
+    apple-fonts.url = "git+https://git.oss.uzinfocom.uz/mirrors/apple-fonts?shallow=1";
 
     # Zen Browser
     zen-browser.url = "git+https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake?shallow=1";
