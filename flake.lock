@@ -2428,10 +2428,10 @@
         "xinux-lib": "xinux-lib_7"
       },
       "locked": {
-        "lastModified": 1791197382,
-        "narHash": "sha256-f2GODQyNU8wzYKDx/Wiu+ITdvtCJtfuuN/tXkmuygXo=",
+        "lastModified": 1791364451,
+        "narHash": "sha256-lQj64b0VK7tt0vTeDm3gkrQGqvOLIGhebfrJa9ePfG4=",
         "ref": "main",
-        "rev": "fe96cfd4962f204f0c39d42165e47c2acf227538",
+        "rev": "a9319faacc8b8fdef3fda65ffd78fbac3152aa3b",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/settings"
@@ -2491,10 +2491,10 @@
         "nixpkgs": "nixpkgs_14"
       },
       "locked": {
-        "lastModified": 1791266850,
-        "narHash": "sha256-F/scdmE9Y03TfSQWrBHaJWTRTr3rRQBqvJSDgF48g1c=",
+        "lastModified": 1791367832,
+        "narHash": "sha256-MSFMvb579iNOOx89nEAligQJaLB6Qv1QfAw31eC4JIU=",
         "ref": "refs/heads/main",
-        "rev": "d9e4e25d6ade5d541074045d332d887c044e11f5",
+        "rev": "a2caf7fe6fb6e4786591acb9cdf1306db1b011f7",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/zen-browser-flake"
