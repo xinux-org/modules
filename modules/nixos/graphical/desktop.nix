@@ -71,8 +71,8 @@ in
                   "org.gnome.Geary.desktop"
                   "org.gnome.Calendar.desktop"
                   "org.gnome.Nautilus.desktop"
-                  "org.xinux.NixSoftwareCenter.desktop"
-                  "org.xinux.XinuxModuleManager.desktop"
+                  "uz.xinux.NixSoftwareCenter.desktop"
+                  "uz.xinux.XinuxModuleManager.desktop"
                   "uz.xinux.EIMZOManager.desktop"
                 ];
               };
