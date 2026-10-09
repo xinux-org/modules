@@ -697,10 +697,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1791525117,
-        "narHash": "sha256-fj+r/JcFvf32tTip2u/kjQU8VNurQB5Ld5HtIxzCugY=",
+        "lastModified": 1791547952,
+        "narHash": "sha256-DGW3lqAN+kWFgICKFC37Btv5dDKGBhXks8tqHoywr5k=",
         "ref": "main",
-        "rev": "4eab9fc1d2013ca2c33b559b98cd215e64c83dae",
+        "rev": "4d57d6f10094457c5e7e39e605e2362eae30cbd3",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/module-manager"
