@@ -397,10 +397,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1791371485,
-        "narHash": "sha256-sBzpNBqAtS9RdUN2XV86i+ZSTQFmxt2Tt0DP66M2CL4=",
+        "lastModified": 1791460129,
+        "narHash": "sha256-KopIizHuVEJ31YFa82qNeYzwW5ZrjchI1i2U0Mox9hw=",
         "ref": "main",
-        "rev": "a9bc51b7d681a738546232b12f420993d2447440",
+        "rev": "1c008d5fd77200b03f948f31aeeb7c4424d9095a",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
@@ -697,10 +697,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1787908961,
-        "narHash": "sha256-4oTRn/5c6RHirDKaiSN8r+ge8WC1gA/5tyHH/abaVns=",
+        "lastModified": 1791525117,
+        "narHash": "sha256-fj+r/JcFvf32tTip2u/kjQU8VNurQB5Ld5HtIxzCugY=",
         "ref": "main",
-        "rev": "aca5b4c6e31870a17f1ab0d9ecf26fb526177ec5",
+        "rev": "4eab9fc1d2013ca2c33b559b98cd215e64c83dae",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/module-manager"
