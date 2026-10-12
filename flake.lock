@@ -49,10 +49,10 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1791664982,
-        "narHash": "sha256-XE92pEMitPxks8fzEU9XdiEQQLCy9bgMcGMIX4Zc/2M=",
+        "lastModified": 1791752832,
+        "narHash": "sha256-WytHHi+UG5h6rtSuzDzTOiKfNdvuDfoJYksWLvZ/jtc=",
         "ref": "master",
-        "rev": "3212a94c92a9c70ed8d3307a7905625ccbac74b4",
+        "rev": "a295d54ba7b96a54b8a0bfc08e5cce277c4a3b50",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/nix-cachyos-kernel"
@@ -1661,11 +1661,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1791640828,
-        "narHash": "sha256-e23ckdSdstbWNyCAnXZ33LoPXqVzMH+teMsTFM22Tu8=",
+        "lastModified": 1791738803,
+        "narHash": "sha256-o1vEy2xhuBxM/FS8DXA0pKWZhqj2MF56Dlu9eLT/3Sg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3e40103c8fa6e2d478c7becb75ded2a2176963e7",
+        "rev": "94d35c7c05087e8b07373a403c55e97d99ff9af9",
         "type": "github"
       },
       "original": {
