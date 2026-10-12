@@ -397,10 +397,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1791557994,
-        "narHash": "sha256-m1DdiNY7HfxgR2sDvNlsdjxqw8f8iW09zPZfLKguHs8=",
+        "lastModified": 1791793752,
+        "narHash": "sha256-uKeTtYgPLGQP48U5R7WMG4mKHN/06Jol1Z97CRVbOEc=",
         "ref": "main",
-        "rev": "0fd4832c55621e8075fc6e0e1885bff47212efc7",
+        "rev": "11a38ee809ebae062f9085821e3ac680d1a5e202",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/software-center"
