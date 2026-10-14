@@ -49,10 +49,10 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1791848821,
-        "narHash": "sha256-zmA3LKGQBRY4/vqDt0U+B+Vf78NlS0vhuFtKxm51+Q8=",
+        "lastModified": 1791928760,
+        "narHash": "sha256-6KooAP/cLL7Loo0BU+wF7mARLGVv9lLjx2bhd78V89E=",
         "ref": "master",
-        "rev": "873c5a2a40575b880a962aaade19afbb572adf92",
+        "rev": "85af0d8e588946173af589868107b2e4584a3220",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/nix-cachyos-kernel"
