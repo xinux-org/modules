@@ -265,10 +265,10 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1792036918,
-        "narHash": "sha256-hcvShmbeImQgIyDT6VwoB9N5zluIT/0evteaGolAzJI=",
+        "lastModified": 1792123157,
+        "narHash": "sha256-Sho009E1A2NpKw3JfVFTYQvePNJS19Oc3g7D1kBDa7M=",
         "ref": "refs/heads/main",
-        "rev": "09823990c75e15754a709648a08ca9a2ac9ed701",
+        "rev": "ee6c893ee31035e6121a5065fc21c80ba805d855",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/helium-browser-nix-flake"
@@ -456,11 +456,11 @@
     },
     "nixpkgs-darwin": {
       "locked": {
-        "lastModified": 1791678325,
-        "narHash": "sha256-yH6Su6IXtj1DUC6/Fpl1rmGpOFH1vtozMGOqaA6Yknk=",
+        "lastModified": 1792052774,
+        "narHash": "sha256-E7Hc6xMjd2onLR6KEwaGJHaFlbhE2J+R0ikHzBo0Xis=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "240fddad86d7a0520319f21d8be1b43db426b18d",
+        "rev": "7529d323f8f9926b38df356da2483c2a4e759d00",
         "type": "github"
       },
       "original": {
