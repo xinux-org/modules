@@ -65,10 +65,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1792352305,
-        "narHash": "sha256-zuX1x4dhijG9pr74yySgkMwDeKY63jgLIsKlqHj78O4=",
+        "lastModified": 1792446362,
+        "narHash": "sha256-cjpS9fG+1j5d+w2q2Pjqp8awL4KoMUlPdUeNNxOjOIQ=",
         "ref": "master",
-        "rev": "b70cedc6abfe9a01b9ec2451a5c737e59cf19e3e",
+        "rev": "be0be288549209421ab4f67c392a23109cb809a3",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/mirrors/nix-cachyos-kernel"
