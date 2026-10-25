@@ -69,7 +69,6 @@ in
         "quiet"
         "udev.log_level=0"
       ];
-      boot.initrd.verbose = false;
     }
   ];
 }
