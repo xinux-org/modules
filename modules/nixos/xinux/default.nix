@@ -216,14 +216,15 @@ in
       # Reasonable Defaults
       nix = {
         settings = {
-          experimental-features = [
+          # https://nix.dev/manual/nix/2.24/command-ref/conf-file#file-format
+          extra-experimental-features = [
             "nix-command"
             "flakes"
             "pipe-operators"
           ];
+          # https://nix.dev/manual/nix/2.35/release-notes/rl-2.35.html#build-performance-improvements
           substituters = lib.mkBefore [
-            "https://cache.xinux.uz"
-            # "https://cache.xinux.uz/?priority=10"
+            "https://cache.xinux.uz?priority=0&compression=zstd&compression-level=3"
           ];
           trusted-public-keys = lib.mkBefore [
             "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
