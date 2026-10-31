@@ -23,14 +23,5 @@
       # https://discourse.nixos.org/t/confusing-systemd-networking-config-warning/44886/2
       useDHCP = lib.mkDefault false;
     };
-    # Workaround for https://github.com/NixOS/nixpkgs/issues/180175
-    systemd.services.NetworkManager-wait-online = {
-      serviceConfig = {
-        ExecStart = [
-          ""
-          "${pkgs.networkmanager}/bin/nm-online -q"
-        ];
-      };
-    };
   };
 }
