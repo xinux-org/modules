@@ -3,11 +3,14 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 with lib; let
   cfg = config.modules.biosboot;
-in {
+  xinux-grub-theme = inputs.xinux-grub-theme.packages."${pkgs.stdenv.hostPlatform.system}".default;
+in
+{
   config = {
     boot = {
       loader = {
@@ -16,14 +19,8 @@ in {
           enable = true;
           #splashImage = ./background.png;
           useOSProber = true;
-          theme = "${
-            (pkgs.fetchFromGitHub {
-              owner = "xinux-org";
-              repo = "bootloader-theme";
-              tag = "v1.0.3";
-              hash = "sha256-ipaiJiQ3r2B3si1pFKdp/qykcpaGV+EqXRwl6UkCohs=";
-            })
-          }/xinux";
+          efiSupport = true;
+          theme = "${xinux-grub-theme}/grub/themes/xinux";
         };
       };
     };

@@ -33,6 +33,13 @@
       url = "git+https://git.oss.uzinfocom.uz/xinux/lib?ref=release-25.11&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Grub theme
+    xinux-grub-theme = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/grub-theme?ref=main&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Custom software
     mac-style-plymouth = {
       url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-plymouth-theme?ref=master&shallow=1";
