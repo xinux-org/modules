@@ -37,7 +37,7 @@
     };
 
     # Software Center
-    nix-software-center = { 
+    nix-software-center = {
       url = "git+https://git.oss.uzinfocom.uz/xinux/software-center?ref=main&shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
@@ -112,7 +112,7 @@
     };
 
     # Template Buddy
-    bleur = { 
+    bleur = {
       url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
@@ -128,6 +128,12 @@
         flake-parts.follows = "flake-parts";
         flake-compat.follows = "xinux-lib/flake-compat";
       };
+    };
+
+    # Grub theme
+    xinux-grub-theme = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/grub-theme?ref=main&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Custom software

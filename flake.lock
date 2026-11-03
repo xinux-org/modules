@@ -520,6 +520,7 @@
         "systems": "systems",
         "uz-xkb": "uz-xkb",
         "xin": "xin",
+        "xinux-grub-theme": "xinux-grub-theme",
         "xinux-lib": "xinux-lib",
         "xinux-module-manager": "xinux-module-manager",
         "xinux-settings": "xinux-settings",
@@ -648,6 +649,28 @@
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/xin"
+      }
+    },
+    "xinux-grub-theme": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793710775,
+        "narHash": "sha256-C/VH8qdngVKZ7OkjboZUcWtgIDeQ861R8+DosIfnG8k=",
+        "ref": "main",
+        "rev": "396386dfbe807be4bf7708b6dfb62f4aaf871cf8",
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/grub-theme"
+      },
+      "original": {
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/xinux/grub-theme"
       }
     },
     "xinux-lib": {
