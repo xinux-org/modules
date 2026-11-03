@@ -2,10 +2,12 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 let
   cfg = config.modules.biosboot;
+  xinux-grub-theme = inputs.xinux-grub-theme.packages."${pkgs.stdenv.hostPlatform.system}".default;
 in
 {
   config = {
@@ -17,14 +19,7 @@ in
           devices = [ "nodev" ];
           useOSProber = true;
           efiSupport = true;
-          theme = "${
-            (pkgs.fetchFromGitHub {
-              owner = "xinux-org";
-              repo = "bootloader-theme";
-              tag = "v1.0.3";
-              hash = "sha256-ipaiJiQ3r2B3si1pFKdp/qykcpaGV+EqXRwl6UkCohs=";
-            })
-          }/xinux";
+          theme = "${xinux-grub-theme}/grub/themes/xinux";
         };
       };
     };

@@ -8,6 +8,7 @@
 let
   cfg = config.modules.efiboot;
   efiSysMountPoint = config.boot.loader.efi.efiSysMountPoint;
+  xinux-grub-theme = inputs.xinux-grub-theme.packages."${pkgs.stdenv.hostPlatform.system}".default;
 in
 {
   options.modules.efiboot = with lib.types; {
@@ -37,14 +38,7 @@ in
             devices = [ "nodev" ];
             useOSProber = true;
             efiSupport = true;
-            theme = "${
-              (pkgs.fetchFromGitHub {
-                owner = "xinux-org";
-                repo = "bootloader-theme";
-                tag = "v1.0.3";
-                hash = "sha256-ipaiJiQ3r2B3si1pFKdp/qykcpaGV+EqXRwl6UkCohs=";
-              })
-            }/xinux";
+            theme = "${xinux-grub-theme}/grub/themes/xinux";
           };
         };
         plymouth = {

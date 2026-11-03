@@ -12,7 +12,16 @@
     xinux-settings.url = "git+https://git.oss.uzinfocom.uz/xinux/settings?ref=main&shallow=1";
 
     # Software Center
-    nix-software-center.url = "git+https://git.oss.uzinfocom.uz/xinux/software-center?ref=release-26.05&shallow=1";
+    nix-software-center = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/software-center?ref=main&shallow=1";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        xinux-lib.follows = "xinux-lib";
+        git-hooks.follows = "xinux-lib/git-hooks";
+        treefmt-nix.follows = "xinux-lib/treefmt-nix";
+        nixos-appstream-data.inputs.flake-utils.follows = "flake-utils";
+      };
+    };
 
     # Module Manager
     xinux-module-manager.url = "git+https://git.oss.uzinfocom.uz/xinux/module-manager?ref=release-26.05&shallow=1";
@@ -33,10 +42,22 @@
     xinux-wallpaper.url = "git+https://git.oss.uzinfocom.uz/xinux/wallpaper?ref=release-26.05&shallow=1";
 
     # Template Buddy
-    bleur.url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
+    bleur = {
+      url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
 
     # Kernels
     cachyos-kernel.url = "git+https://git.oss.uzinfocom.uz/mirrors/nix-cachyos-kernel?ref=master&shallow=1";
+
+    # Grub theme
+    xinux-grub-theme = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/grub-theme?ref=main&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Custom software
     mac-style-plymouth.url = "git+https://git.oss.uzinfocom.uz/xinux/xinux-plymouth-theme?ref=master&shallow=1";
