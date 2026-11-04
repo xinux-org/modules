@@ -1,5 +1,6 @@
 {
   lib,
+  pkgs,
   ...
 }:
 {
@@ -8,4 +9,8 @@
   ];
 
   xinux.osInfo.enable = lib.mkDefault true;
+
+  environment.systemPackages = [
+    pkgs.internal.xinux-icon
+  ];
 }
