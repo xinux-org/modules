@@ -39,6 +39,9 @@ in
             useOSProber = true;
             efiSupport = true;
             theme = "${xinux-grub-theme}/grub/themes/xinux";
+
+            entryOptions = "--class xinux --unrestricted";
+            subEntryOptions = "--class xinux";
           };
         };
         plymouth = {
