@@ -24,7 +24,7 @@ let
     VERSION_ID = cfg.release;
     BUILD_ID = cfg.version;
     PRETTY_NAME = "Xinux ${cfg.release} (${mcfg.codeName})";
-    LOGO = "nix-xinux-white";
+    LOGO = "xinux";
     HOME_URL = "https://xinux.uz";
     DOCUMENTATION_URL = "https://xinux.uz/learn";
     SUPPORT_URL = "https://matrix.to/#/#xinux:uchar.uz";
