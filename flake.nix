@@ -46,7 +46,6 @@
       url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
       };
     };
 
