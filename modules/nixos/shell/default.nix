@@ -30,6 +30,17 @@ in
   };
 
   config = lib.mkMerge [
+
+    # Rusted Tools
+    (lib.mkIf cfg.rusted-tools {
+      environment.systemPackages = [ 
+        (lib.hiPrio pkgs.uutils-coreutils-noprefix)
+        (lib.hiPrio pkgs.uutils-diffutils)
+        (lib.hiPrio pkgs.uutils-findutils)
+      ];
+    })
+
+    
     # Defaults
     {
       programs = {
@@ -52,22 +63,6 @@ in
         bash = {
           completion.enable = true;
           vteIntegration = true;
-
-          shellAliases = mkIf cfg.rusted-tools rec {
-            sl = ls;
-            ls = "${getExe pkgs.eza}";
-            top = "${getExe pkgs.btop}";
-            cat = "${getExe pkgs.bat}";
-            ps = "${getExe pkgs.procs}";
-            grep = "${getExe pkgs.ripgrep}";
-            search = "${getExe pkgs.ripgrep}";
-            look = "${getExe pkgs.fd}";
-            find = "${getExe pkgs.fd}";
-            ping = "${getExe pkgs.gping}";
-            time = "${getExe pkgs.hyperfine}";
-            vi = "${lib.getExe pkgs.helix}";
-            vim = vi;
-          };
         };
       };
     })
@@ -209,20 +204,6 @@ in
             zstyle ':completion:*' verbose true
             zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
           '';
-
-          shellAliases = mkIf cfg.rusted-tools rec {
-            sl = ls;
-            ls = "${getExe pkgs.eza}";
-            top = "${getExe pkgs.btop}";
-            cat = "${getExe pkgs.bat}";
-            ps = "${getExe pkgs.procs}";
-            grep = "${getExe pkgs.ripgrep}";
-            search = "${getExe pkgs.ripgrep}";
-            look = "${getExe pkgs.fd}";
-            find = "${getExe pkgs.fd}";
-            ping = "${getExe pkgs.gping}";
-            time = "${getExe pkgs.hyperfine}";
-          };
         };
 
         direnv.enableZshIntegration = true;
