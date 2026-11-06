@@ -22,7 +22,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-conf-editor = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/conf-editor?ref=release-25.11&shallow=1";
+      url = "git+https://git.oss.uzinfocom.uz/archive/conf-editor?ref=release-25.11&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     xinux-tour = {

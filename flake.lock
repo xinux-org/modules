@@ -517,13 +517,13 @@
         "rev": "343fa60d358622beab83b42f351ed233c68bfdf3",
         "shallow": true,
         "type": "git",
-        "url": "https://git.oss.uzinfocom.uz/xinux/conf-editor"
+        "url": "https://git.oss.uzinfocom.uz/archive/conf-editor"
       },
       "original": {
         "ref": "release-25.11",
         "shallow": true,
         "type": "git",
-        "url": "https://git.oss.uzinfocom.uz/xinux/conf-editor"
+        "url": "https://git.oss.uzinfocom.uz/archive/conf-editor"
       }
     },
     "nixpkgs": {
