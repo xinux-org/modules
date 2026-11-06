@@ -17,9 +17,6 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         xinux-lib.follows = "xinux-lib";
-        git-hooks.follows = "xinux-lib/git-hooks";
-        treefmt-nix.follows = "xinux-lib/treefmt-nix";
-        nixos-appstream-data.inputs.flake-utils.follows = "flake-utils";
       };
     };
 
