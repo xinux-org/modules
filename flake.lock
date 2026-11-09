@@ -658,10 +658,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1794225559,
-        "narHash": "sha256-r/dbZ6/71RGrLI+W/AuDQnEsTB4Y1kbUADWeC/MUSRc=",
+        "lastModified": 1794227163,
+        "narHash": "sha256-urZB1FbDbI/X1156Z/pIblL9D2DOBoNOf0zwlNJWCDg=",
         "ref": "main",
-        "rev": "9b0b4dc7b9f6e247117b16be323cd4c3664ef078",
+        "rev": "d77132cee6afc010002e6040dce480c6077f1cf4",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/grub-theme"
