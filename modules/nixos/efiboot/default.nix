@@ -8,7 +8,7 @@
 let
   cfg = config.modules.efiboot;
   efiSysMountPoint = config.boot.loader.efi.efiSysMountPoint;
-  xinux-grub-theme = inputs.xinux-grub-theme.packages."${pkgs.stdenv.hostPlatform.system}".default;
+  xinux-grub-theme = inputs.xinux-grub-theme.packages."${pkgs.stdenv.hostPlatform.system}".default.override {lang = config.i18n.defaultLocale;};
 in
 {
   options.modules.efiboot = with lib.types; {
