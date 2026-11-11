@@ -5,8 +5,8 @@
     systems.url = "github:nix-systems/default-linux";
 
     flake-utils = {
-     url = "github:numtide/flake-utils";
-     inputs.systems.follows = "systems";
+      url = "github:numtide/flake-utils";
+      inputs.systems.follows = "systems";
     };
 
     flake-parts = {
@@ -217,16 +217,5 @@
       alias.shells.default = "modules";
 
       systems.modules.nixos = with inputs; [ ];
-
-      # Hydra jobs for building caches
-      hydraJobs = {
-        inherit (inputs.self.pkgs.x86_64-linux.nixpkgs)
-          e-imzo-manager
-          nix-software-center
-          xinux-module-manager
-          xinux-settings
-          xinux-tour
-          ;
-      };
     };
 }
