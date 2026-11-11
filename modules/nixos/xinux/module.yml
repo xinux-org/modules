@@ -34,11 +34,6 @@ options:
     description: "It monitors your system for crashes, collects diagnostic information, and lets you submit reports through a simple GUI"
     type: !switch
       default: true
-  - label: "Install LibreOffice document office suite"
-    id: modules.xinux.libreofficePack.enable
-    description: "LibreOffice is an open source office suite that includes Writer, Calc, Impress, Draw, Base, Math"
-    type: !switch
-      default: true
   - label: "Browser"
     id: modules.xinux.browser
     description: "Pick the default browser of choice for the system."

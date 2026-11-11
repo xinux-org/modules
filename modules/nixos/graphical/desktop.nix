@@ -146,45 +146,45 @@ in
       fontDir.enable = true;
       packages = with pkgs; [
         # An alternative popular Chinese font
-        wqy_zenhei
-        ubuntu-classic
-        corefonts
+        # cantarell-fonts
         carlito
-        vista-fonts
-        vista-fonts-chs
+        corefonts
+        dina-font
+        eb-garamond
+        fira-code
+        fira-code
+        fira-code-symbols
+        fira-code-symbols
+        font-awesome
+        font-awesome_4
         font-bh-ttf
+        freefont_ttf
+        hack-font
+        hermit
+        inter
+        iosevka
+        lato        
+        mononoki
+        montserrat
+        mplus-outline-fonts.githubRelease
+        mplus-outline-fonts.osdnRelease
+        nerd-fonts.jetbrains-mono
+        noto-fonts
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
-        nerd-fonts.jetbrains-mono
-        mplus-outline-fonts.osdnRelease
-        fira-code
-        fira-code-symbols
-        hermit
-        source-code-pro
-        terminus_font
-        font-awesome
-        font-awesome_4
-        hack-font
-        noto-fonts
-        # cantarell-fonts
+        oswald
         powerline-fonts
+        proggyfonts
         roboto
         roboto-slab
-        montserrat
-        inter
-        lato
-        eb-garamond
-        fira-code
-        fira-code-symbols
-        mplus-outline-fonts.githubRelease
-        dina-font
-        proggyfonts
-        oswald
         rubik
-        freefont_ttf
-        mononoki
-        iosevka
+        source-code-pro
+        terminus_font
+        ubuntu-classic
+        vista-fonts
+        vista-fonts-chs
+        wqy_zenhei
       ];
     };
 

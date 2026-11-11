@@ -59,11 +59,6 @@ in
       default = true;
       description = "Enable relago — bug reporter for Xinux";
     };
-    libreofficePack.enable = lib.mkOption {
-      type = bool;
-      default = true;
-      description = "Install LibreOffice document office suite";
-    };
     browser = lib.mkOption {
       type = enum [
         "firefox"
@@ -104,11 +99,6 @@ in
     (lib.mkIf cfg.xinuxModuleManager.enable {
       environment.systemPackages = with pkgs; [
         xinux-module-manager
-      ];
-    })
-    (lib.mkIf cfg.libreofficePack.enable {
-      environment.systemPackages = with pkgs; [
-        libreoffice
       ];
     })
 
