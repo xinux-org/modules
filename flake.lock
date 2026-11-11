@@ -26,31 +26,6 @@
         "url": "https://git.oss.uzinfocom.uz/mirrors/aagl-gtk-on-nix"
       }
     },
-    "bleur": {
-      "inputs": {
-        "flake-parts": [
-          "flake-parts"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1782132215,
-        "narHash": "sha256-pzMubbaKsivqUWEMpt/fIXguDjG1/2tcMFZf5vxo/AU=",
-        "ref": "main",
-        "rev": "41312b84801bb7314f12390af4c931aa3b50c789",
-        "shallow": true,
-        "type": "git",
-        "url": "https://git.oss.uzinfocom.uz/bleur/bleur"
-      },
-      "original": {
-        "ref": "main",
-        "shallow": true,
-        "type": "git",
-        "url": "https://git.oss.uzinfocom.uz/bleur/bleur"
-      }
-    },
     "cachyos-kernel": {
       "inputs": {
         "flake-compat": [
@@ -506,7 +481,6 @@
     "root": {
       "inputs": {
         "aagl": "aagl",
-        "bleur": "bleur",
         "cachyos-kernel": "cachyos-kernel",
         "e-imzo-manager": "e-imzo-manager",
         "flake-parts": "flake-parts",

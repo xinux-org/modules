@@ -111,15 +111,6 @@
       };
     };
 
-    # Template Buddy
-    bleur = {
-      url = "git+https://git.oss.uzinfocom.uz/bleur/bleur?ref=main&shallow=1";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-      };
-    };
-
     # Kernels
     cachyos-kernel = {
       url = "git+https://git.oss.uzinfocom.uz/mirrors/nix-cachyos-kernel?ref=master&shallow=1";
@@ -230,7 +221,6 @@
       # Hydra jobs for building caches
       hydraJobs = {
         inherit (inputs.self.pkgs.x86_64-linux.nixpkgs)
-          bleur
           e-imzo-manager
           nix-software-center
           xinux-module-manager
