@@ -447,11 +447,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791346838,
-        "narHash": "sha256-cDsYpbh3NgyHk12voE2rzYA/SVgY4nBbQkTaqTKVafI=",
+        "lastModified": 1795010708,
+        "narHash": "sha256-1kFrBPulSFdh5rpREHYRSCBCaIfjwawYWPavkgH1hhU=",
         "ref": "main",
-        "rev": "c3f875803b247d353636767d8d6f2e91b518eac6",
-        "revCount": 62,
+        "rev": "b38d4a03a32c2d2c7184a006ee44038285b51aa3",
+        "revCount": 68,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/relago"
       },
