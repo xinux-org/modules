@@ -22,6 +22,9 @@
       ];
       # https://discourse.nixos.org/t/confusing-systemd-networking-config-warning/44886/2
       useDHCP = lib.mkDefault false;
+      # avoid such warnings:
+      # dhcp6_openudp: Address already in use
+      dhcpcd.enable = lib.mkDefault false;
     };
   };
 }
